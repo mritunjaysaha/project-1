@@ -1,0 +1,28 @@
+@import "./utils.scss";
+
+.header {
+    background-color: yellow;
+    height: 14rem;
+
+    font-size: $padding-mobile;
+    font-weight: 700;
+
+    padding: $padding-mobile;
+}
+
+.section1 {
+    padding: 2rem $padding-mobile;
+    h3 {
+        padding-bottom: 1rem;
+    }
+
+    p {
+        padding-top: 1rem;
+    }
+}
+
+.placeholder {
+    background: #888;
+    height: 200px;
+    width: 300px;
+}

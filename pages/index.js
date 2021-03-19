@@ -1,6 +1,7 @@
 import Head from "next/head";
-import styles from "../styles/home.module.scss";
 import { Navbar } from "../src/navbar";
+import { Header } from "../src/header";
+import { Body } from "../src/body";
 
 export default function Home() {
     return (
@@ -11,9 +12,9 @@ export default function Home() {
             </Head>
 
             <Navbar />
-            <header className={styles.header}>
-                Lorem ipsum dolor sit amet.
-            </header>
+            <Header />
+            <Body />
+
             {/* <footer className={styles.footer}></footer> */}
         </div>
     );
