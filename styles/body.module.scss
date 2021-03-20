@@ -20,23 +20,25 @@
 
 .section2 {
     padding: 4rem $padding-mobile;
-    background-color: red;
+    // background-color: red;
+    height: 90vh;
+
     h3 {
         font-size: $fs-x-large;
         font-weight: $fw-regular;
-        padding-bottom: 2rem;
+        padding-bottom: 4rem;
     }
 
     ul {
-        padding-left: 3rem;
-        padding-bottom: 2rem;
+        padding-left: 4rem;
+        padding-bottom: 4rem;
         font-size: $fs-small;
     }
 }
 
 .section3 {
-    background-color: yellow;
-    height: 80vh;
+    // background-color: yellow;
+    height: 90vh;
 
     display: flex;
     flex-direction: column;
@@ -60,7 +62,7 @@
 }
 
 .placeholder {
-    background: #888;
+    // background: #888;
     height: 200px;
     width: 100%;
 }
