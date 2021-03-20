@@ -4,25 +4,73 @@
     background-color: yellow;
     height: 14rem;
 
-    font-size: $padding-mobile;
+    font-size: $fs-medium;
     font-weight: 700;
 
     padding: $padding-mobile;
 }
 
 .section1 {
-    padding: 2rem $padding-mobile;
+    padding: 0 $padding-mobile;
+
     h3 {
-        padding-bottom: 1rem;
+        padding: 4rem 0;
+        text-align: center;
+        font-size: $fs-large;
+        font-weight: $fw-regular;
     }
 
     p {
-        padding-top: 1rem;
+        padding: 1.4rem 0;
+
+        font-size: $fs-small;
+        font-weight: $fw-regular;
     }
+}
+
+.section2 {
+    padding: 4rem $padding-mobile;
+    background-color: red;
+    h3 {
+        font-size: $fs-x-large;
+        font-weight: $fw-regular;
+        padding-bottom: 2rem;
+    }
+
+    ul {
+        padding-left: 3rem;
+        padding-bottom: 2rem;
+        font-size: $fs-small;
+    }
+}
+
+.section3 {
+    background-color: yellow;
+    height: 80vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    h3 {
+        font-size: $fs-large;
+        font-weight: $fw-medium;
+        margin-top: 40vh;
+        margin-bottom: 4rem;
+    }
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: $fs-medium;
 }
 
 .placeholder {
     background: #888;
     height: 200px;
-    width: 300px;
+    width: 100%;
 }

@@ -12,7 +12,7 @@ export function Navbar() {
         <nav className={styles.navbar}>
             <div>Lorem, ipsum.</div>
 
-            <MenuTwoToneIcon />
+            <MenuTwoToneIcon fontSize="large" />
             {/* {navbarLinks.map((link) => (
                 <li>{link.name}</li>
             ))} */}
