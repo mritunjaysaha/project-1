@@ -13,7 +13,7 @@ export function MUIButton({ name, color, size }) {
     return (
         <Button
             variant="contained"
-            color={color ? color : ""}
+            color={color ? color : "primary"}
             size={size ? size : "medium"}
         >
             {name ? name : "temp"}

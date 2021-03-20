@@ -1,20 +1,10 @@
 @import "./utils.scss";
 
-.header {
-    background-color: yellow;
-    height: 14rem;
-
-    font-size: $fs-medium;
-    font-weight: 700;
-
-    padding: $padding-mobile;
-}
-
 .section1 {
-    padding: 0 $padding-mobile;
+    padding: 0 $padding-mobile 4rem;
 
     h3 {
-        padding: 4rem 0;
+        padding: 8rem 0;
         text-align: center;
         font-size: $fs-large;
         font-weight: $fw-regular;
