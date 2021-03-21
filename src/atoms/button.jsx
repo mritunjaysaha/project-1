@@ -13,8 +13,9 @@ export function MUIButton({ name, color, size }) {
     return (
         <Button
             variant="contained"
-            color={color ? color : "primary"}
-            size={size ? size : "medium"}
+            // color={color ? color : "primary"}
+            // size={size ? size : "medium"}
+            style={{ background: "#fff" }}
         >
             {name ? name : "temp"}
         </Button>
