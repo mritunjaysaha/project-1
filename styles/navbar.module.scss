@@ -9,12 +9,43 @@
     padding: $padding-mobile;
     font-size: $fs-small;
 
-    // background: red;
-
     z-index: 100;
 }
 
 .changeBackgroundColor {
     background: white;
     color: black;
+}
+
+.mobileMenu {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    color: black;
+
+    font-size: $fs-medium; // effects the font-size of close button
+
+    li {
+        list-style: none;
+        font-size: $fs-medium;
+    }
+}
+
+.close {
+    position: absolute;
+    top: 4rem;
+    right: 4rem;
+}
+
+.hide {
+    display: none;
 }
