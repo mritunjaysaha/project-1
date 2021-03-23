@@ -5,13 +5,15 @@ import CloseIcon from "@material-ui/icons/Close";
 
 export function Navbar() {
     const navbarLinks = [
-        { name: "aaa", link: "#" },
+        { name: "home", link: "#" },
         { name: "bbb", link: "#" },
+        { name: "ccc", link: "#" },
         { name: "ccc", link: "#" },
     ];
 
     const [isScrolled, setScrolled] = useState(false);
     const [isMenuClicked, setMenuClicked] = useState(false);
+    const [viewportWidth, setViewportWidth] = useState();
 
     useEffect(() => {
         const listener = document.addEventListener("scroll", (e) => {
@@ -23,6 +25,9 @@ export function Navbar() {
                 setScrolled(false);
             }
         });
+
+        setViewportWidth(document.documentElement.clientWidth);
+        console.log({ viewportWidth });
 
         return () => {
             document.removeEventListener("scroll", listener);
@@ -46,10 +51,18 @@ export function Navbar() {
         >
             <div>Lorem, ipsum.</div>
 
-            <MenuTwoToneIcon fontSize="large" onClick={handleHamburgerMenu} />
+            <MenuTwoToneIcon
+                fontSize="large"
+                onClick={handleHamburgerMenu}
+                className={styles.hamburgerMenu}
+            />
             <ul
                 className={
-                    isMenuClicked ? `${styles.mobileMenu}` : `${styles.hide}`
+                    viewportWidth <= 640
+                        ? isMenuClicked
+                            ? `${styles.navbarMenu}`
+                            : `${styles.hideMenu}`
+                        : `${styles.showMenu} ${styles.navbarMenu}`
                 }
             >
                 <CloseIcon

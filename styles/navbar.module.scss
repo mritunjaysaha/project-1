@@ -10,6 +10,10 @@
     font-size: $fs-small;
 
     z-index: 100;
+
+    @media only screen and (min-width: 996px) {
+        padding: 2rem 6rem;
+    }
 }
 
 .changeBackgroundColor {
@@ -17,7 +21,7 @@
     color: black;
 }
 
-.mobileMenu {
+.navbarMenu {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,14 +42,41 @@
         list-style: none;
         font-size: $fs-medium;
     }
+
+    @media only screen and (min-width: 996px) {
+        position: relative;
+        background: none;
+
+        flex-direction: row;
+        justify-content: space-between;
+
+        color: inherit;
+
+        height: unset;
+        width: 40rem;
+    }
 }
 
 .close {
     position: absolute;
     top: 4rem;
     right: 4rem;
+
+    @media only screen and (min-width: 996px) {
+        display: none !important;
+    }
 }
 
-.hide {
+.hamburgerMenu {
+    @media only screen and (min-width: 996px) {
+        display: none !important;
+    }
+}
+
+.hideMenu {
     display: none;
+}
+
+.showMenu {
+    display: flex;
 }
