@@ -15,16 +15,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        -webkit-transform: translate(-50%, -40%);
-        -moz-transform: translate(-50%, -40%);
-        transform: translate(-50%, -40%);
-        // background: radial-gradient(
-        //     circle,
-        //     rgba(77, 32, 83, 0.7) 0%,
-        //     rgba(77, 32, 83, 0.0001) 70%
-        // );
-
-        // rgba(43,46,74,1)
+        transform: translate(-42%, -42%);
 
         background: radial-gradient(
             circle,
@@ -32,7 +23,7 @@
             rgba(43, 46, 74, 0.0001) 70%
         );
 
-        width: 100vw;
+        width: 110vw;
         padding-top: 100%;
         z-index: 20;
     }
