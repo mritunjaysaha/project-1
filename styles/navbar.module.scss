@@ -16,11 +16,6 @@
     }
 }
 
-.changeBackgroundColor {
-    background: white;
-    color: black;
-}
-
 .navbarMenu {
     position: absolute;
     top: 0;
@@ -79,4 +74,9 @@
 
 .showMenu {
     display: flex;
+}
+
+.changeBackgroundColor {
+    background: white;
+    color: black;
 }
