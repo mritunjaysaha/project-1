@@ -1,7 +1,6 @@
 @import "./utils.scss";
 
 .header {
-    // background-color: yellow;
     height: 28rem;
 
     font-size: $fs-medium;
@@ -40,13 +39,15 @@
         flex-direction: column;
         height: 100rem;
 
+        padding: 0 6rem;
+
         &::before {
             transform: translate(-50%, -40%);
             width: 100vw;
         }
 
         h3 {
-            font-size: $fs-xx-large;
+            font-size: $fs-xxx-large;
         }
     }
 }

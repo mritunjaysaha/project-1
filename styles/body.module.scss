@@ -1,6 +1,10 @@
 @import "./utils.scss";
 
+$fs-desktop-large: 4.2rem;
+
 .section1 {
+    display: flex;
+    flex-direction: column;
     padding: 0 $padding-mobile 4rem;
 
     h3 {
@@ -16,11 +20,36 @@
         font-size: $fs-small;
         font-weight: $fw-regular;
     }
+
+    @media only screen and (min-width: 996px) {
+        padding: 2rem 6rem;
+
+        h3 {
+            font-size: $fs-x-large;
+        }
+
+        section {
+            display: flex;
+            justify-content: space-between;
+
+            div,
+            p {
+                width: 350rem;
+            }
+
+            div {
+                margin-right: 8rem;
+            }
+
+            p {
+                padding: 0;
+            }
+        }
+    }
 }
 
 .section2 {
     padding: 4rem $padding-mobile;
-    // background-color: red;
     height: 90vh;
 
     h3 {
@@ -33,6 +62,18 @@
         padding-left: 4rem;
         padding-bottom: 4rem;
         font-size: $fs-small;
+    }
+
+    @media only screen and (min-width: 996px) {
+        padding: 4rem 20rem;
+
+        h3 {
+            font-size: $fs-desktop-large;
+        }
+
+        ul {
+            font-size: $fs-large;
+        }
     }
 }
 
@@ -50,6 +91,12 @@
         font-weight: $fw-medium;
         margin-top: 40vh;
         margin-bottom: 4rem;
+    }
+
+    @media only screen and (min-width: 996px) {
+        h3 {
+            font-size: $fs-desktop-large;
+        }
     }
 }
 

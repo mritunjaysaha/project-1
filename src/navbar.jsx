@@ -6,9 +6,9 @@ import CloseIcon from "@material-ui/icons/Close";
 export function Navbar() {
     const navbarLinks = [
         { name: "home", link: "#" },
-        { name: "bbb", link: "#" },
-        { name: "ccc", link: "#" },
-        { name: "ccc", link: "#" },
+        { name: "our partners", link: "#" },
+        { name: "news", link: "#" },
+        { name: "contact", link: "#" },
     ];
 
     const [isScrolled, setScrolled] = useState(false);
