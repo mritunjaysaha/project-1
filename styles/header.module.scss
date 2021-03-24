@@ -26,17 +26,25 @@
         z-index: 20;
     }
 
-    @media only screen and (min-width: 640px) {
-        // background: red;
+    h3 {
+        z-index: 100 !important;
     }
 
-    @media only screen and (min-width: 996px) {
-        text-align: right;
-        text-transform: uppercase;
-
+    @media only screen and (min-width: 640px) {
+        height: 80rem;
         display: flex;
         justify-content: center;
         flex-direction: column;
+
+        h3 {
+            font-size: $fs-xxx-large;
+            width: 40rem;
+        }
+    }
+
+    @media only screen and (min-width: 996px) {
+        text-transform: uppercase;
+
         height: 100rem;
 
         padding: 0 6rem;
@@ -44,10 +52,6 @@
         &::before {
             transform: translate(-50%, -40%);
             width: 100vw;
-        }
-
-        h3 {
-            font-size: $fs-xxx-large;
         }
     }
 }
