@@ -2,15 +2,9 @@ import { useState, useEffect, createRef } from "react";
 import styles from "../styles/navbar.module.scss";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
+import { navbarList, companyName } from "./data";
 
 export function Navbar() {
-    const navbarLinks = [
-        { name: "home", link: "#" },
-        { name: "our partners", link: "#" },
-        { name: "news", link: "#" },
-        { name: "contact", link: "#" },
-    ];
-
     const [isScrolled, setScrolled] = useState(false);
     const [isMenuClicked, setMenuClicked] = useState(false);
     const [viewportWidth, setViewportWidth] = useState();
@@ -49,7 +43,7 @@ export function Navbar() {
                     : `${styles.navbar}`
             }
         >
-            <div>Lorem, ipsum.</div>
+            <div>{companyName.name}</div>
 
             <MenuTwoToneIcon
                 fontSize="large"
@@ -71,7 +65,7 @@ export function Navbar() {
                     fontSize="inherit"
                     onClick={handleCloseButton}
                 />
-                {navbarLinks.map((link) => (
+                {navbarList.map((link) => (
                     <li key={link.name}>{link.name}</li>
                 ))}
             </ul>
