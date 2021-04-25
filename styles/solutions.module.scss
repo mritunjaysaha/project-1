@@ -1,0 +1,29 @@
+@import "./utils.scss";
+.section2 {
+    padding: 4rem $padding-mobile;
+    height: 90vh;
+
+    h3 {
+        font-size: $fs-x-large;
+        font-weight: $fw-regular;
+        padding-bottom: 4rem;
+    }
+
+    ul {
+        padding-left: 4rem;
+        padding-bottom: 4rem;
+        font-size: $fs-small;
+    }
+
+    @media only screen and (min-width: 996px) {
+        padding: 4rem 20rem;
+
+        h3 {
+            font-size: $fs-desktop-large;
+        }
+
+        ul {
+            font-size: $fs-large;
+        }
+    }
+}

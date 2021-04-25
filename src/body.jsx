@@ -27,21 +27,6 @@ export function Body() {
                 </section>
             </section>
 
-            <section className={styles.section2}>
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <ul>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Lorem, ipsum.</li>
-                </ul>
-                <div className={styles.btnContainer}>
-                    <MUIButton name="button" color="primary" size="large" />
-                </div>
-            </section>
-
             <section className={styles.section3}>
                 <h3>Get in touch with us</h3>
                 <div className={styles.btnContainer}>
