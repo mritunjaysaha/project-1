@@ -6,8 +6,7 @@ import { MUIButton } from "./atoms/button";
 export function Body() {
     return (
         <>
-            <section className={styles.initialPage}></section>
-            <section className={styles.section1}>
+            {/* <section className={styles.section1}>
                 <h3>get the deals closed on your own terms</h3>
 
                 <div className={styles.placeholder}></div>
@@ -24,10 +23,10 @@ export function Body() {
                     suscipit fuga impedit inventore. Voluptas, beatae. Quidem
                     harum sit, libero magni omnis porro blanditiis.
                 </p>
-            </section>
+            </section> */}
 
             {/*  */}
-            <section className={styles.section1}>
+            {/* <section className={styles.section1}>
                 <div>
                     <h1>Who we are</h1>
                     <p>XXX capital is an independently owned</p>
@@ -45,15 +44,31 @@ export function Body() {
                         stakes with the deal, the more exciting it is for us
                     </p>
                 </div>
-            </section>
-            {/* Offerings */}
+            </section> */}
 
-            <section className={styles.section3}>
+            {/* Offerings */}
+            {/* <section className={styles.offeringsSection}>
+                <h3>Our core services</h3>
+                <ul>
+                    <li className={styles.ulLiCard}>
+                        <p>Debt Insurance</p>
+                    </li>
+                    <li>Debt Insurance</li>
+                    <li>Debt Insurance</li>
+                    <li>Debt Insurance</li>
+                    <li>Debt Insurance</li>
+                    <li>Debt Insurance</li>
+                    <li>Debt Insurance</li>
+                    <li>Debt Insurance</li>
+                </ul>
+            </section> */}
+
+            {/* <section className={styles.section3}>
                 <h3>Get in touch with us</h3>
                 <div className={styles.btnContainer}>
                     <MUIButton name="button" />
                 </div>
-            </section>
+            </section> */}
         </>
     );
 }
