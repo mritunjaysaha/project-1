@@ -4,7 +4,7 @@ import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
 import { navbarList, companyName } from "./data";
 
-export function Navbar() {
+export function Navbar({ className }) {
     const [isScrolled, setScrolled] = useState(false);
     const [isMenuClicked, setMenuClicked] = useState(false);
     const [viewportWidth, setViewportWidth] = useState();
@@ -37,13 +37,15 @@ export function Navbar() {
 
     return (
         <nav
-            className={
-                isScrolled
-                    ? `${styles.navbar} ${styles.changeBackgroundColor}`
-                    : `${styles.navbar}`
-            }
+            // className={
+            //     isScrolled
+            //         ? `${styles.className} ${styles.changeBackgroundColor}`
+            //         : `${styles.className}`
+            // }
+
+            className={styles.navbarHeaderAbsolute}
         >
-            <div>{companyName.name}</div>
+            <h1 className={styles.companyName}>{companyName.name}</h1>
 
             <MenuTwoToneIcon
                 fontSize="large"

@@ -1,9 +1,37 @@
 @import "./utils.scss";
 
+.navbarHeaderAbsolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 8rem;
+
+    ul {
+        li {
+            font-size: $fs-small;
+        }
+    }
+}
+
+.companyName {
+    font-size: $fs-medium;
+}
+
+.navbarHeaderAbsolute,
+.navbar {
+    text-transform: uppercase;
+}
+
 .navbar {
     position: sticky;
     top: 0;
+}
 
+.navbar {
     display: flex;
     justify-content: space-between;
     padding: $padding-mobile;
