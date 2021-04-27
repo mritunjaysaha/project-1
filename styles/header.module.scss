@@ -33,10 +33,11 @@
     @media only screen and (min-width: 996px) {
         height: 100vh;
         h3 {
-            padding-top: 32rem;
-            margin-left: 20rem;
+            padding: 0;
+            padding-top: 36rem;
+            margin-left: 16rem;
             font-size: $fs-desktop-initial-page;
-            width: 100rem;
+            width: 120rem;
             line-height: 10rem;
         }
         &::before {
