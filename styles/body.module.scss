@@ -85,10 +85,23 @@
 
 .offeringSection {
     text-align: center;
-    display: block;
     margin: 0 auto;
+    width: 90%;
+    h3 {
+        font-size: $fs-large;
+        margin: 4rem 0;
+    }
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+        grid-column-gap: 1rem;
+        grid-row-gap: 4rem;
+    }
 
     @media only screen and (min-width: 996px) {
+        display: block;
+
         width: 80%;
 
         h3 {
