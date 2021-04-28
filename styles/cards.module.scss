@@ -1,0 +1,25 @@
+@import "./utils.scss";
+
+.cardOuter {
+    height: 12rem;
+    aspect-ratio: 1/1;
+    border: 1px solid white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    p {
+        text-transform: uppercase;
+        font-weight: $fw-bold;
+    }
+
+    button {
+        margin-top: 2rem;
+    }
+}
+
+.pGroup {
+    padding-top: 2rem;
+}

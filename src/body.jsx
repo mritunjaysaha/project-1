@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "../styles/body.module.scss";
+import { Cards } from "./cards";
 
 import { MUIButton } from "./atoms/button";
 
@@ -47,12 +48,10 @@ export function Body() {
             </section> */}
 
             {/* Offerings */}
-            {/* <section className={styles.offeringsSection}>
+            <section className={styles.offeringsSection}>
                 <h3>Our core services</h3>
                 <ul>
-                    <li className={styles.ulLiCard}>
-                        <p>Debt Insurance</p>
-                    </li>
+                    <Cards />
                     <li>Debt Insurance</li>
                     <li>Debt Insurance</li>
                     <li>Debt Insurance</li>
@@ -61,7 +60,7 @@ export function Body() {
                     <li>Debt Insurance</li>
                     <li>Debt Insurance</li>
                 </ul>
-            </section> */}
+            </section>
 
             {/* <section className={styles.section3}>
                 <h3>Get in touch with us</h3>
