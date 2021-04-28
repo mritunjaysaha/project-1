@@ -48,17 +48,21 @@ export function Body() {
             </section> */}
 
             {/* Offerings */}
-            <section className={styles.offeringsSection}>
+            <section className={styles.offeringSection}>
                 <h3>Our core services</h3>
                 <ul>
                     <Cards />
-                    <li>Debt Insurance</li>
-                    <li>Debt Insurance</li>
-                    <li>Debt Insurance</li>
-                    <li>Debt Insurance</li>
-                    <li>Debt Insurance</li>
-                    <li>Debt Insurance</li>
-                    <li>Debt Insurance</li>
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                    <Cards />
+                    <Cards />
                 </ul>
             </section>
 
