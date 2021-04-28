@@ -1,25 +1,42 @@
 @import "./utils.scss";
 
-.cardOuter {
+.offeringCards {
     height: 16rem;
     aspect-ratio: 1/1;
+
+    @media only screen and (min-width: 996px) {
+        height: 20rem;
+    }
+}
+
+.clienteleCards {
+    height: 16rem;
+    aspect-ratio: 1/1;
+
+    @media only screen and (min-width: 996px) {
+        height: 20rem;
+    }
+}
+
+.cardOuter {
     border: 1px solid white;
 
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
     align-items: center;
     text-align: center;
+    justify-content: center;
 
     p {
         text-transform: uppercase;
         font-weight: $fw-bold;
     }
-
-    button {
-        margin-top: 2rem;
-    }
 }
 
 .pGroup {
     padding-top: 2rem;
+
+    @media only screen and (min-width: 996px) {
+        font-size: $fs-small;
+    }
 }

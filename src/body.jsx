@@ -25,7 +25,6 @@ export function Body() {
                     harum sit, libero magni omnis porro blanditiis.
                 </p>
             </section> */}
-
             {/*  */}
             {/* <section className={styles.section1}>
                 <div>
@@ -46,12 +45,11 @@ export function Body() {
                     </p>
                 </div>
             </section> */}
-
             {/* Offerings */}
             <section className={styles.offeringSection}>
                 <h3>Our core services</h3>
                 <ul>
-                    <Cards />
+                    <Cards className="offeringCards" />
                     <Cards />
                     <Cards />
                     <Cards />
@@ -66,6 +64,11 @@ export function Body() {
                 </ul>
             </section>
 
+            {/* Clientele
+            {/* <section>
+                <h3>clients who love to work with us</h3>
+                <ul></ul>
+            </section> */}
             {/* <section className={styles.section3}>
                 <h3>Get in touch with us</h3>
                 <div className={styles.btnContainer}>
