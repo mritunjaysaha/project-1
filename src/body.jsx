@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/body.module.scss";
 import { Cards } from "./cards";
-
+import { TeamPageCards } from "./teamPageCards";
 import { MUIButton } from "./atoms/button";
 
 export function Body() {
@@ -46,7 +46,7 @@ export function Body() {
                 </div>
             </section> */}
             {/* Offerings */}
-            <section className={styles.cardsSection}>
+            {/* <section className={styles.cardsSection}>
                 <h3>Our core services</h3>
                 <ul>
                     <Cards className="offeringCards" />
@@ -58,10 +58,10 @@ export function Body() {
                     <Cards className="offeringCards" />
                     <Cards className="offeringCards" />
                 </ul>
-            </section>
+            </section> */}
 
             {/* Clientele */}
-            <section className={styles.cardsSection}>
+            {/* <section className={styles.cardsSection}>
                 <h3>clients who love to work with us</h3>
                 <ul>
                     <Cards className="clienteleCards" />
@@ -73,7 +73,16 @@ export function Body() {
                     <Cards className="clienteleCards" />
                     <Cards className="clienteleCards" />
                 </ul>
+            </section> */}
+
+            {/* Team page */}
+            <section>
+                <h3>team page</h3>
+                <ul>
+                    <TeamPageCards />
+                </ul>
             </section>
+
             {/* <section className={styles.section3}>
                 <h3>Get in touch with us</h3>
                 <div className={styles.btnContainer}>
