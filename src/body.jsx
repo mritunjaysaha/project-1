@@ -46,29 +46,34 @@ export function Body() {
                 </div>
             </section> */}
             {/* Offerings */}
-            <section className={styles.offeringSection}>
+            <section className={styles.cardsSection}>
                 <h3>Our core services</h3>
                 <ul>
                     <Cards className="offeringCards" />
-                    <Cards />
-                    <Cards />
-                    <Cards />
-                    <Cards />
-                    <Cards />
-                    <Cards />
-                    <Cards />
-                    <Cards />
-                    <Cards />
-                    <Cards />
-                    <Cards />
+                    <Cards className="offeringCards" />
+                    <Cards className="offeringCards" />
+                    <Cards className="offeringCards" />
+                    <Cards className="offeringCards" />
+                    <Cards className="offeringCards" />
+                    <Cards className="offeringCards" />
+                    <Cards className="offeringCards" />
                 </ul>
             </section>
 
-            {/* Clientele
-            {/* <section>
+            {/* Clientele */}
+            <section className={styles.cardsSection}>
                 <h3>clients who love to work with us</h3>
-                <ul></ul>
-            </section> */}
+                <ul>
+                    <Cards className="clienteleCards" />
+                    <Cards className="clienteleCards" />
+                    <Cards className="clienteleCards" />
+                    <Cards className="clienteleCards" />
+                    <Cards className="clienteleCards" />
+                    <Cards className="clienteleCards" />
+                    <Cards className="clienteleCards" />
+                    <Cards className="clienteleCards" />
+                </ul>
+            </section>
             {/* <section className={styles.section3}>
                 <h3>Get in touch with us</h3>
                 <div className={styles.btnContainer}>
