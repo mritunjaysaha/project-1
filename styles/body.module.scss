@@ -124,3 +124,20 @@
         }
     }
 }
+
+.teamPageSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-size: $fs-desktop-large;
+        padding: 4rem;
+    }
+    ul {
+        width: 60rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+}

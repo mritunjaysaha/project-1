@@ -1,47 +1,58 @@
+@import "./utils.scss";
+
 .teamPageCards {
-    height: 30rem;
-    aspect-ratio: 2/3;
+    height: 40rem;
+    aspect-ratio: 1/2;
 
     border: 1px solid white;
 
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr 1fr 3fr;
+    grid-template-rows: 3fr 1fr 3fr;
     gap: 0px 0px;
     grid-template-areas:
         "picture"
         "name"
-        "designation"
         "linkedin";
 
-    padding: 2rem;
+    text-align: center;
 
     .placeholder {
         grid-area: picture;
     }
 
-    h5 {
+    .nameDesignation {
         grid-area: name;
-    }
+        background-color: red;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
 
-    p {
-        grid-area: designation;
+        h3 {
+            font-size: $fs-small;
+            font-weight: $fw-bold;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            font-size: $fs-small;
+            font-weight: $fw-regular;
+        }
     }
 
     .placeholder,
-    h5,
-    p,
+    .nameDesignation,
     a {
         place-self: center;
     }
 
     a {
         grid-area: linkedin;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: flex-end;
-        justify-content: center;
+        align-self: end;
+        place-self: end center;
+        background: red;
+        margin-bottom: 2rem;
     }
 }
 

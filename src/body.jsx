@@ -76,9 +76,10 @@ export function Body() {
             </section> */}
 
             {/* Team page */}
-            <section>
+            <section className={styles.teamPageSection}>
                 <h3>team page</h3>
                 <ul>
+                    <TeamPageCards />
                     <TeamPageCards />
                 </ul>
             </section>

@@ -4,8 +4,10 @@ export function TeamPageCards() {
     return (
         <li className={styles.teamPageCards}>
             <div className={styles.placeholder}></div>
-            <h5>name</h5>
-            <p>designation</p>
+            <div className={styles.nameDesignation}>
+                <h3>name</h3>
+                <p>designation</p>
+            </div>
             <a href="">in</a>
         </li>
     );
