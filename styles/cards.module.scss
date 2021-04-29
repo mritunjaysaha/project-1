@@ -10,7 +10,7 @@
 }
 
 .clienteleCards {
-    height: 16rem;
+    height: 12rem;
     aspect-ratio: 4/3;
 
     @media only screen and (min-width: 996px) {
@@ -27,6 +27,7 @@
     text-align: center;
     justify-content: center;
 
+    margin: 0 auto;
     p {
         text-transform: uppercase;
         font-weight: $fw-bold;
