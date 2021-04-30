@@ -3,6 +3,7 @@ import styles from "../styles/navbar.module.scss";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
 import { navbarList, companyName } from "./data";
+import { SimpleMenu } from "../src/menu";
 
 export function Navbar({ className }) {
     const [isScrolled, setScrolled] = useState(false);
@@ -67,9 +68,15 @@ export function Navbar({ className }) {
                     fontSize="inherit"
                     onClick={handleCloseButton}
                 />
-                {navbarList.map((link) => (
+                {/* {navbarList.map((link) => (
                     <li key={link.name}>{link.name}</li>
-                ))}
+                ))} */}
+
+                <li key="home">home</li>
+                <li key="solutions">solutions</li>
+                <li key="blog">blog</li>
+                <SimpleMenu />
+                <li key="newsletter">newsletter</li>
             </ul>
         </nav>
     );

@@ -46,7 +46,7 @@ export function Body() {
                 </div>
             </section> */}
             {/* Offerings */}
-            {/* <section className={styles.cardsSection}>
+            <section className={styles.cardsSection}>
                 <h3>Our core services</h3>
                 <ul>
                     <Cards className="offeringCards" />
@@ -58,10 +58,10 @@ export function Body() {
                     <Cards className="offeringCards" />
                     <Cards className="offeringCards" />
                 </ul>
-            </section> */}
+            </section>
 
             {/* Clientele */}
-            {/* <section className={styles.cardsSection}>
+            <section className={styles.cardsSection}>
                 <h3>clients who love to work with us</h3>
                 <ul>
                     <Cards className="clienteleCards" />
@@ -73,7 +73,7 @@ export function Body() {
                     <Cards className="clienteleCards" />
                     <Cards className="clienteleCards" />
                 </ul>
-            </section> */}
+            </section>
 
             {/* Team page */}
             <section className={styles.teamPageSection}>
@@ -82,6 +82,28 @@ export function Body() {
                     <TeamPageCards />
                     <TeamPageCards />
                 </ul>
+            </section>
+
+            {/* secret section */}
+            <section className={styles.secretSection}>
+                <div className={styles.secretDiv}>
+                    <p>
+                        Yes, we can keep <span>a secret</span>
+                        <br />
+                        That's why you probably haven't heard of us
+                    </p>
+                </div>
+                <div className={styles.trustDiv}>
+                    <p>
+                        trust is earned.
+                        <br />
+                        confidentiality is part of our dna.
+                        <br />
+                        we sign with our integrity.
+                        <br />
+                        period.
+                    </p>
+                </div>
             </section>
 
             {/* <section className={styles.section3}>
