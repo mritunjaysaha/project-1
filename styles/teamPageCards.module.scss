@@ -18,9 +18,12 @@
     text-align: center;
 
     margin-bottom: 4rem;
+    box-shadow: $box-shadow;
+    border-radius: 0.5rem;
 
     .placeholder {
         grid-area: picture;
+        background-color: #999;
     }
 
     .nameDesignation {
