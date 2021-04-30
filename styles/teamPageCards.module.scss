@@ -17,7 +17,7 @@
 
     text-align: center;
 
-    margin: 2rem 0;
+    margin-bottom: 4rem;
 
     .placeholder {
         grid-area: picture;
@@ -25,7 +25,6 @@
 
     .nameDesignation {
         grid-area: name;
-        background-color: red;
         display: flex;
         flex-direction: column;
         padding: 0;
@@ -53,7 +52,6 @@
         grid-area: linkedin;
         align-self: end;
         place-self: end center;
-        background: red;
         margin-bottom: 2rem;
     }
 }
