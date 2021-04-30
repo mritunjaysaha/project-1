@@ -1,7 +1,7 @@
 @import "./utils.scss";
 
 .summarySection {
-    display: flex;
+    display: none;
     background-color: #888;
 
     .summaryDiv1,
@@ -23,6 +23,10 @@
     }
 
     .summaryDiv2 {
+    }
+
+    @media only screen and (min-width: 996px) {
+        display: flex;
     }
 }
 

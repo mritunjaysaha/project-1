@@ -30,6 +30,7 @@ export function Navbar({ className }) {
     });
 
     const handleHamburgerMenu = () => {
+        console.log(true);
         setMenuClicked(true);
     };
     const handleCloseButton = () => {
@@ -52,7 +53,6 @@ export function Navbar({ className }) {
                     : `${styles.navbarHeaderAbsolute}`
             }
         >
-            {console.log(isScrolled)}
             <h1 className={styles.companyName}>{companyName.name}</h1>
 
             <MenuTwoToneIcon
