@@ -76,7 +76,6 @@ export function Navbar({ className }) {
                 <li key="solutions">solutions</li>
                 <li key="blog">blog</li>
                 <SimpleMenu />
-                <li key="newsletter">newsletter</li>
             </ul>
         </nav>
     );

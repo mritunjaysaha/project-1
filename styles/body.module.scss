@@ -1,48 +1,28 @@
 @import "./utils.scss";
 
-.section1 {
+.summarySection {
     display: flex;
-    flex-direction: column;
-    padding: 0 $padding-mobile 4rem;
+    background-color: #888;
 
-    h3 {
-        padding: 8rem 0;
+    .summaryDiv1,
+    .summaryDiv2 {
+        width: 50%;
         text-align: center;
-        font-size: $fs-large;
-        font-weight: $fw-regular;
-    }
-
-    p {
-        padding: 1.4rem 0;
-
-        font-size: $fs-small;
-        font-weight: $fw-regular;
-    }
-
-    @media only screen and (min-width: 996px) {
-        padding: 2rem 6rem;
-
-        h3 {
-            font-size: $fs-x-large;
+        padding: 8rem 16rem;
+        h1 {
+            font-size: $fs-desktop-large;
         }
 
-        section {
-            display: flex;
-            justify-content: space-between;
-
-            div,
-            p {
-                width: 350rem;
-            }
-
-            div {
-                margin-right: 8rem;
-            }
-
-            p {
-                padding: 0;
-            }
+        p {
+            font-size: $fs-medium;
         }
+    }
+
+    .summaryDiv1 {
+        border-right: 1px solid white;
+    }
+
+    .summaryDiv2 {
     }
 }
 

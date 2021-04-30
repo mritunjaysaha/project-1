@@ -28,12 +28,12 @@ export function Body() {
             </section> */}
 
             {/* summary of the venture */}
-            {/* <section className={styles.section1}>
-                <div>
+            <section className={styles.summarySection}>
+                <div className={styles.summaryDiv1}>
                     <h1>Who we are</h1>
                     <p>XXX capital is an independently owned</p>
                 </div>
-                <div>
+                <div className={styles.summaryDiv2}>
                     <h1>What we do</h1>
                     <p>
                         We've been studying trends about what drives decisions.
@@ -46,7 +46,8 @@ export function Body() {
                         stakes with the deal, the more exciting it is for us
                     </p>
                 </div>
-            </section> */}
+            </section>
+
             {/* Offerings */}
             <section className={styles.cardsSection}>
                 <h3>Our core services</h3>
@@ -98,12 +99,7 @@ export function Body() {
                 </div>
             </section>
 
-            {/* <section className={styles.section3}>
-                <h3>Get in touch with us</h3>
-                <div className={styles.btnContainer}>
-                    <MUIButton name="button" />
-                </div>
-            </section> */}
+            {/* newsletter */}
         </>
     );
 }
