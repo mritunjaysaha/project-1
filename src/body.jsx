@@ -3,6 +3,7 @@ import styles from "../styles/body.module.scss";
 import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
 import { MUIButton } from "./atoms/button";
+import { offeringsData, clienteleData } from "./data";
 
 export function Body() {
     return (
@@ -49,14 +50,9 @@ export function Body() {
             <section className={styles.cardsSection}>
                 <h3>Our core services</h3>
                 <ul>
-                    <Cards className="offeringCards" />
-                    <Cards className="offeringCards" />
-                    <Cards className="offeringCards" />
-                    <Cards className="offeringCards" />
-                    <Cards className="offeringCards" />
-                    <Cards className="offeringCards" />
-                    <Cards className="offeringCards" />
-                    <Cards className="offeringCards" />
+                    {offeringsData.map((data) => (
+                        <Cards className="offeringCards" text={data} />
+                    ))}
                 </ul>
             </section>
 
@@ -64,14 +60,17 @@ export function Body() {
             <section className={styles.cardsSection}>
                 <h3>clients who love to work with us</h3>
                 <ul>
+                    {/* <Cards className="clienteleCards" />
                     <Cards className="clienteleCards" />
                     <Cards className="clienteleCards" />
                     <Cards className="clienteleCards" />
                     <Cards className="clienteleCards" />
                     <Cards className="clienteleCards" />
                     <Cards className="clienteleCards" />
-                    <Cards className="clienteleCards" />
-                    <Cards className="clienteleCards" />
+                    <Cards className="clienteleCards" /> */}
+                    {clienteleData.map((data) => (
+                        <Cards className="clienteleCards" text={data} />
+                    ))}
                 </ul>
             </section>
 
