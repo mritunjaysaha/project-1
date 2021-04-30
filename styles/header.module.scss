@@ -9,7 +9,7 @@
 
     background: url(http://cdn2.editmysite.com/images/editor/theme-background/stock/GW-bridge.jpg);
     background-repeat: no-repeat;
-    background-size: 106%;
+    background-size: cover;
 
     h3 {
         position: relative;
@@ -31,18 +31,17 @@
     }
 
     @media only screen and (min-width: 996px) {
-        height: 100vh;
+        height: 150vh;
+        align-items: center;
+        justify-content: center;
+
         h3 {
             padding: 0;
-            padding-top: 36rem;
-            margin-left: 16rem;
+            // padding-top: 36rem;
+            // margin-left: 16rem;
             font-size: $fs-desktop-initial-page;
             width: 120rem;
             line-height: 10rem;
-        }
-        &::before {
-            transform: translate(-50%, -40%);
-            width: 100vw;
         }
     }
 }
