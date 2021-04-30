@@ -11,18 +11,20 @@ export function Navbar({ className }) {
     const [viewportWidth, setViewportWidth] = useState();
 
     useEffect(() => {
+        setViewportWidth(document.documentElement.clientWidth);
+
         const listener = document.addEventListener("scroll", (e) => {
             const scrolled = document.scrollingElement.scrollTop;
 
-            if (scrolled > 1200) {
+            if (
+                (viewportWidth < 996 && scrolled >= viewportWidth) ||
+                scrolled > 1200
+            ) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
             }
         });
-
-        setViewportWidth(document.documentElement.clientWidth);
-        console.log({ viewportWidth });
 
         return () => {
             document.removeEventListener("scroll", listener);
@@ -30,7 +32,6 @@ export function Navbar({ className }) {
     });
 
     const handleHamburgerMenu = () => {
-        console.log(true);
         setMenuClicked(true);
     };
     const handleCloseButton = () => {
@@ -40,10 +41,6 @@ export function Navbar({ className }) {
     return (
         <nav
             className={
-                // isScrolled
-                //     ? `${styles.navbarHeaderAbsolute} ${styles.changeBackgroundColor}`
-                //     : `${styles.navbarHeaderAbsolute}`
-
                 className
                     ? className.toLowerCase() == "navbar"
                         ? isScrolled

@@ -10,11 +10,12 @@
     background: url(http://cdn2.editmysite.com/images/editor/theme-background/stock/GW-bridge.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    justify-content: center;
 
     h3 {
         position: relative;
         font-size: $fs-xx-large;
-        padding: 16rem 0 0 2rem;
+        padding-left: 2rem;
         width: 100vw;
         color: $white;
     }
