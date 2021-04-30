@@ -4,6 +4,7 @@ import { MUIButton } from "./atoms/button";
 export function Cards({ text, className }) {
     return (
         <li
+            key={text[0]}
             className={`${
                 className.toLowerCase() === "offeringcards"
                     ? styles.offeringCards
