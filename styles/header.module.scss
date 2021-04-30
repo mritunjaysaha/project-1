@@ -16,6 +16,7 @@
         font-size: $fs-xx-large;
         padding: 16rem 0 0 2rem;
         width: 100vw;
+        color: $white;
     }
 
     @media only screen and (min-width: 640px) {
@@ -37,68 +38,9 @@
 
         h3 {
             padding: 0;
-            // padding-top: 36rem;
-            // margin-left: 16rem;
             font-size: $fs-desktop-initial-page;
             width: 120rem;
             line-height: 10rem;
-        }
-    }
-}
-
-.header {
-    height: 28rem;
-
-    font-size: $fs-medium;
-    font-weight: 700;
-
-    // padding: 4rem $padding-mobile 0;
-
-    // &::before {
-    //     content: "";
-    //     pointer-events: none;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     transform: translate(-42%, -42%);
-
-    //     background: radial-gradient(
-    //         circle,
-    //         rgba(43, 46, 74, 0.7) 0%,
-    //         rgba(43, 46, 74, 0.0001) 70%
-    //     );
-
-    //     width: 110vw;
-    //     padding-top: 100%;
-    //     z-index: 20;
-    // }
-
-    h3 {
-        z-index: 100 !important;
-    }
-
-    @media only screen and (min-width: 640px) {
-        height: 80rem;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-        h3 {
-            font-size: 4.8rem;
-            width: 40rem;
-        }
-    }
-
-    @media only screen and (min-width: 996px) {
-        text-transform: uppercase;
-
-        height: 100rem;
-
-        padding: 0 6rem;
-
-        &::before {
-            transform: translate(-50%, -40%);
-            width: 100vw;
         }
     }
 }

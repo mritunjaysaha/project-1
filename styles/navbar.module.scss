@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     padding: 1rem 2rem 0;
+    color: $white;
 
     ul {
         li {
@@ -20,32 +21,24 @@
     }
 }
 
+.navbar {
+    position: sticky;
+}
+
+.showNavbar {
+    display: flex;
+}
+
+.hideNavbar {
+    display: none;
+}
+
 .companyName {
     font-size: $fs-medium;
 }
 
-.navbarHeaderAbsolute,
-.navbar {
+.navbarHeaderAbsolute {
     text-transform: uppercase;
-}
-
-.navbar {
-    position: sticky;
-    top: 0;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: $padding-mobile;
-    font-size: $fs-small;
-
-    text-transform: capitalize;
-
-    z-index: 100;
-    @media only screen and (min-width: 996px) {
-        padding: 2rem 6rem;
-    }
 }
 
 .navbarMenu {

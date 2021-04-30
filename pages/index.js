@@ -11,9 +11,8 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {/* <Navbar className="navbarHeaderAbsolute" /> */}
-
-            {/* <Header /> */}
+            <Header />
+            <Navbar className="navbar" />
 
             <Body />
         </div>

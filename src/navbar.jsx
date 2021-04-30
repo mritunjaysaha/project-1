@@ -14,7 +14,7 @@ export function Navbar({ className }) {
         const listener = document.addEventListener("scroll", (e) => {
             const scrolled = document.scrollingElement.scrollTop;
 
-            if (scrolled > 300) {
+            if (scrolled > 1200) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
@@ -38,14 +38,21 @@ export function Navbar({ className }) {
 
     return (
         <nav
-            // className={
-            //     isScrolled
-            //         ? `${styles.className} ${styles.changeBackgroundColor}`
-            //         : `${styles.className}`
-            // }
+            className={
+                // isScrolled
+                //     ? `${styles.navbarHeaderAbsolute} ${styles.changeBackgroundColor}`
+                //     : `${styles.navbarHeaderAbsolute}`
 
-            className={styles.navbarHeaderAbsolute}
+                className
+                    ? className.toLowerCase() == "navbar"
+                        ? isScrolled
+                            ? `${styles.navbarHeaderAbsolute} ${styles.changeBackgroundColor} ${styles.navbar} ${styles.showNavbar}`
+                            : `${styles.hideNavbar}`
+                        : ``
+                    : `${styles.navbarHeaderAbsolute}`
+            }
         >
+            {console.log(isScrolled)}
             <h1 className={styles.companyName}>{companyName.name}</h1>
 
             <MenuTwoToneIcon
