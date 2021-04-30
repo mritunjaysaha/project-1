@@ -26,3 +26,18 @@ export const clienteleData = [
     ["single/", "multi family", "offices"],
     ["hnwi/", "institutional", "asset holders"],
 ];
+
+export const teamData = [
+    {
+        name: "Shreyas Naik",
+        designation: "Director of Capital Markets",
+        imgSrc: "",
+        linkedin: "",
+    },
+    {
+        name: "Samrat Dhar",
+        designation: "Marketing Director",
+        imgSrc: "",
+        linkedin: "",
+    },
+];

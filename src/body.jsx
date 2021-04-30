@@ -26,7 +26,8 @@ export function Body() {
                     harum sit, libero magni omnis porro blanditiis.
                 </p>
             </section> */}
-            {/*  */}
+
+            {/* summary of the venture */}
             {/* <section className={styles.section1}>
                 <div>
                     <h1>Who we are</h1>
@@ -60,14 +61,6 @@ export function Body() {
             <section className={styles.cardsSection}>
                 <h3>clients who love to work with us</h3>
                 <ul>
-                    {/* <Cards className="clienteleCards" />
-                    <Cards className="clienteleCards" />
-                    <Cards className="clienteleCards" />
-                    <Cards className="clienteleCards" />
-                    <Cards className="clienteleCards" />
-                    <Cards className="clienteleCards" />
-                    <Cards className="clienteleCards" />
-                    <Cards className="clienteleCards" /> */}
                     {clienteleData.map((data) => (
                         <Cards className="clienteleCards" text={data} />
                     ))}
