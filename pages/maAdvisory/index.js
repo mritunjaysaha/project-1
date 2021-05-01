@@ -1,16 +1,8 @@
 import { maAdvisory } from "../../data";
+import { ServicePage } from "../../src/servicePages";
 
 export default function MaAdvisory() {
-    return (
-        <section>
-            <article>
-                <h3>m&amp;a advisory</h3>
-                <article>
-                    {maAdvisory.map((data) => {
-                        return <p>{data}</p>;
-                    })}
-                </article>
-            </article>
-        </section>
-    );
+    const { name, data, img } = maAdvisory;
+
+    return <ServicePage name={name} data={data} imgSrc={img} />;
 }

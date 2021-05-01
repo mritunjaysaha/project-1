@@ -43,6 +43,7 @@ export const teamData = [
 ];
 
 export const equityCapitalMarketsData = {
+    name: "equity capital markets",
     data: [
         [
             `Our equity capital markets practice is focused on working with growth businesses. `,
@@ -51,26 +52,41 @@ export const equityCapitalMarketsData = {
             `Most commonly, we are hired to support founder-controlled businesses in their first institutional capital raise, management teams within large enterprises who are seeking to acquire their operating division, and companies restructuring their capital stack.`,
         ],
     ],
-    img: "",
+    img:
+        "https://intersectioncapital.com/wp-content/uploads/2019/03/building.jpg",
 };
 
-export const debtCapitalMarketsData = [
-    [`Today, there is over $3 trillion committed to credit opportunities.`],
-    [
-        `The overabundance of capital has led to historically low capital cost and more competition amongst lenders. We maintain an extensive network with lenders of various all segments of the credit stack.`,
+export const debtCapitalMarketsData = {
+    name: "debt capital markets",
+    data: [
+        [`Today, there is over $3 trillion committed to credit opportunities.`],
+        [
+            `The overabundance of capital has led to historically low capital cost and more competition amongst lenders. We maintain an extensive network with lenders of various all segments of the credit stack.`,
+        ],
+        [
+            `Most commonly, we are hired to support companies seeking to make acquisitions, recapitalize their balance sheet, or in support of de novo growth.`,
+        ],
     ],
-    [
-        `Most commonly, we are hired to support companies seeking to make acquisitions, recapitalize their balance sheet, or in support of de novo growth.`,
-    ],
-];
+    img:
+        "https://intersectioncapital.com/wp-content/uploads/2019/03/debt-capital.jpg",
+};
 
-export const maAdvisory = [
-    [
-        `The specialized nature of our process ensures positive outcomes with minimal disruption and market awareness. It’s typical that our sell-side mandates are completed with less than 10 prospective parties receiving any signal that the asset is available. On the buy-side, we are able to direct the conversation with prospective targets to ensure that all parties are aligned while tapping our capital markets advisory team to ensure capital availability.`,
+export const maAdvisory = {
+    name: "m&a advisory",
+    data: [
+        [
+            `The specialized nature of our process ensures positive outcomes with minimal disruption and market awareness. It’s typical that our sell-side mandates are completed with less than 10 prospective parties receiving any signal that the asset is available. On the buy-side, we are able to direct the conversation with prospective targets to ensure that all parties are aligned while tapping our capital markets advisory team to ensure capital availability.`,
+        ],
+        [
+            `Most commonly, we are hired by companies needing to run a silent auction to strategic acquirers, founder-owned businesses looking to transition the business while ensuring their legacy remains, and companies which have experienced a previously failed process.`,
+        ],
     ],
-    [
-        `Most commonly, we are hired by companies needing to run a silent auction to strategic acquirers, founder-owned businesses looking to transition the business while ensuring their legacy remains, and companies which have experienced a previously failed process.`,
-    ],
-];
+    img:
+        "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
+};
 
-export const directInvestments = [[`coming soon`]];
+export const directInvestments = {
+    name: "direct investments",
+    data: [[`coming soon`]],
+    img: "",
+};

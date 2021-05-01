@@ -1,16 +1,8 @@
 import { debtCapitalMarketsData } from "../../data";
+import { ServicePage } from "../../src/servicePages";
 
 export default function DebtCapitalMarkets() {
-    return (
-        <section>
-            <article>
-                <h3>debt capital market</h3>
-                <article>
-                    {debtCapitalMarketsData.map((data) => {
-                        return <p>{data}</p>;
-                    })}
-                </article>
-            </article>
-        </section>
-    );
+    const { name, data, img } = debtCapitalMarketsData;
+
+    return <ServicePage name={name} data={data} imgSrc={img} />;
 }
