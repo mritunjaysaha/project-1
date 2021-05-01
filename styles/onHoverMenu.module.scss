@@ -1,28 +1,37 @@
 @import "./utils.scss";
 
+.servicesLi {
+    z-index: 100;
+}
+
 .onHoverMenu {
     position: absolute;
+    top: 0;
     left: 15rem;
+    display: none; //flex
+    padding-top: 2rem;
 
-    background-color: white;
-    color: black;
+    ul {
+        background-color: white;
+        color: black;
 
-    width: 24rem;
-    height: max-content;
+        width: 24rem;
+        height: max-content;
 
-    text-transform: capitalize;
+        text-transform: capitalize;
 
-    display: none;
-    flex-direction: column;
+        display: flex;
+        flex-direction: column;
 
-    padding: 1rem 2rem;
-    margin-top: 2rem;
+        padding: 1rem 2rem;
+        margin-top: 2rem;
 
-    border-radius: 0.5rem;
+        border-radius: 0.5rem;
 
-    li {
-        cursor: pointer;
-        padding: 1rem 0;
-        font-size: $fs-medium !important;
+        li {
+            cursor: pointer;
+            padding: 1rem 0;
+            font-size: $fs-medium !important;
+        }
     }
 }

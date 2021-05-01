@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "../styles/onHoverMenu.module.scss";
 
 export function OnHoverMenu() {
@@ -8,8 +9,6 @@ export function OnHoverMenu() {
         if (!menuRef) {
             menuRef = document.querySelector(menuID);
         }
-
-        console.log({ menuRef });
 
         menuRef.style.display = "flex";
     }
@@ -28,19 +27,22 @@ export function OnHoverMenu() {
                 aria-controls="simple-menu"
                 aria-haspopup="true"
                 onClick={handleClick}
+                className={styles.servicesLi}
             >
                 services
             </li>
-            <ul
+            <div
                 id="onHoverMenu"
                 className={styles.onHoverMenu}
                 onMouseLeave={handleMouseLeave}
             >
-                <li>equity capital markets</li>
-                <li>debt capital markets</li>
-                <li>m&amp;a advisory</li>
-                <li>direct investments</li>
-            </ul>
+                <ul>
+                    <li>equity capital markets</li>
+                    <li>debt capital markets</li>
+                    <li>m&amp;a advisory</li>
+                    <li>direct investments</li>
+                </ul>
+            </div>
         </div>
     );
 }
