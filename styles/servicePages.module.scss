@@ -28,16 +28,41 @@
         z-index: 20;
     }
 
-    z-index: 0;
-
     img {
         height: 60rem;
         aspect-ratio: 3/4;
     }
 
     .contentArticle {
-        padding-right: 8rem;
+        padding-right: 12rem;
 
         z-index: 100 !important;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: max-content;
+
+        h3 {
+            font-size: $fs-desktop-xx-large;
+            font-weight: $fw-bold;
+            text-transform: uppercase;
+            width: 40rem;
+        }
+
+        article {
+            font-size: $fs-medium;
+            margin-top: 4rem;
+            p {
+                margin-bottom: 2rem;
+            }
+        }
     }
+}
+
+.horizontalBorder {
+    background-color: $white;
+    height: 0.4rem;
+    width: 10rem;
+    margin-top: 4rem;
 }

@@ -7,7 +7,7 @@
 .onHoverMenu {
     position: absolute;
     top: 0;
-    left: 15rem;
+    right: 10%;
     display: none; //flex
     padding-top: 2rem;
 
@@ -15,7 +15,7 @@
         background-color: white;
         color: black;
 
-        width: 24rem;
+        width: 28rem;
         height: max-content;
 
         text-transform: capitalize;

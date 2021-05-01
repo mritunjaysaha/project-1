@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styles from "../styles/onHoverMenu.module.scss";
 
 export function OnHoverMenu() {
@@ -26,7 +25,7 @@ export function OnHoverMenu() {
             <li
                 aria-controls="simple-menu"
                 aria-haspopup="true"
-                onClick={handleClick}
+                onMouseEnter={handleClick}
                 className={styles.servicesLi}
             >
                 services

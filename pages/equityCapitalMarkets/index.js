@@ -6,6 +6,7 @@ export default function EquityCapitalMarkets() {
         <section className={styles.serviceSection}>
             <article className={styles.contentArticle}>
                 <h3>equity capital market</h3>
+                <div className={styles.horizontalBorder}></div>
                 <article>
                     {equityCapitalMarketsData.data.map((data) => {
                         return <p>{data}</p>;
