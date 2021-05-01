@@ -1,4 +1,4 @@
-import { equityCapitalMarketsData } from "../../src/data";
+import { equityCapitalMarketsData } from "../../data";
 
 export default function EquityCapitalMarkets() {
     return (
@@ -6,7 +6,7 @@ export default function EquityCapitalMarkets() {
             <article>
                 <h3>equity capital market</h3>
                 <article>
-                    {equityCapitalMarketsData.map((data) => {
+                    {equityCapitalMarketsData.data.map((data) => {
                         return <p>{data}</p>;
                     })}
                 </article>

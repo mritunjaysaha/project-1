@@ -1,4 +1,4 @@
-import { maAdvisory } from "../../src/data";
+import { maAdvisory } from "../../data";
 
 export default function MaAdvisory() {
     return (

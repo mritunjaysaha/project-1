@@ -42,14 +42,17 @@ export const teamData = [
     },
 ];
 
-export const equityCapitalMarketsData = [
-    [
-        `Our equity capital markets practice is focused on working with growth businesses. `,
+export const equityCapitalMarketsData = {
+    data: [
+        [
+            `Our equity capital markets practice is focused on working with growth businesses. `,
+        ],
+        [
+            `Most commonly, we are hired to support founder-controlled businesses in their first institutional capital raise, management teams within large enterprises who are seeking to acquire their operating division, and companies restructuring their capital stack.`,
+        ],
     ],
-    [
-        `Most commonly, we are hired to support founder-controlled businesses in their first institutional capital raise, management teams within large enterprises who are seeking to acquire their operating division, and companies restructuring their capital stack.`,
-    ],
-];
+    img: "",
+};
 
 export const debtCapitalMarketsData = [
     [`Today, there is over $3 trillion committed to credit opportunities.`],

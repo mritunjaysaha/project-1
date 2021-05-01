@@ -1,4 +1,4 @@
-import { debtCapitalMarketsData } from "../../src/data";
+import { debtCapitalMarketsData } from "../../data";
 
 export default function DebtCapitalMarkets() {
     return (

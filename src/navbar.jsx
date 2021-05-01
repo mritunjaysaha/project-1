@@ -2,7 +2,7 @@ import { useState, useEffect, createRef } from "react";
 import styles from "../styles/navbar.module.scss";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
-import { navbarList, companyName } from "./data";
+import { navbarList, companyName } from "../data";
 import { OnHoverMenu } from "../src/menu";
 
 export function Navbar({ className }) {

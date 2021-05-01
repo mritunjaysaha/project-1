@@ -1,4 +1,4 @@
-import { directInvestments } from "../../src/data";
+import { directInvestments } from "../../data";
 
 export default function DirectInvestments() {
     return (

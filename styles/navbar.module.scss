@@ -10,7 +10,10 @@
     justify-content: space-between;
     padding: 2rem;
     color: $white;
+    color: black;
+    background-color: yellow;
     z-index: 100;
+
     ul {
         li {
             font-size: $fs-small;

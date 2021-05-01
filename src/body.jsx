@@ -3,7 +3,7 @@ import styles from "../styles/body.module.scss";
 import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
 import { MUIButton } from "./atoms/button";
-import { offeringsData, clienteleData } from "./data";
+import { offeringsData, clienteleData } from "../data";
 
 export function Body() {
     return (
