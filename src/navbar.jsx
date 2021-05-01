@@ -3,7 +3,7 @@ import styles from "../styles/navbar.module.scss";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
 import { navbarList, companyName } from "./data";
-import { SimpleMenu } from "../src/menu";
+import { OnHoverMenu } from "../src/menu";
 
 export function Navbar({ className }) {
     const [isScrolled, setScrolled] = useState(false);
@@ -78,8 +78,8 @@ export function Navbar({ className }) {
 
                 <li key="home">home</li>
                 <li key="solutions">solutions</li>
+                <OnHoverMenu />
                 <li key="blog">blog</li>
-                <SimpleMenu />
             </ul>
         </nav>
     );

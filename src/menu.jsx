@@ -1,17 +1,26 @@
-import { useState } from "react";
-import Menu from "@material-ui/core/Menu";
-import MenuItem from "@material-ui/core/MenuItem";
+import styles from "../styles/onHoverMenu.module.scss";
 
-export function SimpleMenu() {
-    const [anchorEl, setAnchorEl] = useState(null);
+export function OnHoverMenu() {
+    let menuRef = null;
+    const menuID = "#onHoverMenu";
 
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
+    function handleClick() {
+        if (!menuRef) {
+            menuRef = document.querySelector(menuID);
+        }
 
-    const handleClose = () => {
-        setAnchorEl(null);
-    };
+        console.log({ menuRef });
+
+        menuRef.style.display = "flex";
+    }
+
+    function handleMouseLeave() {
+        if (!menuRef) {
+            menuRef = document.querySelector(menuID);
+        }
+
+        menuRef.style.display = "none";
+    }
 
     return (
         <div>
@@ -22,20 +31,16 @@ export function SimpleMenu() {
             >
                 services
             </li>
-            <Menu
-                id="simple-menu"
-                anchorEl={anchorEl}
-                keepMounted
-                open={Boolean(anchorEl)}
-                onClose={handleClose}
+            <ul
+                id="onHoverMenu"
+                className={styles.onHoverMenu}
+                onMouseLeave={handleMouseLeave}
             >
-                <MenuItem onClick={handleClose}>
-                    Equity Capital Markets
-                </MenuItem>
-                <MenuItem onClick={handleClose}>Debt Capital Markets</MenuItem>
-                <MenuItem onClick={handleClose}>M&amp;A Advisory</MenuItem>
-                <MenuItem onClick={handleClose}>Direct Investments</MenuItem>
-            </Menu>
+                <li>equity capital markets</li>
+                <li>debt capital markets</li>
+                <li>m&amp;a advisory</li>
+                <li>direct investments</li>
+            </ul>
         </div>
     );
 }

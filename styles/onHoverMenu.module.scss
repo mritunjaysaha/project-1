@@ -1,0 +1,28 @@
+@import "./utils.scss";
+
+.onHoverMenu {
+    position: absolute;
+    left: 15rem;
+
+    background-color: white;
+    color: black;
+
+    width: 24rem;
+    height: max-content;
+
+    text-transform: capitalize;
+
+    display: none;
+    flex-direction: column;
+
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+
+    border-radius: 0.5rem;
+
+    li {
+        cursor: pointer;
+        padding: 1rem 0;
+        font-size: $fs-medium !important;
+    }
+}
