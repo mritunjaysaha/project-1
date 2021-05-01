@@ -1,0 +1,43 @@
+@import "./utils.scss";
+
+.serviceSection {
+    padding: 12rem 16rem 0;
+
+    background-color: hsl(240, 50%, 8%);
+    color: $white;
+    display: flex;
+
+    height: 100vh;
+
+    &::before {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-42%, -42%);
+
+        background: radial-gradient(
+            circle,
+            rgba(43, 46, 74, 0.7) 0%,
+            rgba(43, 46, 74, 0.0001) 70%
+        );
+
+        width: 100vw;
+        padding-top: 80%;
+        z-index: 20;
+    }
+
+    z-index: 0;
+
+    img {
+        height: 60rem;
+        aspect-ratio: 3/4;
+    }
+
+    .contentArticle {
+        padding-right: 8rem;
+
+        z-index: 100 !important;
+    }
+}
