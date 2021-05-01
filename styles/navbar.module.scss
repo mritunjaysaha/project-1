@@ -12,6 +12,11 @@
     color: $white;
     z-index: 100;
 
+    h1 {
+        padding: 1rem 0;
+        font-size: $fs-medium;
+    }
+
     ul {
         li {
             font-size: $fs-small;
