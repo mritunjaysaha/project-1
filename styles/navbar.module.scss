@@ -17,10 +17,18 @@
             cursor: pointer;
             z-index: 100;
             padding: 1rem 2rem;
+            margin-left: 1rem !important;
+            // border: 1px solid black;
+            &:first-of-type {
+                margin-left: 0;
+            }
         }
     }
     @media only screen and (min-width: 996px) {
         padding: 2rem 6rem;
+        ul {
+            width: 40%;
+        }
     }
 }
 
