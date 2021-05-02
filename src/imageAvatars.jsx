@@ -14,8 +14,9 @@ const useStyles = makeStyles((theme) => ({
         height: theme.spacing(3),
     },
     large: {
-        width: theme.spacing(10),
-        height: theme.spacing(10),
+        width: theme.spacing(16),
+        height: theme.spacing(16),
+        margin: "auto",
     },
 }));
 
@@ -23,7 +24,7 @@ export function ImageAvatars({ name, img }) {
     const classes = useStyles();
 
     return (
-        <div className={classes.root} style={{ margin: "auto" }}>
+        <div className={classes.root}>
             <Avatar alt={name} src={img} className={classes.large} />
         </div>
     );
