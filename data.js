@@ -90,3 +90,27 @@ export const directInvestments = {
     data: [[`coming soon`]],
     img: "",
 };
+
+export const navigationData = {
+    company: { name: "xxxCapital", link: "/" },
+    home: { name: "home", link: "/" },
+    solutions: { name: "solutions", link: "/solutions" },
+    services: [
+        {
+            name: "equity capital markets",
+            link: "/equityCapitalMarkets",
+        },
+        {
+            name: "debt capital markets",
+            link: "/debtCapitalMarkets",
+        },
+        {
+            name: "m&a advisory",
+            link: "/maAdvisory",
+        },
+        {
+            name: "direct investments",
+            link: "/directInvestments",
+        },
+    ],
+};

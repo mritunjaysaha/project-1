@@ -1,6 +1,8 @@
 import styles from "../styles/onHoverMenu.module.scss";
+import { Anchor } from "../src/atoms/anchor";
 
-export function OnHoverMenu() {
+export function OnHoverMenu({ data }) {
+    const { equityCapitalMarkets } = data;
     let menuRef = null;
     const menuID = "#onHoverMenu";
 
@@ -36,10 +38,13 @@ export function OnHoverMenu() {
                 onMouseLeave={handleMouseLeave}
             >
                 <ul>
-                    <li>equity capital markets</li>
-                    <li>debt capital markets</li>
-                    <li>m&amp;a advisory</li>
-                    <li>direct investments</li>
+                    {data.map((data) => {
+                        return (
+                            <li>
+                                <Anchor name={data.name} href={data.link} />
+                            </li>
+                        );
+                    })}
                 </ul>
             </div>
         </div>

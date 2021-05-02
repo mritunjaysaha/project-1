@@ -2,8 +2,9 @@ import { useState, useEffect, createRef } from "react";
 import styles from "../styles/navbar.module.scss";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
-import { navbarList, companyName } from "../data";
 import { OnHoverMenu } from "../src/menu";
+import { Anchor } from "../src/atoms/anchor";
+import { companyName, navigationData } from "../data";
 
 export function Navbar({ className }) {
     const [isScrolled, setScrolled] = useState(false);
@@ -38,6 +39,8 @@ export function Navbar({ className }) {
         setMenuClicked(false);
     };
 
+    const { company, home, solutions, services } = navigationData;
+
     return (
         <nav
             className={
@@ -50,7 +53,9 @@ export function Navbar({ className }) {
                     : `${styles.navbarHeaderAbsolute}`
             }
         >
-            <h1 className={styles.companyName}>{companyName.name}</h1>
+            <h1>
+                <Anchor name={company.name} href={company.link} />
+            </h1>
 
             <MenuTwoToneIcon
                 fontSize="large"
@@ -72,14 +77,15 @@ export function Navbar({ className }) {
                     fontSize="inherit"
                     onClick={handleCloseButton}
                 />
-                {/* {navbarList.map((link) => (
-                    <li key={link.name}>{link.name}</li>
-                ))} */}
 
-                <li key="home">home</li>
-                <li key="solutions">solutions</li>
-                <OnHoverMenu />
-                <li key="blog">blog</li>
+                <li key={home.name}>
+                    <Anchor name={home.name} href={home.link} />
+                </li>
+                <li key={solutions.name}>
+                    <Anchor name={solutions.name} href={solutions.link} />
+                </li>
+                <OnHoverMenu data={services} />
+                {/* <li key="blog">blog</li> */}
             </ul>
         </nav>
     );
