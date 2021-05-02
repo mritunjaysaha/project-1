@@ -81,10 +81,10 @@ export function Navbar({ className }) {
                 <li key={home.name}>
                     <Anchor name={home.name} href={home.link} />
                 </li>
+                <OnHoverMenu data={services} />
                 <li key={solutions.name}>
                     <Anchor name={solutions.name} href={solutions.link} />
                 </li>
-                <OnHoverMenu data={services} />
                 {/* <li key="blog">blog</li> */}
             </ul>
         </nav>
