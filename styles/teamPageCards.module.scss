@@ -17,6 +17,12 @@
     padding: 2rem;
     justify-content: space-between;
 
+    transition: $card-transition;
+
+    &:hover {
+        box-shadow: $box-shadow-hover;
+    }
+
     .avatarName {
         margin: 0 auto;
 

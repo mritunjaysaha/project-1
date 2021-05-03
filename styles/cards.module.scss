@@ -30,6 +30,12 @@
     box-shadow: $box-shadow;
     border-radius: 0.5rem;
 
+    transition: $card-transition;
+
+    &:hover {
+        box-shadow: $box-shadow-hover;
+    }
+
     p {
         text-transform: uppercase;
         font-weight: $fw-bold;
