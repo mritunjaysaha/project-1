@@ -224,3 +224,23 @@
 .spanColor {
     color: yellow;
 }
+
+.backgroundGradient1 {
+    background: #9cecfb;
+    background: linear-gradient(to right, #0052d4, #65c7f7, #9cecfb);
+}
+
+.backgroundGradient2 {
+    background-color: #ff3cac;
+    background-image: linear-gradient(
+        225deg,
+        #ff3cac 0%,
+        #784ba0 50%,
+        #2b86c5 100%
+    );
+}
+
+.backgroundGradient3 {
+    background: #c2e59c;
+    background: linear-gradient(to right, #64b3f4, #c2e59c);
+}

@@ -50,7 +50,7 @@ export function Body() {
 
             {/* Offerings */}
             <section className={styles.cardsSection}>
-                <h3>
+                <h3 className={styles.backgroundGradient1}>
                     Our core <span className={styles.spanColor}>services</span>
                 </h3>
                 <ul>
@@ -62,7 +62,7 @@ export function Body() {
 
             {/* Clientele */}
             <section className={styles.cardsSection}>
-                <h3>
+                <h3 className={styles.backgroundGradient2}>
                     clients
                     <span>
                         who&nbsp;<span className={styles.spanColor}>love</span>
@@ -79,7 +79,7 @@ export function Body() {
 
             {/* Team page */}
             <section className={styles.teamPageSection}>
-                <h3>team page</h3>
+                <h3 className={styles.backgroundGradient3}>team page</h3>
                 <ul>
                     <TeamPageCards />
                     <TeamPageCards />
