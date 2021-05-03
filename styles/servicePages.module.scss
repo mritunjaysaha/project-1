@@ -1,13 +1,13 @@
 @import "./utils.scss";
 
 .serviceSection {
-    padding: 12rem 16rem 0;
-
     background-color: $blueBGColor;
     color: $white;
     display: flex;
+    flex-direction: column;
+    width: 100vw;
 
-    height: 100vh;
+    padding: 12rem 0 4rem 4rem;
 
     &::before {
         content: "";
@@ -29,14 +29,14 @@
     }
 
     img {
-        height: 60rem;
+        // height: 60rem;
+        width: 80vw;
         aspect-ratio: 3/4;
     }
 
     .contentArticle {
-        padding-right: 12rem;
-
         z-index: 100 !important;
+        width: 80vw;
 
         display: flex;
         flex-direction: column;
@@ -44,17 +44,46 @@
         height: max-content;
 
         h3 {
-            font-size: $fs-desktop-xx-large;
+            font-size: $fs-large;
+
             font-weight: $fw-bold;
             text-transform: uppercase;
-            width: 40rem;
+            width: 80vw;
         }
 
         article {
-            font-size: $fs-medium;
-            margin-top: 4rem;
+            font-size: $fs-small;
+            margin: 4rem 0;
             p {
                 margin-bottom: 2rem;
+            }
+        }
+    }
+
+    @media only screen and (min-width: 996px) {
+        padding: 12rem 16rem 0;
+        height: 100vh;
+        flex-direction: row;
+
+        img {
+            height: 60rem;
+            width: auto;
+            aspect-ratio: 3/4;
+        }
+
+        .contentArticle {
+            padding-right: 12rem;
+            width: 50vw;
+
+            h3 {
+                font-size: $fs-desktop-xx-large;
+                width: 60rem;
+            }
+
+            article {
+                margin: 0;
+                margin-top: 4rem;
+                font-size: $fs-medium;
             }
         }
     }
