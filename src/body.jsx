@@ -80,11 +80,10 @@ export function Body() {
             {/* secret section */}
             <section className={styles.secretSection}>
                 <div className={styles.secretDiv}>
-                    <p>
+                    <h3>
                         Yes, we can keep <span>a secret</span>
-                        <br />
-                        That's why you probably haven't heard of us
-                    </p>
+                    </h3>
+                    <p>That's why you probably haven't heard of us</p>
                 </div>
                 <div className={styles.trustDiv}>
                     <p>

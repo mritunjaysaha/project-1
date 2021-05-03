@@ -5,11 +5,13 @@
 }
 
 .onHoverMenu {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 10%;
+    right: 8%;
     display: none; //flex
-    padding-top: 2rem;
+    padding-top: 8rem;
+
+    z-index: 1000;
 
     ul {
         background-color: white;
@@ -27,6 +29,7 @@
         margin-top: 2rem;
 
         border-radius: 0.5rem;
+        box-shadow: $box-shadow;
 
         li {
             cursor: pointer;
