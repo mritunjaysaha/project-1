@@ -50,7 +50,9 @@ export function Body() {
 
             {/* Offerings */}
             <section className={styles.cardsSection}>
-                <h3>Our core services</h3>
+                <h3>
+                    Our core <span className={styles.spanColor}>services</span>
+                </h3>
                 <ul>
                     {offeringsData.map((data) => (
                         <Cards className="offeringCards" text={data} />
@@ -60,7 +62,14 @@ export function Body() {
 
             {/* Clientele */}
             <section className={styles.cardsSection}>
-                <h3>clients who love to work with us</h3>
+                <h3>
+                    clients
+                    <span>
+                        who&nbsp;<span className={styles.spanColor}>love</span>
+                        &nbsp;to work
+                    </span>
+                    <span>with us</span>
+                </h3>
                 <ul>
                     {clienteleData.map((data) => (
                         <Cards className="clienteleCards" text={data} />

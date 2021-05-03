@@ -1,8 +1,5 @@
 @import "./utils.scss";
 
-// desktop margin
-$marginTopBottom: 12rem;
-
 .summarySection {
     display: none;
     background-color: #000000;
@@ -83,6 +80,15 @@ $marginTopBottom: 12rem;
     h3 {
         font-size: $fs-large;
         margin: 4rem 0;
+        line-height: 3rem;
+        letter-spacing: 0.5rem;
+
+        span {
+            display: flex;
+            justify-content: center;
+            font-weight: bolder !important;
+            letter-spacing: normal;
+        }
     }
 
     ul {
@@ -124,9 +130,15 @@ $marginTopBottom: 12rem;
     flex-direction: column;
     align-items: center;
 
+    margin: $marginTopBottom 0;
+
     h3 {
         font-size: $fs-medium;
-        padding: 4rem;
+        background-color: red;
+        text-transform: uppercase;
+
+        width: 100%;
+        text-align: center;
     }
 
     ul {
@@ -134,6 +146,8 @@ $marginTopBottom: 12rem;
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
+
+        margin-top: 4rem;
     }
 
     @media only screen and (min-width: 996px) {
@@ -205,4 +219,8 @@ $marginTopBottom: 12rem;
             font-weight: $fw-bold;
         }
     }
+}
+
+.spanColor {
+    color: yellow;
 }
