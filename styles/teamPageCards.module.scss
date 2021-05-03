@@ -17,6 +17,16 @@
     padding: 2rem;
     justify-content: space-between;
 
+    .avatarName {
+        margin: 0 auto;
+
+        div {
+            &:first-of-type {
+                margin: 0 auto;
+            }
+        }
+    }
+
     .nameDesignation {
         display: flex;
         flex-direction: column;
@@ -39,13 +49,6 @@
         position: relative;
         bottom: 0;
         height: max-content;
+        opacity: 0.6;
     }
-}
-
-.placeholder {
-    width: 10rem;
-    aspect-ratio: 1/1;
-
-    background: white;
-    border-radius: 50%;
 }
