@@ -1,5 +1,8 @@
 @import "./utils.scss";
 
+// desktop margin
+$marginTopBottom: 12rem;
+
 .summarySection {
     display: none;
     background-color: #000000;
@@ -12,7 +15,7 @@
     .summaryDiv2 {
         width: 50%;
         text-align: center;
-        padding: 12rem 8rem;
+        padding: $marginTopBottom 8rem;
         h1 {
             font-size: $fs-desktop-large;
         }
@@ -96,16 +99,19 @@
 
     @media only screen and (min-width: 996px) {
         display: block;
-        margin: 4rem auto;
-        width: 80%;
+        margin: $marginTopBottom auto;
 
         h3 {
             font-size: $fs-desktop-large;
-            margin: 4rem 0;
+            background-color: red;
+            padding: 4rem 0;
+            text-transform: uppercase;
         }
 
         ul {
+            margin: 0 auto;
             display: grid;
+            width: 80%;
             grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
             gap: 4rem;
             align-items: center;
