@@ -125,5 +125,23 @@ export const careersPageData = {
                 "VU Capital is looking for talented, skilled, driven and experienced Sales Representatives - with aspirations to grow in the sales organisation - who are an integral part to help boost sales and contribute to VU Capital’s long-term business growth. You will be working remotely from home, enjoying in-depth training and kick starting your sales activities.",
             descLink: "",
         },
+        {
+            title: "independent sales representative",
+            description:
+                "VU Capital is looking for talented, skilled, driven and experienced Sales Representatives - with aspirations to grow in the sales organisation - who are an integral part to help boost sales and contribute to VU Capital’s long-term business growth. You will be working remotely from home, enjoying in-depth training and kick starting your sales activities.",
+            descLink: "",
+        },
+        {
+            title: "independent sales representative",
+            description:
+                "VU Capital is looking for talented, skilled, driven and experienced Sales Representatives - with aspirations to grow in the sales organisation - who are an integral part to help boost sales and contribute to VU Capital’s long-term business growth. You will be working remotely from home, enjoying in-depth training and kick starting your sales activities.",
+            descLink: "",
+        },
+        {
+            title: "independent sales representative",
+            description:
+                "VU Capital is looking for talented, skilled, driven and experienced Sales Representatives - with aspirations to grow in the sales organisation - who are an integral part to help boost sales and contribute to VU Capital’s long-term business growth. You will be working remotely from home, enjoying in-depth training and kick starting your sales activities.",
+            descLink: "",
+        },
     ],
 };

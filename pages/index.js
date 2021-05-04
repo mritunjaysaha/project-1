@@ -12,7 +12,7 @@ export default function Home() {
             </Head>
 
             <Header />
-            <Navbar className="navbar" />
+            {/* <Navbar className="navbar" /> */}
 
             <Body />
         </div>

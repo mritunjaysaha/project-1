@@ -28,16 +28,6 @@ export default function Careers() {
                         />
                     </li>
                 ))}
-
-                {data.map((data) => (
-                    <li className={styles.careersCards}>
-                        <h3>{data.title}</h3>
-                        <p>{data.description}</p>
-                        <MUIButton
-                            name={<ATag name={buttonName} link={data.link} />}
-                        />
-                    </li>
-                ))}
             </ul>
         </section>
     );

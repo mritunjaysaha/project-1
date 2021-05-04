@@ -17,10 +17,7 @@ export function Navbar({ className }) {
         const listener = document.addEventListener("scroll", (e) => {
             const scrolled = document.scrollingElement.scrollTop;
 
-            if (
-                (viewportWidth < 996 && scrolled >= viewportWidth) ||
-                scrolled > 1200
-            ) {
+            if (scrolled > 600) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
@@ -44,12 +41,8 @@ export function Navbar({ className }) {
     return (
         <nav
             className={
-                className
-                    ? className.toLowerCase() == "navbar"
-                        ? isScrolled
-                            ? `${styles.navbarHeaderAbsolute} ${styles.changeBackgroundColor} ${styles.navbar} ${styles.showNavbar}`
-                            : `${styles.hideNavbar}`
-                        : ``
+                isScrolled
+                    ? `${styles.navbarHeaderAbsolute} ${styles.changeBackgroundColor}`
                     : `${styles.navbarHeaderAbsolute}`
             }
         >
