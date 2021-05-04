@@ -9,7 +9,7 @@ export default function Careers() {
     return (
         <section className={styles.careersSection}>
             <header className={styles.careersHeader}>
-                <h1>
+                <h1 className={`${styles.multiLineHeader} ${styles.noMargin}`}>
                     what's your next&nbsp;
                     <span
                         className={`${styles.spanContainer} ${styles.spanColor}`}

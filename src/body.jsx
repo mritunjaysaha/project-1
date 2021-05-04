@@ -50,7 +50,9 @@ export function Body() {
 
             {/* Offerings */}
             <section className={styles.cardsSection}>
-                <h3 className={styles.backgroundGradient1}>
+                <h3
+                    className={`${styles.multiLineHeader} ${styles.backgroundGradient1}`}
+                >
                     Our core <span className={styles.spanColor}>services</span>
                 </h3>
                 <ul>
@@ -62,7 +64,9 @@ export function Body() {
 
             {/* Clientele */}
             <section className={styles.cardsSection}>
-                <h3 className={styles.backgroundGradient2}>
+                <h3
+                    className={`${styles.multiLineHeader} ${styles.backgroundGradient2}`}
+                >
                     clients
                     <span>
                         who&nbsp;<span className={styles.spanColor}>love</span>
@@ -79,7 +83,11 @@ export function Body() {
 
             {/* Team page */}
             <section className={styles.teamPageSection}>
-                <h3 className={styles.backgroundGradient3}>team</h3>
+                <h3
+                    className={`${styles.multiLineHeader} ${styles.backgroundGradient3}`}
+                >
+                    meet our <span className={styles.spanColor}>team</span>
+                </h3>
                 <ul>
                     <TeamPageCards />
                     <TeamPageCards />
@@ -90,7 +98,7 @@ export function Body() {
             <section className={styles.secretSection}>
                 <div className={styles.secretDiv}>
                     <h3>
-                        Yes, we can keep{" "}
+                        Yes, we can keep
                         <span className={styles.spanColor}>a secret</span>
                     </h3>
                     <p>That's why you probably haven't heard of us</p>
