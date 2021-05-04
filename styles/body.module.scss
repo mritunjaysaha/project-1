@@ -80,8 +80,9 @@
     h3 {
         font-size: $fs-large;
         margin: 4rem 0;
-        line-height: 3rem;
+        line-height: $line-height-header;
         letter-spacing: 0.5rem;
+        text-shadow: $text-shadow;
 
         span {
             display: flex;
@@ -197,12 +198,12 @@
             font-weight: bolder;
             color: $white;
 
+            line-height: $line-height-header;
+            margin-bottom: 2rem;
+
             span {
-                position: relative;
-                top: -3rem;
                 font-weight: bolder;
                 display: block;
-                color: $black;
                 margin: 0;
             }
         }

@@ -79,7 +79,7 @@ export function Body() {
 
             {/* Team page */}
             <section className={styles.teamPageSection}>
-                <h3 className={styles.backgroundGradient3}>team page</h3>
+                <h3 className={styles.backgroundGradient3}>team</h3>
                 <ul>
                     <TeamPageCards />
                     <TeamPageCards />
@@ -90,7 +90,8 @@ export function Body() {
             <section className={styles.secretSection}>
                 <div className={styles.secretDiv}>
                     <h3>
-                        Yes, we can keep <span>a secret</span>
+                        Yes, we can keep{" "}
+                        <span className={styles.spanColor}>a secret</span>
                     </h3>
                     <p>That's why you probably haven't heard of us</p>
                 </div>

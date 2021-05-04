@@ -32,16 +32,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ### TODO
 
 -   newsletter section
--   add more padding to section beginning header text
+-   <strike>add more padding to section beginning header text</strike>
 -   solutions page
 -   summary section is incomplete
 -   show the active page in the navbar
 -   blog section
 -   on hover
     -   navbar
-    -   cards
+    -   <strike>cards</strike>
     -   linked in icons
--   add material ui linkedIn icon
+-   <strike>add material ui linkedIn icon</strike>
 -   Replace hard coded texts and headers
 -   make the service pages responsive
 -   add styles for scroll bar
