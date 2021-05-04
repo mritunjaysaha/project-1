@@ -113,4 +113,5 @@ export const navigationData = {
             link: "/directInvestments",
         },
     ],
+    careers: { name: "careers", link: "/careers" },
 };

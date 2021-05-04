@@ -39,7 +39,7 @@ export function Navbar({ className }) {
         setMenuClicked(false);
     };
 
-    const { company, home, solutions, services } = navigationData;
+    const { company, home, solutions, services, careers } = navigationData;
 
     return (
         <nav
@@ -85,7 +85,9 @@ export function Navbar({ className }) {
                 <li key={solutions.name}>
                     <Anchor name={solutions.name} href={solutions.link} />
                 </li>
-                {/* <li key="blog">blog</li> */}
+                <li key={careers.name}>
+                    <Anchor name={careers.name} href={careers.link} />
+                </li>
             </ul>
         </nav>
     );
