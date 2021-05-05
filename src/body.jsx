@@ -116,7 +116,12 @@ export function Body() {
                 </div>
             </section>
 
-            {/* newsletter */}
+            {/* blog section */}
+            <section>
+                <h3 className={styles.multiLineHeader}>
+                    more <span className={styles.spanColor}>insights</span>
+                </h3>
+            </section>
         </>
     );
 }
