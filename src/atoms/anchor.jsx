@@ -1,9 +1,10 @@
 import Link from "next/link";
+import styles from "../../styles/anchor.module.scss";
 
-export function Anchor({ href, name }) {
+export function Anchor({ href, name, color }) {
     return (
-        <Link href={href}>
-            <a>{name}</a>
+        <Link href={href ? href : ""}>
+            <a className={color ? styles.className : ""}>{name}</a>
         </Link>
     );
 }

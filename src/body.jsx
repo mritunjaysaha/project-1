@@ -4,6 +4,7 @@ import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
 import { MUIButton } from "./atoms/button";
 import { offeringsData, clienteleData } from "../data";
+import { CardsWithImages } from "../src/cardsWithImage";
 
 export function Body() {
     return (
@@ -121,6 +122,9 @@ export function Body() {
                 <h3 className={styles.multiLineHeader}>
                     more <span className={styles.spanColor}>insights</span>
                 </h3>
+                <section>
+                    <CardsWithImages />
+                </section>
             </section>
         </>
     );
