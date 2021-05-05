@@ -3,7 +3,12 @@ import styles from "../styles/body.module.scss";
 import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
 import { MUIButton } from "./atoms/button";
-import { offeringsData, clienteleData, blogData } from "../data";
+import {
+    offeringsData,
+    clienteleData,
+    blogData,
+    summarySectionData,
+} from "../data";
 import { CardsWithImages } from "../src/cardsWithImage";
 
 export function Body() {
@@ -31,21 +36,17 @@ export function Body() {
             {/* summary of the venture */}
             <section className={styles.summarySection}>
                 <div className={styles.summaryDiv1}>
-                    <h1>Who we are</h1>
-                    <p>XXX capital is an independently owned</p>
+                    <h1 className={styles.multiLineHeader}>
+                        Who <span>we</span>{" "}
+                        <span className={styles.spanColor}>are</span>
+                    </h1>
+                    <p>{summarySectionData.whoWeAre.description}</p>
                 </div>
                 <div className={styles.summaryDiv2}>
-                    <h1>What we do</h1>
-                    <p>
-                        We've been studying trends about what drives decisions.
-                        Cause it's not about the info you present, it's about
-                        how you retain their attention. And finally at the end
-                        of that they are curious and emotionally invested in the
-                        deal. That's how we're able to get the deal on our own
-                        terms for our clients. Plus we are able to retain that
-                        element of fun and excitement. Plus the bigger the
-                        stakes with the deal, the more exciting it is for us
-                    </p>
+                    <h1 className={styles.multiLineHeader}>
+                        What we <span className={styles.spanColor}>do</span>
+                    </h1>
+                    <p>{summarySectionData.whatWeDo.description}</p>
                 </div>
             </section>
 

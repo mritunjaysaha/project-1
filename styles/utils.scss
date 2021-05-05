@@ -2,6 +2,7 @@
 $white: #fafafa;
 $black: #16161d;
 $blueBGColor: hsl(240, 50%, 8%);
+$golden: rgb(194, 151, 102);
 
 // Font size
 $fs-x-small: 1.2rem;
@@ -41,7 +42,10 @@ $line-height-header: 3rem;
 
 .spanColor {
     display: block;
-    color: #f7a440;
+    // color: hsl(32.8, 92%, 50%);
+    // color: hsl(35.1, 99%, 59%);
+    // color: hsl(30.4, 89.5%, 48%);
+    color: $golden;
     text-shadow: $text-shadow;
 }
 
