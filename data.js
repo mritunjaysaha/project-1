@@ -145,3 +145,15 @@ export const careersPageData = {
         },
     ],
 };
+
+export const blogData = {
+    data: [
+        {
+            img:
+                "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
+            name: "a-b-c-d",
+            summary: "Lorem ipsum dolor sit.",
+            fullDescription: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
+        },
+    ],
+};

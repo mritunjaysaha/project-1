@@ -3,7 +3,7 @@ import styles from "../styles/body.module.scss";
 import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
 import { MUIButton } from "./atoms/button";
-import { offeringsData, clienteleData } from "../data";
+import { offeringsData, clienteleData, blogData } from "../data";
 import { CardsWithImages } from "../src/cardsWithImage";
 
 export function Body() {
@@ -118,13 +118,19 @@ export function Body() {
             </section>
 
             {/* blog section */}
-            <section>
+            <section className={styles.cardsSection}>
                 <h3 className={styles.multiLineHeader}>
                     more <span className={styles.spanColor}>insights</span>
                 </h3>
-                <section>
-                    <CardsWithImages />
-                </section>
+                <ul className={styles.cardsSection}>
+                    {blogData.data.map((data) => (
+                        <CardsWithImages
+                            img={data.img}
+                            name={data.name}
+                            description={data.summary}
+                        />
+                    ))}
+                </ul>
             </section>
         </>
     );

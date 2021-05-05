@@ -6,6 +6,13 @@
     display: flex;
     flex-direction: column;
 
+    box-shadow: $box-shadow;
+    transition: $card-transition;
+
+    &:hover {
+        box-shadow: $box-shadow-hover;
+    }
+
     img {
         width: inherit;
         aspect-ratio: 4/3;
@@ -13,6 +20,8 @@
 
     .cardsContents {
         padding: 2rem;
+        text-align: left;
+
         h1 {
             font-size: $fs-medium;
             margin-bottom: 2rem;
