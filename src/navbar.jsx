@@ -1,6 +1,5 @@
 import { useState, useEffect, createRef } from "react";
 import styles from "../styles/navbar.module.scss";
-import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 import CloseIcon from "@material-ui/icons/Close";
 import { OnHoverMenu } from "../src/menu";
 import { Anchor } from "../src/atoms/anchor";
@@ -50,11 +49,11 @@ export function Navbar({ className }) {
                 <Anchor name={company.name} href={company.link} />
             </h1>
 
-            <MenuTwoToneIcon
+            {/* <MenuTwoToneIcon
                 fontSize="large"
                 onClick={handleHamburgerMenu}
                 className={styles.hamburgerMenu}
-            />
+            /> */}
             <ul
                 className={
                     viewportWidth < 996
