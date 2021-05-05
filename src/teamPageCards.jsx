@@ -1,7 +1,6 @@
 import styles from "../styles/teamPageCards.module.scss";
 import { ImageAvatars } from "./imageAvatars";
 import { UilLinkedinAlt } from "@iconscout/react-unicons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function TeamPageCards({ name, img }) {
     return (
