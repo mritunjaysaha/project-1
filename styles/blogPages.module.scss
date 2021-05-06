@@ -1,0 +1,46 @@
+@import "./utils.scss";
+
+$bannerHeight: 60vh;
+
+.blogSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: $marginTopBottom;
+    background-color: $white;
+
+    .header {
+        position: relative;
+        top: 0;
+        height: $bannerHeight;
+
+        img {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: $bannerHeight;
+            z-index: 0;
+
+            object-fit: cover;
+        }
+
+        h1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: $bannerHeight;
+            background-color: rgba(0, 0, 0, 0.55);
+            text-align: center;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+        }
+    }
+
+    p {
+        position: relative;
+    }
+}

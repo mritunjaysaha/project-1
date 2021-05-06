@@ -4,6 +4,7 @@ import CloseIcon from "@material-ui/icons/Close";
 import { OnHoverMenu } from "../src/menu";
 import { Anchor } from "../src/atoms/anchor";
 import { companyName, navigationData } from "../data";
+import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 
 export function Navbar({ className }) {
     const [isScrolled, setScrolled] = useState(false);
@@ -49,11 +50,11 @@ export function Navbar({ className }) {
                 <Anchor name={company.name} href={company.link} />
             </h1>
 
-            {/* <MenuTwoToneIcon
+            <MenuTwoToneIcon
                 fontSize="large"
                 onClick={handleHamburgerMenu}
                 className={styles.hamburgerMenu}
-            /> */}
+            />
             <ul
                 className={
                     viewportWidth < 996

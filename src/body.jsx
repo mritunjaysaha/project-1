@@ -14,25 +14,6 @@ import { CardsWithImages } from "../src/cardsWithImage";
 export function Body() {
     return (
         <>
-            {/* <section className={styles.section1}>
-                <h3>get the deals closed on your own terms</h3>
-
-                <div className={styles.placeholder}></div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Sit, quasi? Dicta, vero. Soluta ratione enim exercitationem
-                    maiores iusto cumque veritatis sequi ab cupiditate,
-                    voluptatibus illo! Voluptates corporis repellat tempore iure
-                    temporibus, nostrum blanditiis. Ea quaerat consectetur,
-                    dolorum quod hic iusto vel id adipisci perspiciatis
-                    accusantium nam asperiores natus velit veniam minus. Natus
-                    doloribus sed rerum, enim suscipit ullam officia impedit!
-                    Laboriosam, sed reprehenderit beatae aspernatur quam
-                    suscipit fuga impedit inventore. Voluptas, beatae. Quidem
-                    harum sit, libero magni omnis porro blanditiis.
-                </p>
-            </section> */}
-
             {/* summary of the venture */}
             <section className={styles.summarySection}>
                 <div className={styles.summaryDiv1}>
@@ -69,12 +50,13 @@ export function Body() {
                 <h3
                     className={`${styles.multiLineHeader} ${styles.backgroundGradient2}`}
                 >
-                    clients
+                    clients&nbsp;
                     <span>
-                        who&nbsp;<span className={styles.spanColor}>love</span>
+                        who&nbsp;
+                        <span className={styles.spanColor}>love</span>
                         &nbsp;to work
                     </span>
-                    <span>with us</span>
+                    <span>&nbsp;with us</span>
                 </h3>
                 <ul>
                     {clienteleData.map((data) => (
