@@ -1,0 +1,39 @@
+@import "./utils.scss";
+
+.contactUsSection {
+    background: url("//cdn2.editmysite.com/images/editor/theme-background/stock/Skyscrapers.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    width: 100vw;
+
+    .contentsContainer {
+        background-color: rgba(0, 0, 0, 0.55);
+        height: inherit;
+        width: inherit;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: $fs-desktop-large;
+        color: $white;
+        margin-bottom: 2rem;
+    }
+
+    .anchorContainer {
+        position: relative !important;
+        background-color: $black;
+        padding: 2rem 4rem;
+        margin: 0 auto;
+        color: $white;
+        font-size: $fs-small;
+        font-weight: $fw-medium;
+        text-transform: uppercase;
+        width: max-content;
+    }
+}
