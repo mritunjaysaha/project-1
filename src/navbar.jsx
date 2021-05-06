@@ -3,13 +3,15 @@ import styles from "../styles/navbar.module.scss";
 import CloseIcon from "@material-ui/icons/Close";
 import { OnHoverMenu } from "../src/menu";
 import { Anchor } from "../src/atoms/anchor";
-import { companyName, navbarData } from "../data";
+import { navbarData } from "../data";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
+import { useRouter } from "next/router";
 
 export function Navbar() {
     const [isScrolled, setScrolled] = useState(false);
     const [isMenuClicked, setMenuClicked] = useState(false);
     const [viewportWidth, setViewportWidth] = useState();
+    const router = useRouter();
 
     useEffect(() => {
         setViewportWidth(document.documentElement.clientWidth);
@@ -78,18 +80,40 @@ export function Navbar() {
                     onClick={handleCloseButton}
                 />
 
-                <li key={home.name} className={styles.activeLink}>
+                <li
+                    key={home.name}
+                    className={
+                        router.pathname == home.link ? styles.activeLink : ""
+                    }
+                >
                     <Anchor name={home.name} href={home.link} />
                 </li>
-                <li key={careers.name}>
+                <li
+                    key={careers.name}
+                    className={
+                        router.pathname == careers.link ? styles.activeLink : ""
+                    }
+                >
                     <Anchor name={careers.name} href={careers.link} />
                 </li>
                 <OnHoverMenu data={services} />
 
-                <li key={newsLetter.name}>
+                <li
+                    key={newsLetter.name}
+                    className={
+                        router.pathname == newsLetter.link
+                            ? styles.activeLink
+                            : ""
+                    }
+                >
                     <Anchor name={newsLetter.name} href={newsLetter.link} />
                 </li>
-                <li key={contact.name}>
+                <li
+                    key={contact.name}
+                    className={
+                        router.pathname == contact.link ? styles.activeLink : ""
+                    }
+                >
                     <Anchor name={contact.name} href={contact.link} />
                 </li>
             </ul>
