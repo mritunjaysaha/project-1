@@ -78,7 +78,7 @@ export function Navbar() {
                     onClick={handleCloseButton}
                 />
 
-                <li key={home.name}>
+                <li key={home.name} className={styles.activeLink}>
                     <Anchor name={home.name} href={home.link} />
                 </li>
                 <li key={careers.name}>

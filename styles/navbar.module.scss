@@ -25,8 +25,13 @@
             font-size: $fs-small;
             cursor: pointer;
             z-index: 100;
+            transition: 0.3s all;
+
             &:first-of-type {
                 margin-left: 0;
+            }
+            &:hover {
+                opacity: 0.75;
             }
         }
     }
@@ -37,7 +42,8 @@
             width: max-content;
 
             li {
-                padding: 1rem;
+                padding: 1rem 2rem;
+                margin: 0;
                 margin-left: 1rem !important;
                 font-weight: $fw-regular;
             }
