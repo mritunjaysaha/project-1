@@ -1,5 +1,7 @@
 @import "./utils.scss";
 
+$activeBorder: $white;
+
 .navbarHeaderAbsolute {
     position: absolute;
     top: 0;
@@ -35,9 +37,13 @@
             }
         }
     }
+
+    $activeBorder: $white;
+
     @media only screen and (min-width: 996px) {
         width: 100%;
         justify-content: space-between;
+
         ul {
             width: max-content;
 
@@ -141,4 +147,12 @@
     position: sticky;
     background: white;
     color: black;
+}
+
+.activeLinkWhite {
+    border: 1px solid $white;
+}
+
+.activeLinkBlack {
+    border: 1px solid $black;
 }

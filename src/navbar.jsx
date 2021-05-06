@@ -83,7 +83,11 @@ export function Navbar() {
                 <li
                     key={home.name}
                     className={
-                        router.pathname == home.link ? styles.activeLink : ""
+                        router.pathname == home.link
+                            ? isScrolled
+                                ? styles.activeLinkBlack
+                                : styles.activeLinkWhite
+                            : styles.activeLinkWhite
                     }
                 >
                     <Anchor name={home.name} href={home.link} />
