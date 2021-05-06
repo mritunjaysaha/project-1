@@ -33,7 +33,6 @@
     padding: 12rem 0 4rem 4rem;
 
     img {
-        // height: 60rem;
         width: 80vw;
         aspect-ratio: 3/4;
     }
@@ -65,18 +64,18 @@
     }
 
     @media only screen and (min-width: 996px) {
-        padding: 12rem 16rem 0;
+        padding: $marginTopBottom 4rem 0 4rem;
         height: 100vh;
         flex-direction: row;
 
         img {
-            height: 60rem;
+            height: 56rem;
             width: auto;
             aspect-ratio: 3/4;
         }
 
         .contentArticle {
-            padding-right: 12rem;
+            padding-right: 8rem;
             width: 50vw;
 
             h3 {
@@ -89,6 +88,14 @@
                 margin-top: 4rem;
                 font-size: $fs-medium;
             }
+        }
+    }
+
+    @media only screen and (min-width: 1200px) {
+        padding: 12rem 16rem 0 16rem;
+
+        .contentArticle {
+            padding-right: 12rem;
         }
     }
 }
