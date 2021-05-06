@@ -19,7 +19,7 @@
     justify-content: center;
 
     h1 {
-        font-size: $fs-desktop-xx-large;
+        font-size: $fs-desktop-large;
         color: $white;
         text-transform: uppercase;
         line-height: 3.4rem;
@@ -32,9 +32,15 @@
             color: $white;
         }
     }
+
+    @media only screen and (min-width: 996px) {
+        h1 {
+            font-size: $fs-desktop-xx-large;
+        }
+    }
 }
 
-.careersContainer {
+.careersCardsContainer {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -44,9 +50,11 @@
 .careersCards {
     list-style: none;
     margin-top: 2rem;
-    width: 80rem;
     padding: 4rem;
     text-align: center;
+    width: 90vw;
+    margin: 0 auto;
+    box-shadow: $box-shadow;
 
     h3 {
         text-transform: capitalize;
@@ -61,5 +69,19 @@
     p {
         margin-bottom: 2rem;
     }
-    box-shadow: $box-shadow;
+
+    button {
+        background-color: $golden !important;
+        color: $white;
+        padding: 2rem;
+        font-size: $fs-x-small !important;
+    }
+
+    @media only screen and (min-width: 996px) {
+        width: 80rem;
+
+        h3 {
+            font-size: $fs-large;
+        }
+    }
 }

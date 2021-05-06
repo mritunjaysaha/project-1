@@ -18,7 +18,7 @@ export default function Careers() {
                     </span>
                 </h1>
             </header>
-            <ul className={styles.careersContainer}>
+            <ul className={styles.careersCardsContainer}>
                 {data.map((data) => (
                     <li className={styles.careersCards}>
                         <h3>{data.title}</h3>
