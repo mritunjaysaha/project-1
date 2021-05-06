@@ -26,10 +26,10 @@
         z-index: 1000;
 
         ul {
-            background-color: white;
-            color: black;
+            background-color: $white;
+            color: $black;
 
-            width: 28rem;
+            width: 20rem;
             height: max-content;
 
             text-transform: capitalize;
@@ -46,7 +46,11 @@
             li {
                 cursor: pointer;
                 padding: 1rem 0;
-                font-size: $fs-medium !important;
+                font-weight: $fw-bold;
+
+                a {
+                    font-size: $fs-small;
+                }
             }
         }
     }

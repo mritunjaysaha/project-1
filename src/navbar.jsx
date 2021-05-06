@@ -83,11 +83,11 @@ export function Navbar() {
                 <li
                     key={home.name}
                     className={
-                        router.pathname == home.link
+                        router.pathname === home.link
                             ? isScrolled
                                 ? styles.activeLinkBlack
                                 : styles.activeLinkWhite
-                            : styles.activeLinkWhite
+                            : ""
                     }
                 >
                     <Anchor name={home.name} href={home.link} />
@@ -95,7 +95,11 @@ export function Navbar() {
                 <li
                     key={careers.name}
                     className={
-                        router.pathname == careers.link ? styles.activeLink : ""
+                        router.pathname === careers.link
+                            ? isScrolled
+                                ? styles.activeLinkBlack
+                                : styles.activeLinkWhite
+                            : ""
                     }
                 >
                     <Anchor name={careers.name} href={careers.link} />
@@ -105,8 +109,10 @@ export function Navbar() {
                 <li
                     key={newsLetter.name}
                     className={
-                        router.pathname == newsLetter.link
-                            ? styles.activeLink
+                        router.pathname === newsLetter.link
+                            ? isScrolled
+                                ? styles.activeLinkBlack
+                                : styles.activeLinkWhite
                             : ""
                     }
                 >
@@ -115,7 +121,11 @@ export function Navbar() {
                 <li
                     key={contact.name}
                     className={
-                        router.pathname == contact.link ? styles.activeLink : ""
+                        router.pathname === contact.link
+                            ? isScrolled
+                                ? styles.activeLinkBlack
+                                : styles.activeLinkWhite
+                            : ""
                     }
                 >
                     <Anchor name={contact.name} href={contact.link} />
