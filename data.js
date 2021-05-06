@@ -6,6 +6,33 @@ export const navbarList = [
     { name: "newsletter", links: "#" },
 ];
 
+export const navbarData = {
+    company: { name: "xxxCapital", link: "/" },
+    home: { name: "home", link: "/" },
+    solutions: { name: "solutions", link: "/solutions" },
+    careers: { name: "careers", link: "/careers" },
+    contact: { name: "contact us", link: "/contactUs" },
+    newsLetter: { name: "newsletter", link: "/newsletter" },
+    services: [
+        {
+            name: "equity capital markets",
+            link: "/equityCapitalMarkets",
+        },
+        {
+            name: "debt capital markets",
+            link: "/debtCapitalMarkets",
+        },
+        {
+            name: "m&a advisory",
+            link: "/maAdvisory",
+        },
+        {
+            name: "direct investments",
+            link: "/directInvestments",
+        },
+    ],
+};
+
 export const companyName = { name: "xxx Capital" };
 
 export const offeringsData = [
@@ -89,31 +116,6 @@ export const directInvestments = {
     name: "direct investments",
     data: [[`coming soon`]],
     img: "",
-};
-
-export const navigationData = {
-    company: { name: "xxxCapital", link: "/" },
-    home: { name: "home", link: "/" },
-    solutions: { name: "solutions", link: "/solutions" },
-    services: [
-        {
-            name: "equity capital markets",
-            link: "/equityCapitalMarkets",
-        },
-        {
-            name: "debt capital markets",
-            link: "/debtCapitalMarkets",
-        },
-        {
-            name: "m&a advisory",
-            link: "/maAdvisory",
-        },
-        {
-            name: "direct investments",
-            link: "/directInvestments",
-        },
-    ],
-    careers: { name: "careers", link: "/careers" },
 };
 
 export const careersPageData = {

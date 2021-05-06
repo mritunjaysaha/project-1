@@ -3,7 +3,7 @@ import styles from "../styles/navbar.module.scss";
 import CloseIcon from "@material-ui/icons/Close";
 import { OnHoverMenu } from "../src/menu";
 import { Anchor } from "../src/atoms/anchor";
-import { companyName, navigationData } from "../data";
+import { companyName, navbarData } from "../data";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 
 export function Navbar({ className }) {
@@ -36,7 +36,15 @@ export function Navbar({ className }) {
         setMenuClicked(false);
     };
 
-    const { company, home, solutions, services, careers } = navigationData;
+    const {
+        company,
+        home,
+        solutions,
+        services,
+        careers,
+        newsLetter,
+        contact,
+    } = navbarData;
 
     return (
         <nav
@@ -74,12 +82,19 @@ export function Navbar({ className }) {
                 <li key={home.name}>
                     <Anchor name={home.name} href={home.link} />
                 </li>
-                <OnHoverMenu data={services} />
                 <li key={solutions.name}>
                     <Anchor name={solutions.name} href={solutions.link} />
                 </li>
                 <li key={careers.name}>
                     <Anchor name={careers.name} href={careers.link} />
+                </li>
+                <OnHoverMenu data={services} />
+
+                <li key={newsLetter.name}>
+                    <Anchor name={newsLetter.name} href={newsLetter.link} />
+                </li>
+                <li key={contact.name}>
+                    <Anchor name={contact.name} href={contact.link} />
                 </li>
             </ul>
         </nav>
