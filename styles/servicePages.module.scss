@@ -3,11 +3,7 @@
 .serviceSection {
     background-color: $blueBGColor;
     color: $white;
-    display: flex;
-    flex-direction: column;
     width: 100vw;
-
-    padding: 12rem 0 4rem 4rem;
 
     &::before {
         content: "";
@@ -27,6 +23,14 @@
         padding-top: 88%;
         z-index: 20;
     }
+}
+
+.serviceArticleContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+    padding: 12rem 0 4rem 4rem;
 
     img {
         // height: 60rem;
@@ -94,4 +98,76 @@
     height: 0.4rem;
     width: 10rem;
     margin-top: 4rem;
+}
+
+.serviceSection2 {
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: $marginTopBottom 4rem;
+}
+
+.menuContainer {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $white;
+    width: max-content;
+    overflow-x: hidden;
+
+    color: $black;
+
+    list-style: none;
+
+    text-transform: uppercase;
+    padding: 8rem 8rem 8rem 10rem;
+
+    li {
+        font-size: $fs-medium;
+        font-weight: $fw-bold;
+        padding: 1rem 0;
+        border-bottom: 1px solid $border-bottom-color;
+    }
+}
+
+.articleMid {
+    width: 60rem;
+
+    h3 {
+        font-size: $fs-large;
+    }
+
+    p {
+        margin-top: 4rem;
+        font-size: $fs-medium;
+    }
+}
+
+.articleDirector {
+    padding: 0 4rem;
+
+    img {
+        background-color: red;
+        height: 16rem;
+        aspect-ratio: 1/1;
+    }
+
+    h3,
+    p {
+        font-size: $fs-small;
+        margin-top: 1rem;
+    }
+
+    a {
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+
+    a {
+        p {
+            color: red;
+            margin-top: 4rem;
+        }
+    }
 }
