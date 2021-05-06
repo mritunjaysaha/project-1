@@ -14,6 +14,31 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+const validate = (values) => {
+    const errors = {};
+    // if (!values.firstName) {
+    //     errors.firstName = "Required";
+    // } else if (values.firstName.length > 15) {
+    //     errors.firstName = "Must be 15 characters or less";
+    // }
+
+    // if (!values.lastName) {
+    //     errors.lastName = "Required";
+    // } else if (values.lastName.length > 20) {
+    //     errors.lastName = "Must be 20 characters or less";
+    // }
+
+    if (!values.email) {
+        errors.email = "Required";
+    } else if (
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+        errors.email = "Invalid email address";
+    }
+
+    return errors;
+};
+
 const SignupForm = () => {
     const classes = useStyles();
     // Pass the useFormik() hook initial form values and a submit function that will
@@ -23,6 +48,7 @@ const SignupForm = () => {
             email: "admin@test.com",
             name: "admin",
         },
+        validate,
         onSubmit: (values) => {
             alert(JSON.stringify(values, null, 2));
         },
@@ -34,13 +60,6 @@ const SignupForm = () => {
             onSubmit={formik.handleSubmit}
         >
             <label htmlFor="name"></label>
-            {/* <input
-                id="name"
-                name="name"
-                type="name"
-                onChange={formik.handleChange}
-                value={formik.values.name}
-            /> */}
             <TextField
                 label="Name"
                 defaultValue="admin"
@@ -53,16 +72,9 @@ const SignupForm = () => {
             />
             <br />
             <br />
+
             <label htmlFor="email"></label>
-            {/* <input
-                id="email"
-                name="email"
-                type="email"
-                onChange={formik.handleChange}
-                value={formik.values.email}
-            /> */}
             <TextField
-                required
                 label="Email"
                 defaultValue="admin@gmail.com"
                 variant="outlined"
@@ -72,8 +84,12 @@ const SignupForm = () => {
                 onChange={formik.handleChange}
                 value={formik.values.email}
             />
+            {formik.errors.email ? (
+                <div className={styles.errors}>{formik.errors.email}</div>
+            ) : null}
             <br />
             <br />
+
             <MUIButton type="submit" name="submit" />
         </form>
     );
