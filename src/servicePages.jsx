@@ -1,9 +1,11 @@
 import styles from "../styles/servicePages.module.scss";
 import { navbarData } from "../data";
 import { Anchor } from "../src/atoms/anchor";
+import { useRouter } from "next/router";
 
 export function ServicePage({ name, data, imgSrc }) {
     const { services } = navbarData;
+    const router = useRouter();
 
     return (
         <section className={styles.serviceSection}>
@@ -22,7 +24,13 @@ export function ServicePage({ name, data, imgSrc }) {
             <section className={styles.serviceSection2}>
                 <ul className={styles.menuContainer}>
                     {services.map((data) => (
-                        <li>
+                        <li
+                            className={
+                                router.pathname === data.link
+                                    ? styles.activeLink
+                                    : ""
+                            }
+                        >
                             <Anchor name={data.name} href={data.link} />
                         </li>
                     ))}

@@ -3,7 +3,7 @@
 .serviceSection {
     background-color: $blueBGColor;
     color: $white;
-    width: 100vw;
+    overflow-x: hidden;
 
     &::before {
         content: "";
@@ -145,6 +145,7 @@
 
     @media only screen and (min-width: 996px) {
         width: max-content;
+        height: max-content;
         padding: 8rem 8rem 8rem 10rem;
         margin: 0;
     }
@@ -164,7 +165,7 @@
     }
 
     @media only screen and (min-width: 996px) {
-        width: 60rem;
+        width: 40rem;
     }
 }
 
@@ -199,4 +200,7 @@
     @media only screen and (min-width: 996px) {
         margin: 0;
     }
+}
+.activeLink {
+    text-decoration: underline;
 }
