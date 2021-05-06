@@ -20,8 +20,8 @@ const SignupForm = () => {
     // be called when the form is submitted
     const formik = useFormik({
         initialValues: {
-            email: "",
-            name: "",
+            email: "admin@test.com",
+            name: "admin",
         },
         onSubmit: (values) => {
             alert(JSON.stringify(values, null, 2));
@@ -88,6 +88,9 @@ export default function NewsLetterPage() {
             <div className={styles.formContainer}>
                 <SignupForm />
             </div>
+            <a href="https://www.freepik.com/photos/background">
+                Background photo created by mrsiraphol - www.freepik.com
+            </a>
         </section>
     );
 }
