@@ -5,36 +5,49 @@
 }
 
 .onHoverMenu {
-    position: fixed;
-    top: 0;
-    left: 70%;
-    display: none; //flex
-    padding-top: 8rem;
-
-    z-index: 1000;
-
     ul {
-        background-color: white;
-        color: black;
-
-        width: 28rem;
         height: max-content;
-
-        text-transform: capitalize;
-
-        display: flex;
-        flex-direction: column;
-
-        padding: 1rem 2rem;
-        margin-top: 2rem;
-
-        border-radius: 0.5rem;
-        box-shadow: $box-shadow;
-
         li {
-            cursor: pointer;
-            padding: 1rem 0;
-            font-size: $fs-medium !important;
+            padding: 0 0 0 4rem;
+            font-weight: $fw-regular;
+        }
+        a {
+            font-size: $fs-x-small;
+        }
+    }
+
+    @media only screen and (min-width: 996px) {
+        position: fixed;
+        top: 0;
+        left: 70%;
+        display: none; //flex
+        padding-top: 8rem;
+
+        z-index: 1000;
+
+        ul {
+            background-color: white;
+            color: black;
+
+            width: 28rem;
+            height: max-content;
+
+            text-transform: capitalize;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 1rem 2rem;
+            margin-top: 2rem;
+
+            border-radius: 0.5rem;
+            box-shadow: $box-shadow;
+
+            li {
+                cursor: pointer;
+                padding: 1rem 0;
+                font-size: $fs-medium !important;
+            }
         }
     }
 }

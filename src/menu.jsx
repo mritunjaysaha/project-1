@@ -2,7 +2,6 @@ import styles from "../styles/onHoverMenu.module.scss";
 import { Anchor } from "../src/atoms/anchor";
 
 export function OnHoverMenu({ data }) {
-    const { equityCapitalMarkets } = data;
     let menuRef = null;
     const menuID = "#onHoverMenu";
 
@@ -30,7 +29,7 @@ export function OnHoverMenu({ data }) {
                 onMouseEnter={handleClick}
                 className={styles.servicesLi}
             >
-                services
+                our offerings
             </li>
             <div
                 id="onHoverMenu"

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Navbar } from "../src/navbar";
 import { Header } from "../src/header";
 import { Body } from "../src/body";
 

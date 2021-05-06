@@ -39,7 +39,6 @@ export function Navbar() {
     const {
         company,
         home,
-        solutions,
         services,
         careers,
         newsLetter,
@@ -81,9 +80,6 @@ export function Navbar() {
 
                 <li key={home.name}>
                     <Anchor name={home.name} href={home.link} />
-                </li>
-                <li key={solutions.name}>
-                    <Anchor name={solutions.name} href={solutions.link} />
                 </li>
                 <li key={careers.name}>
                     <Anchor name={careers.name} href={careers.link} />
