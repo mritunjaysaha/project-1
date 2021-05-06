@@ -8,16 +8,22 @@
 
     box-shadow: $box-shadow;
     transition: $card-transition;
+    border-radius: $card-border-radius;
 
     &:hover {
         box-shadow: $box-shadow-hover;
+
+        h1 {
+            color: blue;
+        }
     }
 
     img {
         width: inherit;
         aspect-ratio: 4/3;
+        border-radius: $card-border-radius $card-border-radius 0 0;
+        z-index: 0;
     }
-
     .cardsContents {
         padding: 2rem;
         text-align: left;
@@ -25,6 +31,7 @@
         h1 {
             font-size: $fs-medium;
             margin-bottom: 2rem;
+            transition: $card-transition;
         }
 
         p {
@@ -35,6 +42,7 @@
         a {
             font-size: $fs-small;
             font-weight: $fw-bold;
+            color: $golden;
         }
     }
 }

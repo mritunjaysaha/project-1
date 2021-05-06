@@ -9,7 +9,7 @@
     width: 100vw;
 
     .contentsContainer {
-        background-color: rgba(0, 0, 0, 0.55);
+        background-color: $overlay;
         height: inherit;
         width: inherit;
         display: flex;

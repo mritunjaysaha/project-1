@@ -9,7 +9,12 @@ export function CardsWithImages({ img, name, description }) {
                 alt=""
             />
             <article className={styles.cardsContents}>
-                <h1>{name ? name : "Lorem ipsum dolor sit amet."}</h1>
+                <h1>
+                    {/* {name
+                        ? name.replaceAll("-", " ")
+                        : "Lorem ipsum dolor sit amet."} */}
+                    Lorem, ipsum dolor.
+                </h1>
                 <p>
                     {description
                         ? description
@@ -19,7 +24,7 @@ export function CardsWithImages({ img, name, description }) {
                 </p>
                 <Anchor
                     color={true}
-                    name="Read More >>"
+                    name="Read More >>>"
                     href={`/blog/${name}`}
                 />{" "}
             </article>

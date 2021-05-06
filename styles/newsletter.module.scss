@@ -3,7 +3,7 @@
 .newsletterSection {
     header {
         position: static;
-        background-image: url(./assets/office-building-pattern-textures.jpg);
+        background-image: url(../assets/office-building-pattern-textures.jpg);
         background-size: cover;
         background-repeat: no-repeat;
         width: 100%;
@@ -20,7 +20,7 @@
             align-items: center;
             justify-content: center;
 
-            background-color: rgba(0, 0, 0, 0.55);
+            background-color: $overlay;
 
             height: inherit;
             width: inherit;
