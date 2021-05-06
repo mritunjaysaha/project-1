@@ -43,7 +43,7 @@ const SignupForm = () => {
             /> */}
             <TextField
                 label="Name"
-                defaultValue=""
+                defaultValue="admin"
                 variant="outlined"
                 id="name"
                 name="name"
@@ -64,7 +64,7 @@ const SignupForm = () => {
             <TextField
                 required
                 label="Email"
-                defaultValue=""
+                defaultValue="admin@gmail.com"
                 variant="outlined"
                 id="email"
                 name="email"

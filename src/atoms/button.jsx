@@ -9,12 +9,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export function MUIButton({ name, color, size }) {
+export function MUIButton({ name, color, size, type }) {
     return (
         <Button
             variant="contained"
             // color={color ? color : "primary"}
             // size={size ? size : "medium"}
+            type={type ? type : ""}
             style={{ background: "#fff" }}
         >
             {name ? name : "temp"}
