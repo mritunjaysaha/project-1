@@ -6,7 +6,7 @@ import { Anchor } from "../src/atoms/anchor";
 import { companyName, navbarData } from "../data";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 
-export function Navbar({ className }) {
+export function Navbar() {
     const [isScrolled, setScrolled] = useState(false);
     const [isMenuClicked, setMenuClicked] = useState(false);
     const [viewportWidth, setViewportWidth] = useState();

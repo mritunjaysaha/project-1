@@ -9,12 +9,13 @@
     box-shadow: $box-shadow;
     transition: $card-transition;
     border-radius: $card-border-radius;
+    margin: 0 auto;
 
     &:hover {
         box-shadow: $box-shadow-hover;
 
         h1 {
-            color: blue;
+            color: $blue;
         }
     }
 

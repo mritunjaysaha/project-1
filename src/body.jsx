@@ -105,7 +105,9 @@ export function Body() {
                 <h3 className={styles.multiLineHeader}>
                     more <span className={styles.spanColor}>insights</span>
                 </h3>
-                <ul className={styles.cardsSection}>
+                <ul
+                    className={`${styles.cardsSection} ${styles.blogCardsContainer}`}
+                >
                     {blogData.data.map((data) => (
                         <CardsWithImages
                             img={data.img}
