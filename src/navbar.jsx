@@ -19,7 +19,7 @@ export function Navbar() {
         const listener = document.addEventListener("scroll", (e) => {
             const scrolled = document.scrollingElement.scrollTop;
 
-            if (scrolled > 300) {
+            if (scrolled > 200) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
@@ -51,7 +51,7 @@ export function Navbar() {
         <nav
             className={
                 isScrolled
-                    ? `${styles.navbarHeaderAbsolute} ${styles.changeBackgroundColor}`
+                    ? `${styles.navbarHeaderAbsolute} ${styles.changeBackgroundColor} ${styles.slideInBottom}`
                     : `${styles.navbarHeaderAbsolute}`
             }
         >

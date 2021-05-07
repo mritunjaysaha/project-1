@@ -16,17 +16,6 @@ const useStyles = makeStyles((theme) => ({
 
 const validate = (values) => {
     const errors = {};
-    // if (!values.firstName) {
-    //     errors.firstName = "Required";
-    // } else if (values.firstName.length > 15) {
-    //     errors.firstName = "Must be 15 characters or less";
-    // }
-
-    // if (!values.lastName) {
-    //     errors.lastName = "Required";
-    // } else if (values.lastName.length > 20) {
-    //     errors.lastName = "Must be 20 characters or less";
-    // }
 
     if (!values.email) {
         errors.email = "Required";
@@ -41,8 +30,7 @@ const validate = (values) => {
 
 const SignupForm = () => {
     const classes = useStyles();
-    // Pass the useFormik() hook initial form values and a submit function that will
-    // be called when the form is submitted
+
     const formik = useFormik({
         initialValues: {
             email: "",
