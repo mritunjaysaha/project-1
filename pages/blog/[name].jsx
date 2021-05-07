@@ -13,12 +13,14 @@ export default function BlogPage() {
 
     useEffect(() => {
         for (let datum of data) {
-            if (name === "a-b-c-d") {
+            if (name === datum.name) {
                 setCurrentData(datum);
                 break;
             }
         }
     }, [currentData]);
+
+    console.log({ currentData }, currentData.fullDescription.length);
 
     return (
         <section className={styles.blogSection}>
@@ -27,17 +29,19 @@ export default function BlogPage() {
                 <h1>{name ? name.replaceAll("-", " ") : "name"}</h1>
             </header>
             <section className={styles.blogContentsContainer}>
-                {currentData.fullDescription.map((data) => {
-                    const { head, desc } = data;
-                    return (
-                        <div className={styles.blogContainer}>
-                            <h3>{head}</h3>
-                            {desc.map((d) => {
-                                return <p>{d}</p>;
-                            })}
-                        </div>
-                    );
-                })}
+                {currentData
+                    ? currentData.fullDescription.map((data) => {
+                          const { head, desc } = data;
+                          return (
+                              <div className={styles.blogContainer}>
+                                  <h3>{head}</h3>
+                                  {desc.map((d) => {
+                                      return <p>{d}</p>;
+                                  })}
+                              </div>
+                          );
+                      })
+                    : ""}
             </section>
         </section>
     );
