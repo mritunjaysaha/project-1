@@ -146,6 +146,24 @@ export const careersPageData = {
     ],
 };
 
+/**
+ * data: [ list of all the blogs]
+ *
+ * data: [
+ * {
+ *      img: "source of image file",
+ *      name: "name of the blog",
+ *      summary: "summary/starting of the the blog which will be shown in the cards",
+ *      fullDescription: [
+ *          head: "question or header"
+ *          desc: [data as a collection of arrays which will be placed inside
+ *                  <p></p>
+ *          ]
+ *      ]
+ * }
+ * ]
+ */
+
 export const blogData = {
     data: [
         {

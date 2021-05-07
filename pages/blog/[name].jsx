@@ -31,7 +31,6 @@ export default function BlogPage() {
                 <h1>{name ? name.replaceAll("-", " ") : "name"}</h1>
             </header>
             <section className={styles.blogContentsContainer}>
-                <p>{currentData.summary}</p>
                 {currentData.fullDescription.map((data) => {
                     const { head, desc } = data;
                     return (
