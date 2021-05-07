@@ -19,20 +19,6 @@
 
     transition: $card-transition;
 
-    &:hover {
-        box-shadow: $box-shadow-hover;
-    }
-
-    .avatarName {
-        margin: 0 auto;
-
-        div {
-            &:first-of-type {
-                margin: 0 auto;
-            }
-        }
-    }
-
     .nameDesignation {
         display: flex;
         flex-direction: column;
@@ -44,6 +30,7 @@
             margin: 0;
             padding: 0;
             background-color: inherit;
+            transition: $card-transition;
         }
 
         p {
@@ -57,5 +44,15 @@
         bottom: 0;
         height: max-content;
         opacity: 0.6;
+    }
+
+    &:hover {
+        box-shadow: $box-shadow-hover;
+
+        .nameDesignation {
+            h3 {
+                color: $blue;
+            }
+        }
     }
 }
