@@ -19,7 +19,7 @@ export function Navbar() {
         const listener = document.addEventListener("scroll", (e) => {
             const scrolled = document.scrollingElement.scrollTop;
 
-            if (scrolled > 600) {
+            if (scrolled > 300) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
