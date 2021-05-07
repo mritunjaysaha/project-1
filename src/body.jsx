@@ -88,7 +88,7 @@ export function Body() {
             {/* secret section */}
             <section className={styles.secretSection}>
                 <div className={styles.secretDiv}>
-                    <h3>
+                    <h3 className={styles.multiLineHeader}>
                         Yes, we can keep
                         <span className={styles.spanColor}>a secret</span>
                     </h3>
