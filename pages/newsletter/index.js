@@ -45,8 +45,8 @@ const SignupForm = () => {
     // be called when the form is submitted
     const formik = useFormik({
         initialValues: {
-            email: "admin@test.com",
-            name: "admin",
+            email: "",
+            name: "",
         },
         validate,
         onSubmit: (values) => {
