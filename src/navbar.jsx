@@ -89,6 +89,7 @@ export function Navbar() {
                                 : styles.activeLinkWhite
                             : ""
                     }
+                    onClick={handleCloseButton}
                 >
                     <Anchor name={home.name} href={home.link} />
                 </li>
@@ -101,10 +102,16 @@ export function Navbar() {
                                 : styles.activeLinkWhite
                             : ""
                     }
+                    onClick={handleCloseButton}
                 >
                     <Anchor name={careers.name} href={careers.link} />
                 </li>
-                <OnHoverMenu data={services} />
+                <OnHoverMenu
+                    data={services}
+                    isMenuClicked={isMenuClicked}
+                    setMenuClicked={setMenuClicked}
+                    handle={handleCloseButton}
+                />
 
                 <li
                     key={newsLetter.name}
@@ -115,6 +122,7 @@ export function Navbar() {
                                 : styles.activeLinkWhite
                             : ""
                     }
+                    onClick={handleCloseButton}
                 >
                     <Anchor name={newsLetter.name} href={newsLetter.link} />
                 </li>
@@ -127,6 +135,7 @@ export function Navbar() {
                                 : styles.activeLinkWhite
                             : ""
                     }
+                    onClick={handleCloseButton}
                 >
                     <Anchor name={contact.name} href={contact.link} />
                 </li>

@@ -1,7 +1,13 @@
+import { useState } from "react";
 import styles from "../styles/onHoverMenu.module.scss";
 import { Anchor } from "../src/atoms/anchor";
 
-export function OnHoverMenu({ data }) {
+export function OnHoverMenu({
+    data,
+    handleClose,
+    isMenuClicked,
+    setMenuClicked,
+}) {
     let menuRef = null;
     const menuID = "#onHoverMenu";
 
@@ -39,7 +45,11 @@ export function OnHoverMenu({ data }) {
                 <ul>
                     {data.map((data) => {
                         return (
-                            <li>
+                            <li
+                                onClick={() => {
+                                    setMenuClicked(false);
+                                }}
+                            >
                                 <Anchor name={data.name} href={data.link} />
                             </li>
                         );
