@@ -43,7 +43,6 @@
 
     a {
         grid-area: link;
-
         text-transform: capitalize;
         background-color: $golden;
         padding: 1rem 2rem;
@@ -53,6 +52,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        z-index: 100;
     }
 }
 
