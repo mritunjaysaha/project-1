@@ -40,9 +40,21 @@
         text-transform: uppercase;
         font-weight: $fw-bold;
     }
+}
 
+.nameArea {
+    grid-area: name;
+    padding-top: 2rem;
+
+    @media only screen and (min-width: 996px) {
+        font-size: $fs-small;
+    }
+}
+
+.linkArea {
     a {
         grid-area: link;
+
         text-transform: capitalize;
         background-color: $golden;
         padding: 1rem 2rem;
@@ -52,16 +64,5 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        z-index: 100;
-    }
-}
-
-.nameArea {
-    grid-area: name;
-    padding-top: 2rem;
-
-    @media only screen and (min-width: 996px) {
-        font-size: $fs-small;
     }
 }
