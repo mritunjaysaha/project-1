@@ -20,8 +20,6 @@ export default function BlogPage() {
         }
     }, [currentData]);
 
-    console.log({ currentData }, currentData.fullDescription.length);
-
     return (
         <section className={styles.blogSection}>
             <header className={styles.header}>
