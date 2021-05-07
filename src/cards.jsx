@@ -1,10 +1,10 @@
 import styles from "../styles/cards.module.scss";
-import { MUIButton } from "./atoms/button";
+import { Anchor } from "../src/atoms/anchor";
 
-export function Cards({ text, className }) {
+export function Cards({ text, className, link }) {
     return (
         <li
-            key={text[0]}
+            key={text ? text[0] : ""}
             className={`${
                 className.toLowerCase() === "offeringcards"
                     ? styles.offeringCards
@@ -13,11 +13,16 @@ export function Cards({ text, className }) {
                     : ""
             } ${styles.cardOuter}`}
         >
-            <div className={styles.pGroup}>
-                {text.map((t) => (
-                    <p>{t}</p>
-                ))}
+            <div className={styles.nameArea}>
+                {text ? text.map((t) => <p>{t}</p>) : ""}
             </div>
+            {link ? (
+                <div className={styles.linkArea}>
+                    <Anchor name="know more" link={link} />
+                </div>
+            ) : (
+                ""
+            )}
         </li>
     );
 }

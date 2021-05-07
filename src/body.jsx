@@ -39,9 +39,16 @@ export function Body() {
                     Our core <span className={styles.spanColor}>services</span>
                 </h3>
                 <ul>
-                    {offeringsData.map((data) => (
-                        <Cards className="offeringCards" text={data} />
-                    ))}
+                    {offeringsData.map((data) => {
+                        console.log(data.name);
+                        return (
+                            <Cards
+                                className="offeringCards"
+                                text={data.name}
+                                link={data.link}
+                            />
+                        );
+                    })}
                 </ul>
             </section>
 

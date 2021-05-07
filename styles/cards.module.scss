@@ -20,7 +20,9 @@
 
 .cardOuter {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+        "name"
+        "link";
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -38,9 +40,24 @@
         text-transform: uppercase;
         font-weight: $fw-bold;
     }
+
+    a {
+        grid-area: link;
+
+        text-transform: capitalize;
+        background-color: $golden;
+        padding: 1rem 2rem;
+        border-radius: $border-radius;
+        color: $white;
+        font-size: $fs-x-small;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-.pGroup {
+.nameArea {
+    grid-area: name;
     padding-top: 2rem;
 
     @media only screen and (min-width: 996px) {

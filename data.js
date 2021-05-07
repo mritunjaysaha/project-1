@@ -36,14 +36,12 @@ export const navbarData = {
 export const companyName = { name: "xxx Capital" };
 
 export const offeringsData = [
-    ["debt", "insurance"],
-    ["corporate", "structuring"],
-    ["treasury", "management"],
-    ["captive", "insurance"],
-    ["trade", "finance"],
-    ["escrow/", "paymaster"],
-    ["(green)", "bonds"],
-    ["impact", "funding"],
+    { name: ["equity capital", "markets"], link: "/equityCapitalMarkets" },
+    { name: ["debt capital", "markets"], link: "/debtCapitalMarkets" },
+    { name: ["m&a", "Advisory"], link: "/maAdvisory" },
+    { name: ["direct", "investments"], link: "/directInvestments" },
+    { name: ["green", "bonds"], link: null },
+    { name: ["impact", "funding"], link: null },
 ];
 
 export const clienteleData = [
