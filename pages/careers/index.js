@@ -6,8 +6,9 @@ const ATag = ({ link, name }) => <a href={link}>{name}</a>;
 
 export default function Careers() {
     const { data, buttonName } = careersPageData;
-    return (
-        <section className={styles.careersSection}>
+
+    const CareerJSX = () => (
+        <>
             <header className={styles.careersHeader}>
                 <h1 className={`${styles.multiLineHeader} ${styles.noMargin}`}>
                     what's your next&nbsp;
@@ -29,6 +30,20 @@ export default function Careers() {
                     </li>
                 ))}
             </ul>
+        </>
+    );
+
+    return (
+        <section className={styles.careersSection}>
+            {data.length ? (
+                <CareerJSX />
+            ) : (
+                <header className={styles.careersHeader}>
+                    <h1 className={styles.multiLineHeader}>
+                        coming <span className={styles.spanColor}>soon</span>
+                    </h1>
+                </header>
+            )}
         </section>
     );
 }
