@@ -152,7 +152,7 @@ export const careersPageData = {
  * data: [
  * {
  *      img: "source of image file",
- *      name: "name of the blog",
+ *      name: "name of the blog and should be written as in-this-way with hyphens(-)",
  *      summary: "summary/starting of the the blog which will be shown in the cards",
  *      fullDescription: [
  *          head: "question or header"
@@ -195,7 +195,7 @@ export const blogData = {
         {
             img:
                 "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
+            name: "a-b-c",
             summary: "Lorem ipsum dolor sit.",
             fullDescription: [
                 {

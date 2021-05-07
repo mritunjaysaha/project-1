@@ -40,7 +40,6 @@ export function Body() {
                 </h3>
                 <ul>
                     {offeringsData.map((data) => {
-                        console.log(data.name);
                         return (
                             <Cards
                                 className="offeringCards"
@@ -115,8 +114,8 @@ export function Body() {
                 <ul>
                     {blogData.data.map((data) => (
                         <CardsWithImages
-                            img={data.img}
                             name={data.name}
+                            img={data.img}
                             description={data.summary}
                         />
                     ))}

@@ -6,23 +6,19 @@ import styles from "../../styles/blogPages.module.scss";
 export default function BlogPage() {
     const router = useRouter();
     const { name } = router.query;
+
+    const [currentData, setCurrentData] = useState("");
+
     const { data } = blogData;
-    const currentData = data[0];
 
-    console.log({ currentData });
-    // const [currentData, setCurrentData] = useState("");
-
-    // const { data } = blogData;
-
-    // useEffect(() => {
-    //     for (let datum of data) {
-    //         if (name === "a-b-c-d") {
-    //             setCurrentData(datum);
-    //             console.log(name.replaceAll("-", " "));
-    //             break;
-    //         }
-    //     }
-    // }, [currentData]);
+    useEffect(() => {
+        for (let datum of data) {
+            if (name === "a-b-c-d") {
+                setCurrentData(datum);
+                break;
+            }
+        }
+    }, [currentData]);
 
     return (
         <section className={styles.blogSection}>

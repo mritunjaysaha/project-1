@@ -2,19 +2,14 @@ import { Anchor } from "./atoms/anchor";
 import styles from "../styles/cardsWithImage.module.scss";
 
 export function CardsWithImages({ img, name, description }) {
+    console.log(name.replace(/-/g, " "));
+    name = name ? name.replace(/-/g, " ") : "";
+
     return (
         <article className={styles.cardsOuter}>
-            <img
-                src="https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg"
-                alt=""
-            />
+            <img src={img ? img : ""} alt={name ? name : ""} />
             <article className={styles.cardsContents}>
-                <h1>
-                    {/* {name
-                        ? name.replaceAll("-", " ")
-                        : "Lorem ipsum dolor sit amet."} */}
-                    Lorem, ipsum dolor.
-                </h1>
+                <h1>{name ? name : ""}</h1>
                 <p>
                     {description
                         ? description
@@ -25,7 +20,7 @@ export function CardsWithImages({ img, name, description }) {
                 <Anchor
                     color={true}
                     name="Read More >>>"
-                    href={`/blog/${name}`}
+                    href={`/blog/${name ? name : ""}`}
                 />{" "}
             </article>
         </article>
