@@ -2,7 +2,6 @@ import { Anchor } from "./atoms/anchor";
 import styles from "../styles/cardsWithImage.module.scss";
 
 export function CardsWithImages({ img, name, description }) {
-    console.log(name.replace(/-/g, " "));
     name = name ? name.replace(/-/g, " ") : "";
 
     return (
