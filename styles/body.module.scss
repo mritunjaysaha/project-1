@@ -86,9 +86,32 @@
     }
 }
 
-.blogCardsContainer {
-    display: flex;
-    flex-direction: column;
+.blogCardsSection {
+    text-align: center;
+    margin: 4rem auto;
+    justify-content: center;
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        article {
+            margin-bottom: 4rem;
+        }
+    }
+
+    @media only screen and (min-width: 996px) {
+        display: block;
+        margin: $marginTopBottom auto;
+
+        ul {
+            margin: 0 auto;
+            display: grid;
+            width: 80%;
+            grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+            gap: 4rem;
+            align-items: center;
+        }
+    }
 }
 
 .teamPageSection {
