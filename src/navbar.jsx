@@ -68,7 +68,7 @@ export function Navbar() {
                 className={
                     viewportWidth < 996
                         ? isMenuClicked
-                            ? `${styles.navbarMenu}`
+                            ? `${styles.navbarMenu} ${styles.slideInRight}`
                             : `${styles.hideMenu}`
                         : `${styles.showMenu} ${styles.navbarMenu}`
                 }
