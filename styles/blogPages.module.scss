@@ -48,9 +48,9 @@ $bannerHeight: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 4rem 0;
         margin: 0 auto;
-        padding: $marginTopBottom;
-        width: 60vw;
+        width: 80vw;
 
         p {
             font-size: $fs-small;
@@ -63,6 +63,11 @@ $bannerHeight: 60vh;
         h3,
         p {
             margin-bottom: 2rem;
+        }
+
+        @media only screen and (min-width: 996px) {
+            padding: $marginTopBottom;
+            width: 60vw;
         }
     }
 }
