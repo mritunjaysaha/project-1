@@ -5,16 +5,15 @@ $bannerHeight: 60vh;
 .blogSection {
     display: flex;
     flex-direction: column;
-    margin-top: $marginTopBottom;
     background-color: $white;
-
+    position: relative;
     .header {
-        position: relative;
+        position: static;
         top: 0;
         height: $bannerHeight;
 
         img {
-            position: fixed;
+            position: absolute;
             top: 0;
             width: 100%;
             height: $bannerHeight;
@@ -24,7 +23,7 @@ $bannerHeight: 60vh;
         }
 
         h1 {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
@@ -35,6 +34,7 @@ $bannerHeight: 60vh;
 
             justify-content: center;
             align-items: center;
+            text-transform: capitalize;
 
             color: white;
         }
@@ -42,5 +42,27 @@ $bannerHeight: 60vh;
 
     p {
         position: relative;
+    }
+
+    .blogContentsContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        padding: $marginTopBottom;
+        width: 60vw;
+
+        p {
+            font-size: $fs-small;
+        }
+
+        h3 {
+            font-size: $fs-large;
+        }
+
+        h3,
+        p {
+            margin-bottom: 2rem;
+        }
     }
 }
