@@ -1,15 +1,14 @@
-import Image from "next/image";
 import styles from "../styles/body.module.scss";
 import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
-import { MUIButton } from "./atoms/button";
+import { CardsWithImages } from "../src/cardsWithImage";
 import {
     offeringsData,
     clienteleData,
     blogData,
     summarySectionData,
+    teamData,
 } from "../data";
-import { CardsWithImages } from "../src/cardsWithImage";
 
 export function Body() {
     return (
@@ -79,8 +78,20 @@ export function Body() {
                     meet our <span className={styles.spanColor}>team</span>
                 </h3>
                 <ul>
-                    <TeamPageCards />
-                    <TeamPageCards />
+                    {/* <TeamPageCards />
+                    <TeamPageCards /> */}
+                    {teamData
+                        ? teamData.map(
+                              ({ name, img, designation, linkedin }) => (
+                                  <TeamPageCards
+                                      name={name}
+                                      designation={designation}
+                                      img={img}
+                                      href={linkedin}
+                                  />
+                              )
+                          )
+                        : ""}
                 </ul>
             </section>
 

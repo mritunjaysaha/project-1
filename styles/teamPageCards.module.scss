@@ -19,6 +19,12 @@
 
     transition: $card-transition;
 
+    .avatarImage {
+        img {
+            filter: grayscale(100%);
+        }
+    }
+
     .nameDesignation {
         display: flex;
         flex-direction: column;
