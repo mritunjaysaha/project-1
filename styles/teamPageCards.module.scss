@@ -21,6 +21,9 @@
 
     .avatarImage {
         img {
+            height: 12rem;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
             filter: grayscale(100%);
         }
     }

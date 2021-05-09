@@ -1,5 +1,4 @@
 import styles from "../styles/teamPageCards.module.scss";
-import { ImageAvatars } from "./imageAvatars";
 import { UilLinkedinAlt } from "@iconscout/react-unicons";
 
 export function TeamPageCards({ name, designation, img, href }) {
@@ -7,7 +6,7 @@ export function TeamPageCards({ name, designation, img, href }) {
         <li className={styles.teamPageCards}>
             <div>
                 <div className={styles.avatarImage}>
-                    <ImageAvatars name={name} img={img} />
+                    <img src={img} alt={name} />
                 </div>
                 <div className={styles.nameDesignation}>
                     <h3>{name ? name : "name"}</h3>
