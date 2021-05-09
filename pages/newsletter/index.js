@@ -43,10 +43,7 @@ const SignupForm = () => {
     });
 
     return (
-        <form
-            className={`${classes.root} ${styles.form}`}
-            onSubmit={formik.handleSubmit}
-        >
+        <form className={`${styles.form}`} onSubmit={formik.handleSubmit}>
             <label htmlFor="name"></label>
             <TextField
                 label="Name"
