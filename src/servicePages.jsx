@@ -1,5 +1,5 @@
 import styles from "../styles/servicePages.module.scss";
-import { navbarData } from "../data";
+import { navbarData, teamData } from "../data";
 import { Anchor } from "../src/atoms/anchor";
 import { useRouter } from "next/router";
 
@@ -48,11 +48,13 @@ export function ServicePage({ name, data, imgSrc }) {
                 </article>
 
                 <article className={styles.articleDirector}>
-                    <img src="" alt="" />
-                    <h3>name</h3>
-                    <p>designation</p>
+                    <img src={teamData[0].img} alt={teamData[0].name} />
+                    <h3>{teamData[0].name}</h3>
+                    <p className={styles.pDesignation}>
+                        {teamData[0].designation}
+                    </p>
 
-                    <Anchor name={<p>Learn More</p>} />
+                    {/* <Anchor name={<p>Learn More</p>} /> */}
                 </article>
             </section>
         </section>

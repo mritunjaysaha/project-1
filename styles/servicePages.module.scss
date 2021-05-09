@@ -202,9 +202,14 @@
 
     a {
         p {
-            color: red;
             margin-top: 4rem;
         }
+    }
+    img {
+        filter: grayscale(100%);
+    }
+    .pDesignation {
+        width: inherit;
     }
 
     @media only screen and (min-width: 996px) {
