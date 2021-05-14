@@ -1,12 +1,12 @@
 import styles from "../styles/header.module.scss";
-import { Navbar } from "./navbar";
+import Fade from "react-reveal/Fade";
 
 export function Header() {
     return (
         <header className={styles.initialPage}>
-            {/* <Navbar /> */}
-
-            <h3>Advisory Services for Growing Companies</h3>
+            <Fade bottom duration={1000}>
+                <h3>Advisory Services for Growing Companies</h3>
+            </Fade>
         </header>
     );
 }

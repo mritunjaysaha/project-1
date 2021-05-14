@@ -78,8 +78,6 @@ export function Body() {
                     meet our <span className={styles.spanColor}>team</span>
                 </h3>
                 <ul>
-                    {/* <TeamPageCards />
-                    <TeamPageCards /> */}
                     {teamData
                         ? teamData.map(
                               ({ name, img, designation, linkedin }) => (

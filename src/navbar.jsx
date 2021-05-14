@@ -38,20 +38,14 @@ export function Navbar() {
         setMenuClicked(false);
     };
 
-    const {
-        company,
-        home,
-        services,
-        careers,
-        newsLetter,
-        contact,
-    } = navbarData;
+    const { company, home, services, careers, newsLetter, contact } =
+        navbarData;
 
     return (
         <nav
             className={
                 isScrolled
-                    ? `${styles.navbarHeaderAbsolute} ${styles.changeBackgroundColor} ${styles.slideInBottom}`
+                    ? `${styles.navbarHeaderAbsolute} ${styles.changeBackgroundColor} ${styles.slideInTop}`
                     : `${styles.navbarHeaderAbsolute}`
             }
         >
