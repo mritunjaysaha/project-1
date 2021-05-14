@@ -1,13 +1,7 @@
-import { useState } from "react";
 import styles from "../styles/onHoverMenu.module.scss";
 import { Anchor } from "../src/atoms/anchor";
 
-export function OnHoverMenu({
-    data,
-    handleClose,
-    isMenuClicked,
-    setMenuClicked,
-}) {
+export function OnHoverMenu({ data, setMenuClicked }) {
     let menuRef = null;
     const menuID = "#onHoverMenu";
 

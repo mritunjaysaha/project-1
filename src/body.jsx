@@ -9,6 +9,7 @@ import {
     summarySectionData,
     teamData,
 } from "../data";
+import Zoom from "react-reveal";
 
 export function Body() {
     return (
@@ -96,22 +97,26 @@ export function Body() {
             {/* secret section */}
             <section className={styles.secretSection}>
                 <div className={styles.secretDiv}>
-                    <h3 className={styles.multiLineHeader}>
-                        Yes, we can keep
-                        <span className={styles.spanColor}>a secret</span>
-                    </h3>
-                    <p>That's why you probably haven't heard of us</p>
+                    <Zoom cascade duration={8000}>
+                        <h3 className={styles.multiLineHeader}>
+                            Yes, we can keep
+                            <span className={styles.spanColor}>a secret</span>
+                        </h3>
+                        <p>That's why you probably haven't heard of us</p>
+                    </Zoom>
                 </div>
                 <div className={styles.trustDiv}>
-                    <p>
-                        trust is earned.
-                        <br />
-                        confidentiality is part of our dna.
-                        <br />
-                        we sign with our integrity.
-                        <br />
-                        period.
-                    </p>
+                    <Zoom cascade duration={8000}>
+                        <p>
+                            trust is earned.
+                            <br />
+                            confidentiality is part of our dna.
+                            <br />
+                            we sign with our integrity.
+                            <br />
+                            period.
+                        </p>
+                    </Zoom>
                 </div>
             </section>
 
