@@ -4,6 +4,7 @@ import styles from "../../styles/newsletter.module.scss";
 import TextField from "@material-ui/core/TextField";
 import { makeStyles } from "@material-ui/core/styles";
 import { MUIButton } from "../../src/atoms/button";
+import Fade from "react-reveal/Fade";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -29,8 +30,6 @@ const validate = (values) => {
 };
 
 const SignupForm = () => {
-    const classes = useStyles();
-
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -68,9 +67,12 @@ const SignupForm = () => {
                 type="email"
                 onChange={formik.handleChange}
                 value={formik.values.email}
+                className={formik.errors.email ? `${styles.errorsInput}` : ""}
             />
             {formik.errors.email ? (
-                <div className={styles.errors}>{formik.errors.email}</div>
+                <Fade bottom collapse duration={800}>
+                    <div className={styles.errors}>{formik.errors.email}</div>
+                </Fade>
             ) : null}
             <br />
             <br />

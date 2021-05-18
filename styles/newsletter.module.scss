@@ -63,3 +63,9 @@
     font-size: $fs-x-small;
     margin-top: 1rem;
 }
+
+.errorsInput {
+    input[type="email"] {
+        border-color: yellow !important;
+    }
+}
