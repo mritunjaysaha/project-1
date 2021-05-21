@@ -1,5 +1,6 @@
 import styles from "../styles/onHoverMenu.module.scss";
 import { Anchor } from "../src/atoms/anchor";
+import Fade from "react-reveal/Fade";
 
 export function OnHoverMenu({ data, setMenuClicked }) {
     let menuRef = null;
@@ -27,29 +28,32 @@ export function OnHoverMenu({ data, setMenuClicked }) {
                 aria-controls="simple-menu"
                 aria-haspopup="true"
                 onMouseEnter={handleClick}
+                // onMouseLeave={handleMouseLeave}
                 className={styles.servicesLi}
             >
                 our offerings
             </li>
-            <div
-                id="onHoverMenu"
-                className={styles.onHoverMenu}
-                onMouseLeave={handleMouseLeave}
-            >
-                <ul>
-                    {data.map((data) => {
-                        return (
-                            <li
-                                onClick={() => {
-                                    setMenuClicked(false);
-                                }}
-                            >
-                                <Anchor name={data.name} href={data.link} />
-                            </li>
-                        );
-                    })}
-                </ul>
-            </div>
+            <Fade duration={800}>
+                <div
+                    id="onHoverMenu"
+                    className={styles.onHoverMenu}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <ul>
+                        {data.map((data) => {
+                            return (
+                                <li
+                                    onClick={() => {
+                                        setMenuClicked(false);
+                                    }}
+                                >
+                                    <Anchor name={data.name} href={data.link} />
+                                </li>
+                            );
+                        })}
+                    </ul>
+                </div>
+            </Fade>
         </div>
     );
 }
