@@ -2,18 +2,13 @@ import { useFormik } from "formik";
 
 import styles from "../../styles/newsletter.module.scss";
 import TextField from "@material-ui/core/TextField";
-import { makeStyles } from "@material-ui/core/styles";
 import { MUIButton } from "../../src/atoms/button";
 import Fade from "react-reveal/Fade";
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        "& .MuiTextField-root": {
-            margin: theme.spacing(0),
-            width: "40rem",
-        },
-    },
-}));
+import FormControl from "@material-ui/core/FormControl";
+import FormHelperText from "@material-ui/core/FormHelperText";
+import Input from "@material-ui/core/Input";
+import InputLabel from "@material-ui/core/InputLabel";
 
 const validate = (values) => {
     const errors = {};
@@ -68,7 +63,9 @@ const SignupForm = () => {
                 onChange={formik.handleChange}
                 value={formik.values.email}
                 className={formik.errors.email ? `${styles.errorsInput}` : ""}
+                error={formik.errors.email ? true : ""}
             />
+
             {formik.errors.email ? (
                 <Fade bottom collapse duration={800}>
                     <div className={styles.errors}>{formik.errors.email}</div>

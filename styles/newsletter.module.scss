@@ -59,13 +59,15 @@
 }
 
 .errors {
-    color: red;
+    color: $errorsColor;
     font-size: $fs-x-small;
     margin-top: 1rem;
 }
 
 .errorsInput {
-    input[type="email"] {
-        border-color: yellow !important;
+    &:active,
+    &:focus {
+        border: none;
+        outline: 2px solid $errorsColor !important;
     }
 }
