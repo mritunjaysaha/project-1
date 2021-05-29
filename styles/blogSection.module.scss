@@ -1,4 +1,18 @@
+@import "./utils.scss";
+
 .cardsContainer {
     width: 80vw;
     margin: 4rem auto;
+
+    h3 {
+        font-size: $fs-medium;
+    }
+    p {
+        font-size: $fs-small;
+    }
+
+    a {
+        color: $golden;
+        font-size: $fs-small;
+    }
 }

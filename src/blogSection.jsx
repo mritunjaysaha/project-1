@@ -15,12 +15,14 @@ export function BlogSection() {
                     <Card.Img variant="top" src={img} />
                     <Card.Body>
                         <Card.Title>
-                            {title
-                                ? title
-                                : `Card title that wraps to a new line`}
+                            <h3>
+                                {title
+                                    ? title
+                                    : `Card title that wraps to a new line`}
+                            </h3>
                         </Card.Title>
                         <Card.Text>
-                            {summary ? summary : `summary goes here`}
+                            <p>{summary ? summary : `summary goes here`}</p>
                         </Card.Text>
                         <Anchor
                             color={true}
