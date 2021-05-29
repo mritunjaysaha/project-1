@@ -1,7 +1,6 @@
 import styles from "../styles/body.module.scss";
 import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
-import { CardsWithImages } from "../src/cardsWithImage";
 import {
     offeringsData,
     clienteleData,
