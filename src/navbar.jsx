@@ -1,4 +1,4 @@
-import { useState, useEffect, createRef } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/navbar.module.scss";
 import CloseIcon from "@material-ui/icons/Close";
 import { OnHoverMenu } from "../src/menu";
