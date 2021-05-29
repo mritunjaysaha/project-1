@@ -6,6 +6,7 @@ import styles from "../../styles/blogPages.module.scss";
 export default function BlogPage() {
     const router = useRouter();
     const { name } = router.query;
+    console.log("name: ", name);
 
     const [currentData, setCurrentData] = useState("");
 
