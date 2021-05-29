@@ -19,7 +19,7 @@
 export const blogData = {
     data: [
         {
-            img: "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
+            img: "https://dummyimage.com/400x300.jpg",
             title: "Our investment memo/ thesis",
             summary: `
             Explain the trends in the past and for the future:
@@ -559,7 +559,7 @@ export const blogData = {
             // ],
         },
         {
-            img: "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
+            img: "https://dummyimage.com/300x300.jpg",
             name: "a-b-c",
             summary: "Lorem ipsum dolor sit.",
             fullDescription: [
@@ -584,8 +584,8 @@ export const blogData = {
             ],
         },
         {
-            img: "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
+            img: "https://dummyimage.com/200x100.jpg",
+            name: "a-b-c",
             summary: "Lorem ipsum dolor sit.",
             fullDescription: [
                 {
@@ -609,8 +609,8 @@ export const blogData = {
             ],
         },
         {
-            img: "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
+            img: "https://dummyimage.com/300x200.jpg",
+            name: "a-b-c",
             summary: "Lorem ipsum dolor sit.",
             fullDescription: [
                 {
@@ -634,8 +634,8 @@ export const blogData = {
             ],
         },
         {
-            img: "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
+            img: "https://dummyimage.com/400x300.jpg",
+            name: "a-b-c",
             summary: "Lorem ipsum dolor sit.",
             fullDescription: [
                 {
@@ -659,33 +659,8 @@ export const blogData = {
             ],
         },
         {
-            img: "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
-            summary: "Lorem ipsum dolor sit.",
-            fullDescription: [
-                {
-                    head: "What ....",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-                {
-                    head: "what ......",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-            ],
-        },
-        {
-            img: "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
+            img: "https://dummyimage.com/300x300.jpg",
+            name: "a-b-c",
             summary: "Lorem ipsum dolor sit.",
             fullDescription: [
                 {
