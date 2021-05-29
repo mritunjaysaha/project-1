@@ -7,3 +7,11 @@
 .textColor {
     color: $white;
 }
+
+.anchor {
+    color: inherit;
+
+    &:hover {
+        color: inherit;
+    }
+}
