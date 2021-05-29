@@ -56,8 +56,7 @@ export const teamData = [
     {
         name: "Shreyas Naik",
         designation: "Director of Capital Markets",
-        img:
-            "https://media-exp1.licdn.com/dms/image/C5103AQEeWhZDAkOfZA/profile-displayphoto-shrink_400_400/0/1556536638233?e=1625702400&v=beta&t=S-vgk-mcZuK4diyVNyf5l1LDOKWM5pWlgJbFBvhVmUw",
+        img: "https://media-exp1.licdn.com/dms/image/C5103AQEeWhZDAkOfZA/profile-displayphoto-shrink_400_400/0/1556536638233?e=1625702400&v=beta&t=S-vgk-mcZuK4diyVNyf5l1LDOKWM5pWlgJbFBvhVmUw",
         linkedin: "https://www.linkedin.com/in/shreyas-naik-639536149/",
     },
     {
@@ -78,8 +77,7 @@ export const equityCapitalMarketsData = {
             `Most commonly, we are hired to support founder-controlled businesses in their first institutional capital raise, management teams within large enterprises who are seeking to acquire their operating division, and companies restructuring their capital stack.`,
         ],
     ],
-    img:
-        "https://intersectioncapital.com/wp-content/uploads/2019/03/building.jpg",
+    img: "https://intersectioncapital.com/wp-content/uploads/2019/03/building.jpg",
 };
 
 export const debtCapitalMarketsData = {
@@ -93,8 +91,7 @@ export const debtCapitalMarketsData = {
             `Most commonly, we are hired to support companies seeking to make acquisitions, recapitalize their balance sheet, or in support of de novo growth.`,
         ],
     ],
-    img:
-        "https://intersectioncapital.com/wp-content/uploads/2019/03/debt-capital.jpg",
+    img: "https://intersectioncapital.com/wp-content/uploads/2019/03/debt-capital.jpg",
 };
 
 export const maAdvisory = {
@@ -107,8 +104,7 @@ export const maAdvisory = {
             `Most commonly, we are hired by companies needing to run a silent auction to strategic acquirers, founder-owned businesses looking to transition the business while ensuring their legacy remains, and companies which have experienced a previously failed process.`,
         ],
     ],
-    img:
-        "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
+    img: "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
 };
 
 export const directInvestments = {
@@ -164,193 +160,6 @@ export const careersPageData = {
  * }
  * ]
  */
-
-export const blogData = {
-    data: [
-        {
-            img:
-                "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
-            summary: "Lorem ipsum dolor sit.",
-            fullDescription: [
-                {
-                    head: "What ....",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-                {
-                    head: "what ......",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-            ],
-        },
-        {
-            img:
-                "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "a-b-c",
-            summary: "Lorem ipsum dolor sit.",
-            fullDescription: [
-                {
-                    head: "What ....",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-                {
-                    head: "what ......",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-            ],
-        },
-        {
-            img:
-                "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
-            summary: "Lorem ipsum dolor sit.",
-            fullDescription: [
-                {
-                    head: "What ....",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-                {
-                    head: "what ......",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-            ],
-        },
-        {
-            img:
-                "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
-            summary: "Lorem ipsum dolor sit.",
-            fullDescription: [
-                {
-                    head: "What ....",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-                {
-                    head: "what ......",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-            ],
-        },
-        {
-            img:
-                "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
-            summary: "Lorem ipsum dolor sit.",
-            fullDescription: [
-                {
-                    head: "What ....",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-                {
-                    head: "what ......",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-            ],
-        },
-        {
-            img:
-                "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
-            summary: "Lorem ipsum dolor sit.",
-            fullDescription: [
-                {
-                    head: "What ....",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-                {
-                    head: "what ......",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-            ],
-        },
-        {
-            img:
-                "https://intersectioncapital.com/wp-content/uploads/2019/03/sign-deal.jpg",
-            name: "Lorem-ipsum-dolor",
-            summary: "Lorem ipsum dolor sit.",
-            fullDescription: [
-                {
-                    head: "What ....",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-                {
-                    head: "what ......",
-                    desc: [
-                        [
-                            `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, repellendus recusandae quo corrupti ea quisquam rem est cupiditate voluptatum enim? Incidunt cupiditate nostrum hic perferendis facilis placeat natus, quaerat commodi explicabo, eveniet laborum quam, et illum earum possimus. Accusamus minus non omnis unde? Soluta error debitis culpa ipsa maxime neque tempore magnam recusandae rerum, alias similique quos minus unde reprehenderit a quasi laudantium odio odit delectus, mollitia harum facilis placeat optio? Voluptate maiores mollitia quam suscipit officia cumque doloremque natus ullam? Ipsa sapiente aperiam quasi blanditiis animi odit suscipit similique ratione exercitationem, iusto voluptate quo ipsam omnis, non vel possimus.`,
-                        ],
-                        [`ajksdasklfklasfkas askljfaskjdas lksjadaj`],
-                    ],
-                },
-            ],
-        },
-    ],
-};
 
 export const summarySectionData = {
     whoWeAre: { description: `XXX capital is an independently owned` },

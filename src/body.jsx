@@ -9,11 +9,14 @@ import {
     summarySectionData,
     teamData,
 } from "../data";
+
 import Zoom from "react-reveal";
+import { BlogSection } from "../src/blogSection";
 
 export function Body() {
     return (
         <>
+            <BlogSection />
             {/* summary of the venture */}
             <section className={styles.summarySection}>
                 <div className={styles.summaryDiv1}>
@@ -121,7 +124,7 @@ export function Body() {
             </section>
 
             {/* blog section */}
-            <section className={styles.blogCardsSection}>
+            {/* <section className={styles.blogCardsSection}>
                 <h3 className={styles.multiLineHeader}>
                     more <span className={styles.spanColor}>insights</span>
                 </h3>
@@ -134,7 +137,7 @@ export function Body() {
                         />
                     ))}
                 </ul>
-            </section>
+            </section> */}
         </>
     );
 }

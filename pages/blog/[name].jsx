@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { blogData } from "../../data";
+import { blogData } from "../../blogsData";
 import styles from "../../styles/blogPages.module.scss";
 
 export default function BlogPage() {
