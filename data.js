@@ -30,6 +30,11 @@ export const navbarData = {
             name: "direct investments",
             link: "/directInvestments",
         },
+        {
+            comingSoon: true,
+            name: "initial coin offerings",
+            link: "/",
+        },
     ],
 };
 

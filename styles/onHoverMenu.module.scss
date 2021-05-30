@@ -4,52 +4,44 @@
     z-index: 100;
 }
 
-.onHoverMenu {
-    ul {
-        height: max-content;
-        li {
-            padding: 0 0 0 4rem;
-            font-weight: $fw-regular;
-        }
-        a {
-            font-size: $fs-x-small;
-        }
+.menuItem {
+    padding: 0 0 0 4rem;
+    font-weight: $fw-regular;
+    text-transform: capitalize;
+    a {
+        font-size: $fs-x-small;
     }
 
     @media only screen and (min-width: 996px) {
-        position: fixed;
-        top: 0;
-        left: 67%;
-        display: none; //flex
-        padding-top: 6rem;
-        z-index: 1000;
-        ul {
-            background-color: $white;
-            color: $black;
+        // position: fixed;
+        // top: 0;
+        // left: 67%;
+        // display: none; //flex
+        // padding-top: 6rem;
+        // z-index: 1000;
+        // background-color: $white;
+        // color: $black;
 
-            width: 20rem;
-            height: max-content;
+        // width: max-content;
+        // height: max-content;
 
-            text-transform: capitalize;
+        // text-transform: capitalize;
 
-            display: flex;
-            flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
 
-            padding: 1rem 2rem;
-            margin-top: 2rem;
+        // padding: 1rem 2rem;
+        // margin-top: 2rem;
 
-            border-radius: 0.5rem;
-            box-shadow: $box-shadow;
+        // border-radius: 0.5rem;
+        // box-shadow: $box-shadow;
 
-            li {
-                cursor: pointer;
-                padding: 1rem 0;
-                font-weight: $fw-bold;
+        cursor: pointer;
+        padding: 1rem 0;
+        font-weight: $fw-bold;
 
-                a {
-                    font-size: $fs-small;
-                }
-            }
+        a {
+            font-size: $fs-small;
         }
     }
 }
