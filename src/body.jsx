@@ -4,7 +4,6 @@ import { TeamPageCards } from "./teamPageCards";
 import {
     offeringsData,
     clienteleData,
-    blogData,
     summarySectionData,
     teamData,
 } from "../data";
@@ -15,13 +14,6 @@ import { BlogSection } from "../src/blogSection";
 export function Body() {
     return (
         <>
-            <section>
-                <h3 className={styles.multiLineHeader}>
-                    more <span className={styles.spanColor}>insights</span>
-                </h3>
-
-                <BlogSection />
-            </section>
             {/* summary of the venture */}
             <section className={styles.summarySection}>
                 <div className={styles.summaryDiv1}>
@@ -143,6 +135,13 @@ export function Body() {
                     ))}
                 </ul>
             </section> */}
+            <section className={styles.blogCardsSection}>
+                <h3 className={styles.multiLineHeader}>
+                    more <span className={styles.spanColor}>insights</span>
+                </h3>
+
+                <BlogSection />
+            </section>
         </>
     );
 }
