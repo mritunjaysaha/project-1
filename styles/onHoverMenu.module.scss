@@ -4,23 +4,19 @@
     z-index: 100;
 }
 
-.menuItem {
+.menuItemDesktop {
+    display: none;
+
     padding: 0 0 0 4rem;
     font-weight: $fw-regular;
     text-transform: capitalize;
-    font-size: inherit;
 
-    a {
-        font-size: $fs-x-small;
+    a,
+    p {
+        font-size: $fs-small;
     }
 
     @media only screen and (min-width: 996px) {
-        cursor: pointer;
-        padding: 1rem 0;
-        font-weight: $fw-bold;
-
-        a {
-            font-size: $fs-small;
-        }
+        display: flex;
     }
 }

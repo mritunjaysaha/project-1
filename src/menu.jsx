@@ -1,7 +1,6 @@
 import styles from "../styles/onHoverMenu.module.scss";
 import { Anchor } from "../src/atoms/anchor";
 import { useState } from "react";
-import Button from "@material-ui/core/Button";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Fade from "@material-ui/core/Fade";
@@ -39,13 +38,14 @@ export function OnHoverMenu({ data, setMenuClicked }) {
             >
                 {data.map(({ name, link, comingSoon }) =>
                     !comingSoon ? (
-                        <MenuItem className={styles.menuItem}>
+                        <MenuItem className={styles.menuItemDesktop}>
                             <Anchor name={name} href={link} />
                         </MenuItem>
                     ) : (
-                        <MenuItem className={styles.menuItem}>
+                        <MenuItem className={styles.menuItemDesktop}>
                             <p>
                                 <Anchor name={name} href={link} />
+
                                 <span className={styles.comingSoon}>
                                     coming soon
                                 </span>
