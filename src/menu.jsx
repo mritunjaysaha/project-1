@@ -20,68 +20,7 @@ export function OnHoverMenu({ data, setMenuClicked }) {
         setAnchorEl(null);
     };
 
-    // function handleClick() {
-    //     if (!menuRef) {
-    //         menuRef = document.querySelector(menuID);
-    //     }
-
-    //     menuRef.style.display = "flex";
-    // }
-
-    // function handleMouseLeave() {
-    //     if (!menuRef) {
-    //         menuRef = document.querySelector(menuID);
-    //     }
-
-    //     menuRef.style.display = "none";
-    // }
-
     return (
-        // <div>
-        //     <li
-        //         aria-controls="simple-menu"
-        //         aria-haspopup="true"
-        //         onMouseEnter={handleClick}
-        //         // onMouseLeave={handleMouseLeave}
-        //         className={styles.servicesLi}
-        //     >
-        //         our offerings
-        //     </li>
-        //     <Fade duration={800}>
-        //         <div
-        //             id="onHoverMenu"
-        //             className={styles.onHoverMenu}
-        //             onMouseLeave={handleMouseLeave}
-        //         >
-        //             <ul>
-        //                 {data.map((data) => {
-        //                     return (
-        //                         <li
-        //                             onClick={() => {
-        //                                 setMenuClicked(false);
-        //                             }}
-        //                         >
-        //                             {!data.comingSoon ? (
-        //                                 <Anchor
-        //                                     name={data.name}
-        //                                     href={data.link}
-        //                                 />
-        //                             ) : (
-        //                                 <p>
-        //                                     initial coin offering
-        //                                     <span className={styles.comingSoon}>
-        //                                         coming soon!
-        //                                     </span>
-        //                                 </p>
-        //                             )}
-        //                         </li>
-        //                     );
-        //                 })}
-        //             </ul>
-        //         </div>
-        //     </Fade>
-        // </div>
-
         <div>
             <li
                 aria-controls="fade-menu"
@@ -98,15 +37,22 @@ export function OnHoverMenu({ data, setMenuClicked }) {
                 onClose={handleClose}
                 TransitionComponent={Fade}
             >
-                {/* <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My account</MenuItem>
-                <MenuItem onClick={handleClose}>Logout</MenuItem> */}
-
-                {data.map(({ name, link }) => (
-                    <MenuItem className={styles.menuItem}>
-                        <Anchor name={name} href={link} />
-                    </MenuItem>
-                ))}
+                {data.map(({ name, link, comingSoon }) =>
+                    !comingSoon ? (
+                        <MenuItem className={styles.menuItem}>
+                            <Anchor name={name} href={link} />
+                        </MenuItem>
+                    ) : (
+                        <MenuItem className={styles.menuItem}>
+                            <p>
+                                <Anchor name={name} href={link} />
+                                <span className={styles.comingSoon}>
+                                    coming soon
+                                </span>
+                            </p>
+                        </MenuItem>
+                    )
+                )}
             </Menu>
         </div>
     );
