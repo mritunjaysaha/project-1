@@ -17,9 +17,15 @@
         padding-left: 2rem;
         width: 100vw;
         color: $white;
-        font-size: $fs-xx-large;
+        font-size: $fs-x-large;
         font-family: "Montserrat", sans-serif;
         font-weight: $fw-bold;
+    }
+
+    @media only screen and (max-width: 320px) {
+        h3 {
+            font-size: $fs-medium;
+        }
     }
 
     @media only screen and (min-width: 640px) {
@@ -41,9 +47,10 @@
 
         h3 {
             padding: 0;
-            font-size: $fs-desktop-xxx-large;
             width: 120rem;
             line-height: 10rem;
+            font-size: $fs-desktop-xxx-large;
+            font-weight: $fw-x-bold;
         }
     }
 }

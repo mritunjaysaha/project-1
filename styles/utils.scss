@@ -21,10 +21,10 @@ $fs-xxx-large: 3.6rem;
 $fs-desktop-large: 4.2rem;
 $fs-desktop-x-large: 4.6rem;
 $fs-desktop-xx-large: 5rem;
-$fs-desktop-xxx-large: 10.5rem;
+$fs-desktop-xxx-large: 9rem;
 
 // Font weight
-
+$fw-x-bold: 800;
 $fw-bold: 700;
 $fw-medium: 500;
 $fw-regular: 400;
@@ -66,15 +66,17 @@ $border-radius: 0.5rem;
 }
 
 .multiLineHeader {
-    font-size: $fs-desktop-large;
     text-transform: uppercase;
     text-shadow: $text-shadow;
     line-height: $line-height-header;
+
     padding: 4rem 0;
     margin-bottom: 4rem;
     width: 100%;
     text-align: center;
+
     font-family: "Montserrat", sans-serif;
+    font-size: $fs-desktop-large;
     font-weight: $fw-bold;
 }
 

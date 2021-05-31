@@ -4,6 +4,11 @@
     height: 16rem;
     aspect-ratio: 1/1;
 
+    @media only screen and (max-width: 320px) {
+        font-size: $fs-small;
+        height: 20rem;
+    }
+
     @media only screen and (min-width: 996px) {
         height: 26rem;
     }
@@ -12,6 +17,10 @@
 .clienteleCards {
     height: 12rem;
     aspect-ratio: 4/3;
+
+    @media only screen and (max-width: 320px) {
+        height: 18rem;
+    }
 
     @media only screen and (min-width: 996px) {
         height: 20rem;
