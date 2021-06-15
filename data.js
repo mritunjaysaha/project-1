@@ -7,7 +7,7 @@ export const navbarList = [
 ];
 
 export const navbarData = {
-    company: { name: "xxxCapital", link: "/" },
+    company: { name: "Maneuver Ventures", link: "/" },
     home: { name: "home", link: "/" },
     solutions: { name: "solutions", link: "/solutions" },
     careers: { name: "careers", link: "/careers" },
@@ -38,7 +38,7 @@ export const navbarData = {
     ],
 };
 
-export const companyName = { name: "xxx Capital" };
+export const companyName = { name: "Maneuver Ventures" };
 
 export const offeringsData = [
     { name: ["equity capital", "markets"], link: "/equityCapitalMarkets" },
