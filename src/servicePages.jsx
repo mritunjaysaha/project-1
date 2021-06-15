@@ -35,27 +35,6 @@ export function ServicePage({ name, data, imgSrc }) {
                         </li>
                     ))}
                 </ul>
-
-                <article className={styles.articleMid}>
-                    <h3>Lorem ipsum dolor sit amet.</h3>
-                    <div className={styles.horizontalBorder}></div>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Debitis ratione possimus cupiditate maiores nihil
-                        magni asperiores sed. Incidunt non cum fuga, doloribus
-                        in animi, magni possimus molestias, atque numquam totam!
-                    </p>
-                </article>
-
-                <article className={styles.articleDirector}>
-                    <img src={teamData[0].img} alt={teamData[0].name} />
-                    <h3>{teamData[0].name}</h3>
-                    <p className={styles.pDesignation}>
-                        {teamData[0].designation}
-                    </p>
-
-                    {/* <Anchor name={<p>Learn More</p>} /> */}
-                </article>
             </section>
         </section>
     );

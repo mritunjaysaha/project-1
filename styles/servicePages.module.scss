@@ -92,8 +92,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: $marginTopBottom 4rem;
+    justify-content: center;
 
     @media only screen and (min-width: 996px) {
         flex-direction: row;
@@ -103,7 +102,6 @@
 .menuContainer {
     display: flex;
     flex-direction: column;
-
     background-color: $white;
     width: 80vw;
     margin: 0 auto;
@@ -136,65 +134,6 @@
     }
 }
 
-.articleMid {
-    width: 80vw;
-    margin: 0 auto 4rem auto;
-
-    h3 {
-        font-size: $fs-large;
-    }
-
-    p {
-        margin-top: 4rem;
-        font-size: $fs-small;
-    }
-
-    @media only screen and (min-width: 996px) {
-        width: 40rem;
-        h3 {
-            font-size: $fs-x-large;
-        }
-        p {
-            font-size: $fs-small;
-        }
-    }
-}
-
-.articleDirector {
-    padding: 0;
-    margin: 0 auto;
-    width: 16rem;
-    img {
-        background-color: red;
-        width: inherit;
-        aspect-ratio: 1/1;
-        filter: grayscale(100%);
-    }
-    .pDesignation {
-        width: inherit;
-    }
-    h3,
-    p {
-        font-size: $fs-small;
-        margin-top: 1rem;
-    }
-
-    a {
-        text-transform: uppercase;
-        font-weight: 100;
-    }
-
-    a {
-        p {
-            margin-top: 4rem;
-        }
-    }
-
-    @media only screen and (min-width: 996px) {
-        padding-right: 4rem;
-        margin: 0;
-    }
-}
 .activeLink {
     text-decoration: underline;
 }
