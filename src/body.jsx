@@ -14,23 +14,6 @@ import { BlogSection } from "../src/blogSection";
 export function Body() {
     return (
         <>
-            {/* summary of the venture */}
-            <section className={styles.summarySection}>
-                <div className={styles.summaryDiv1}>
-                    <h1 className={styles.multiLineHeader}>
-                        Who <span>we</span>{" "}
-                        <span className={styles.spanColor}>are</span>
-                    </h1>
-                    <p>{summarySectionData.whoWeAre.description}</p>
-                </div>
-                <div className={styles.summaryDiv2}>
-                    <h1 className={styles.multiLineHeader}>
-                        What we <span className={styles.spanColor}>do</span>
-                    </h1>
-                    <p>{summarySectionData.whatWeDo.description}</p>
-                </div>
-            </section>
-
             {/* Offerings */}
             <section className={styles.cardsSection}>
                 <h3
