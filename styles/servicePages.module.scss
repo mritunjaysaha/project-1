@@ -1,28 +1,9 @@
 @import "./utils.scss";
 
 .serviceSection {
-    background-color: $blueBGColor;
-    color: $white;
+    background-color: $white;
+    color: $black;
     overflow-x: hidden;
-
-    &::before {
-        content: "";
-        pointer-events: none;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(-42%, -42%);
-
-        background: radial-gradient(
-            circle,
-            rgba(43, 46, 74, 0.7) 0%,
-            rgba(43, 46, 74, 0.0001) 70%
-        );
-
-        width: 100vw;
-        padding-top: 88%;
-        z-index: 20;
-    }
 }
 
 .serviceArticleContainer {
@@ -101,7 +82,7 @@
 }
 
 .horizontalBorder {
-    background-color: $white;
+    background-color: $black;
     height: 0.4rem;
     width: 10rem;
     margin-top: 4rem;
