@@ -4,15 +4,12 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-
-    height: 50vh;
-
-    background: url(http://cdn2.editmysite.com/images/editor/theme-background/stock/GW-bridge.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    justify-content: center;
+    padding: 0;
+    height: 100vh;
 
     h3 {
+        top: 50%;
+        z-index: 10;
         position: relative;
         padding-left: 2rem;
         width: 100vw;
@@ -29,25 +26,23 @@
     }
 
     @media only screen and (min-width: 640px) {
-        height: 80rem;
         display: flex;
         justify-content: center;
         flex-direction: column;
 
         h3 {
-            font-size: 4.8rem;
+            font-size: $fs-desktop-x-large;
             width: 70vw;
         }
     }
 
     @media only screen and (min-width: 996px) {
-        height: 150vh;
-        align-items: center;
         justify-content: center;
 
         h3 {
-            padding: 0;
-            width: 120rem;
+            position: static;
+            margin: 0 0 0 $marginLeftRight;
+            width: 100rem;
             line-height: 10rem;
             font-size: $fs-desktop-xxx-large;
             font-weight: $fw-x-bold;

@@ -15,6 +15,19 @@ module.exports = withImages({
 
 module.exports = {
     /* Add Your Scss File Folder Path Here */
+
+    module: {
+        rules: [
+            {
+                test: "/.(png|jpe?g)$/i",
+                use: [
+                    {
+                        loader: "file-loader",
+                    },
+                ],
+            },
+        ],
+    },
     sassOptions: {
         includePaths: [path.join(__dirname, "styles")],
     },
