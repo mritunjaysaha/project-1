@@ -3,9 +3,8 @@
 .initialPage {
     display: flex;
     flex-direction: column;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+    margin: 0 !important;
+    height: 90vh;
 
     h3 {
         top: 50%;

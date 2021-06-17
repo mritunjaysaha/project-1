@@ -1,11 +1,12 @@
 @import "./utils.scss";
 
 .navbarHeaderAbsolute {
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     margin: 0;
     width: 100%;
+    text-transform: uppercase;
 
     display: flex;
     justify-content: space-between;
@@ -62,10 +63,10 @@
     }
 }
 
-.navbar {
-    position: sticky;
-    box-shadow: $box-shadow;
-}
+// .navbar {
+//     position: sticky;
+//     box-shadow: $box-shadow;
+// }
 
 .showNavbar {
     display: flex;
@@ -77,10 +78,6 @@
 
 .companyName {
     font-size: $fs-medium;
-}
-
-.navbarHeaderAbsolute {
-    text-transform: uppercase;
 }
 
 .navbarMenu {
@@ -149,7 +146,6 @@
 }
 
 .changeBackgroundColor {
-    position: sticky;
     background: white;
     color: black;
 
