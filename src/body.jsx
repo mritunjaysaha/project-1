@@ -16,12 +16,16 @@ export function Body() {
         <>
             {/* Offerings */}
             <section className={styles.cardsSection}>
-                <h3
-                    className={`${styles.multiLineHeader} ${styles.backgroundGradient1}`}
-                >
-                    Our core <span className={styles.spanColor}>services</span>
-                </h3>
-                <ul>
+                <div className={`${styles.backgroundBlack}`}>
+                    <h3 className={`${styles.multiLineHeader}`}>
+                        Our core
+                        <span className={styles.spanColor}>services</span>
+                        <div
+                            className={`${styles.horizontalBorder} ${styles.backgroundWhite}`}
+                        ></div>
+                    </h3>
+                </div>
+                <ul className={styles.cardsGridUL}>
                     {offeringsData.map((data) => {
                         return (
                             <Cards
@@ -36,18 +40,23 @@ export function Body() {
 
             {/* Clientele */}
             <section className={styles.cardsSection}>
-                <h3
-                    className={`${styles.multiLineHeader} ${styles.backgroundGradient2}`}
-                >
-                    clients&nbsp;
-                    <span>
-                        who&nbsp;
-                        <span className={styles.spanColor}>love</span>
-                        &nbsp;to work
-                    </span>
-                    <span>&nbsp;with us</span>
-                </h3>
-                <ul>
+                <div className={styles.backgroundBlack}>
+                    <h3
+                        className={`${styles.multiLineHeader} ${styles.backgroundBlack}`}
+                    >
+                        clients&nbsp;
+                        <span>
+                            who&nbsp;
+                            <span className={styles.spanColor}>love</span>
+                            to work
+                        </span>
+                        <span>&nbsp;with us</span>
+                        <div
+                            className={`${styles.horizontalBorder} ${styles.backgroundWhite}`}
+                        ></div>
+                    </h3>
+                </div>
+                <ul className={styles.cardsGridUL}>
                     {clienteleData.map((data) => (
                         <Cards className="clienteleCards" text={data} />
                     ))}
@@ -55,13 +64,17 @@ export function Body() {
             </section>
 
             {/* Team page */}
-            <section className={styles.teamPageSection}>
-                <h3
-                    className={`${styles.multiLineHeader} ${styles.backgroundGradient3}`}
-                >
-                    meet our <span className={styles.spanColor}>team</span>
-                </h3>
-                <ul>
+            <section className={styles.cardsSection}>
+                <div className={`${styles.backgroundBlack}`}>
+                    <h3 className={`${styles.multiLineHeader}`}>
+                        Our core
+                        <span className={styles.spanColor}>services</span>
+                        <div
+                            className={`${styles.horizontalBorder} ${styles.backgroundWhite}`}
+                        ></div>
+                    </h3>
+                </div>
+                <ul className={styles.cardsFlexUL}>
                     {teamData
                         ? teamData.map(
                               ({ name, img, designation, linkedin }) => (

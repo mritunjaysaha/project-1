@@ -1,46 +1,5 @@
 @import "./utils.scss";
 
-.summarySection {
-    display: flex;
-    flex-direction: column;
-    background-color: #000000;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 800'%3E%3Cg %3E%3Ccircle fill='%23000000' cx='400' cy='400' r='600'/%3E%3Ccircle fill='%23080512' cx='400' cy='400' r='500'/%3E%3Ccircle fill='%230f091d' cx='400' cy='400' r='400'/%3E%3Ccircle fill='%23120e27' cx='400' cy='400' r='300'/%3E%3Ccircle fill='%23131232' cx='400' cy='400' r='200'/%3E%3Ccircle fill='%2314143d' cx='400' cy='400' r='100'/%3E%3C/g%3E%3C/svg%3E");
-    background-attachment: fixed;
-    background-size: cover;
-    color: $white;
-    font-family: "Montserrat", sans-serif;
-
-    .summaryDiv1,
-    .summaryDiv2 {
-        width: 90vw;
-        text-align: center;
-        padding: 4rem 0;
-        margin: 0 auto;
-        h1 {
-            font-size: $fs-desktop-large;
-        }
-
-        p {
-            margin-top: 4rem;
-            font-size: $fs-medium;
-        }
-    }
-
-    @media only screen and (min-width: 996px) {
-        flex-direction: row;
-
-        .summaryDiv1,
-        .summaryDiv2 {
-            width: 50%;
-            padding: $marginTopBottom 8rem;
-        }
-
-        .summaryDiv1 {
-            border-right: 1px solid white;
-        }
-    }
-}
-
 .btnContainer {
     display: flex;
     justify-content: center;
@@ -49,88 +8,59 @@
     font-size: $fs-medium;
 }
 
-.placeholder {
-    background: #888;
-    height: 200px;
-    width: 100%;
-}
-
 .cardsSection {
     text-align: center;
     margin: 4rem auto;
     justify-content: center;
 
-    ul {
-        display: grid;
-
-        grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
-        grid-column-gap: 0;
-        grid-row-gap: 4rem;
-
-        align-items: center;
-        align-self: center;
-        justify-content: center;
-    }
-    @media only screen and (max-width: 320px) {
-        ul {
-            display: flex;
-            flex-direction: column;
-        }
-    }
     @media only screen and (min-width: 996px) {
         display: block;
         margin: $marginTopBottom auto;
-
-        ul {
-            margin: 0 auto;
-            display: grid;
-            width: 80%;
-            grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
-            gap: 4rem;
-            align-items: center;
-        }
     }
 }
 
-.blogCardsSection {
-    margin: 4rem;
+.cardsGridUL {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(50vw, 1fr));
+    grid-column-gap: 0;
+    grid-row-gap: 4rem;
+
+    align-items: center;
+    align-self: center;
     justify-content: center;
 
+    margin-top: 12rem;
+
     @media only screen and (max-width: 320px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media only screen and (min-width: 996px) {
         margin: 0 auto;
+        display: grid;
+        width: 80%;
+        grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+        gap: 4rem;
+        align-items: center;
     }
 }
 
-.teamPageSection {
+.cardsFlexUL {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 
-    margin: $marginTopBottom 0;
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-
-        margin-top: 4rem;
-    }
     @media only screen and (min-width: 768px) {
-        ul {
-            width: 80vw;
-            flex-direction: row;
-        }
+        width: 80vw;
+        flex-direction: row;
     }
-    @media only screen and (min-width: 996px) {
-        h3 {
-            font-size: $fs-desktop-large;
-            padding: 4rem;
-        }
 
-        ul {
-            width: 60rem;
-        }
+    @media only screen and (min-width: 996px) {
+        height: max-content;
+        margin: 0 auto;
     }
 }
 
@@ -209,28 +139,11 @@
     }
 }
 
-.backgroundGradient1 {
-    background: #9cecfb;
-    background: linear-gradient(to right, #0052d4, #65c7f7, #9cecfb);
-}
+.blogCardsSection {
+    margin: 4rem;
+    justify-content: center;
 
-.backgroundGradient2 {
-    background-color: #ff3cac;
-    background-image: linear-gradient(
-        225deg,
-        #ff3cac 0%,
-        #784ba0 50%,
-        #2b86c5 100%
-    );
-}
-
-.backgroundGradient3 {
-    background: #c2e59c;
-    background: linear-gradient(to right, #64b3f4, #c2e59c);
-}
-
-.backgroundGradient1,
-.backgroundGradient2,
-.backgroundGradient3 {
-    color: $white;
+    @media only screen and (max-width: 320px) {
+        margin: 0 auto;
+    }
 }
