@@ -107,10 +107,10 @@ export default function BlogPage() {
     // });
     const currentData = data[0];
 
-    // useEffect(() => {
-    //     const scene = document.querySelector("#scene");
-    //     new Parallax(scene, { invertX: false, invertY: false });
-    // });
+    useEffect(() => {
+        const scene = document.querySelector("#scene");
+        new Parallax(scene, { invertX: false, invertY: false });
+    });
 
     return (
         <>

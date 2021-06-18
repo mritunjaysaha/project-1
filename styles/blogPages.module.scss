@@ -89,18 +89,23 @@ $bannerHeight: 80vh;
     margin: 0 auto;
     width: 80vw;
     padding-top: calc(#{$bannerHeight} + #{$marginTopBottom});
+    font-family: "Catamaran", sans-serif;
 
-    p {
+    strong,
+    p,
+    li {
+        font-family: inherit;
         font-size: $fs-small;
+        margin-bottom: 1rem;
     }
 
-    h3 {
-        font-size: $fs-large;
+    li {
+        list-style: inside;
+        padding-left: 4rem;
     }
 
-    h3,
-    p {
-        margin-bottom: 2rem;
+    ul > p {
+        margin-bottom: 0rem;
     }
 
     @media only screen and (min-width: 996px) {
