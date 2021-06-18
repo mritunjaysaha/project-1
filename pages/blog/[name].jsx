@@ -93,50 +93,43 @@ export default function BlogPage() {
     const router = useRouter();
     const { name } = router.query;
 
-    const [currentData, setCurrentData] = useState("");
+    // const [currentData, setCurrentData] = useState("");
 
     const { data } = blogData;
 
-    useEffect(() => {
-        // for (let datum of data) {
-        //     if (name === datum.title) {
-        //         setCurrentData(datum);
-        //         break;
-        //     }
-        // }
-    });
+    // useEffect(() => {
+    //     for (let datum of data) {
+    //         if (name === datum.id) {
+    //             setCurrentData(datum);
+    //             break;
+    //         }
+    //     }
+    // });
+    const currentData = data[0];
 
-    useEffect(() => {
-        const scene = document.querySelector("#scene");
-        new Parallax(scene, { invertX: false, invertY: false });
-    });
+    // useEffect(() => {
+    //     const scene = document.querySelector("#scene");
+    //     new Parallax(scene, { invertX: false, invertY: false });
+    // });
 
     return (
-        <section className={styles.blogSection}>
-            <div className={styles.overlay}>
-                <h3>TEMP</h3>
-            </div>
-            <header className={styles.parallax} id="scene">
-                <div className={styles.overlay}></div>
-
-                <div data-depth="0.4" className={styles.layer}>
-                    <ParticlesJS />
+        <>
+            <section className={styles.blogSection}>
+                <div className={styles.overlay}>
+                    <h3>{currentData.title}</h3>
                 </div>
-                <div data-depth="0.3" className={styles.layer}></div>
-            </header>
-            {/* <section className={styles.blogContentsContainer}>
-                {currentData
-                    ? currentData.fullDescription.map((data) => {
-                          const { head, desc } = data;
-                          return (
-                              <div className={styles.blogContainer}>
-                                  <h3>{head}</h3>
-                              </div>
-                          );
-                      })
-                    : ""
-                    }
-            </section> */}
-        </section>
+                <header className={styles.parallax} id="scene">
+                    <div className={styles.overlay}></div>
+
+                    <div data-depth="0.4" className={styles.layer}>
+                        <ParticlesJS />
+                    </div>
+                    <div data-depth="0.3" className={styles.layer}></div>
+                </header>
+            </section>
+            <section className={styles.blogContentsContainer}>
+                {currentData != false ? currentData.fullDescription() : ""}
+            </section>
+        </>
     );
 }

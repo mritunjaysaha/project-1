@@ -16,60 +16,25 @@
  * ]
  */
 
+const blog = () => {
+    return (
+        <>
+            <h3>HTML here</h3>
+        </>
+    );
+};
+
 export const blogData = {
     data: [
         {
             img: "https://dummyimage.com/400x300.jpg",
-            title: `Our investment memo or thesis`,
+            id: `Our investment memo or thesis`,
+            title: "Our investment memo/thesis",
             summary: `
             Explain the trends in the past and for the future:
             Looking at the uncertainty of the post pandemic world0
             `,
-            fullDescription: [],
-            // introText: {
-            //     type: "list",
-            //     listData: [
-            //         `how highly centralized tech entities have been acting as quasi fasistic institutions to regulate our lives, controlling free speech,`,
-            //         `neccesity of decentralization to achieve true democratization of rewards and contro`,
-            //         `making the internet truly end user centric rather than the platform centric ( like bloggers write it for the algorithm)`,
-            //         `wrestle back regulatory control from centralized platform entities to a community based curation model to truly democratize the platform`,
-            //     ],
-            // },
-
-            // fullDescription: [
-            //     {
-            //         head: `Explain the psychology of asset bubbles and explain woth trends how it goes through cycles similar to the dot com bubble ,`,
-            //         desc: [
-            //             {
-            //                 type: "plainText",
-            //                 data: [
-            //                     `We're in the middle of a crypto Bubble burst`,
-            //                     `crypto startups that survive will it big in the next decade( and what they need to do)`,
-            //                 ],
-            //             },
-            //             {
-            //                 type: "list",
-            //                 data: [
-            //                     `crypto venture have gone through a bubble like phase with a lot of scams in this arena with a lot of ICO tokens ending up worthless `,
-            //                     `create a securities market based on Blockchain with internal regulatory mechanisms
-            //                     (For companies to go public/ ICOs to be on the forefront to the regular government regulated securities exchanges
-            //                     )
-            //                     `,
-            //                 ],
-            //             },
-            //         ],
-            //     },
-
-            //     {
-            //         head: `Looking at the trends `,
-            //         desc: [
-            //             {
-            //                 type: "list",
-            //                 data: [`decentralization and crypto ventures`],
-            //             },
-            //         ],
-            //     },
-            // ],
+            fullDescription: blog,
         },
         {
             img: "https://dummyimage.com/300x300.jpg",

@@ -1,6 +1,6 @@
 @import "./utils.scss";
 
-$bannerHeight: 60vh;
+$bannerHeight: 80vh;
 
 .layer,
 .parallax,
@@ -8,7 +8,9 @@ $bannerHeight: 60vh;
 .particleJS,
 .overlay {
     position: absolute;
-    height: 80vh;
+    top: 0;
+    left: 0;
+    height: $bannerHeight;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -16,13 +18,14 @@ $bannerHeight: 60vh;
     overflow: hidden;
 }
 .overlay {
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     z-index: 100;
     display: flex;
     justify-content: center;
     align-items: center;
     h3 {
         color: white;
+        font-size: $fs-desktop-large;
     }
 }
 
@@ -70,74 +73,37 @@ $bannerHeight: 60vh;
 }
 
 .blogSection {
+    position: relative !important;
     display: flex;
     flex-direction: column;
     background-color: $white;
-    position: relative;
     font-family: "Montserrat", sans-serif;
+}
 
-    .header {
-        position: static;
-        top: 0;
-        height: $bannerHeight;
-
-        img {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            height: $bannerHeight;
-            z-index: 0;
-
-            object-fit: cover;
-        }
-
-        h1 {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: $bannerHeight;
-            background-color: $overlay;
-            text-align: center;
-            display: flex;
-            font-size: $fs-large;
-
-            justify-content: center;
-            align-items: center;
-            text-transform: capitalize;
-
-            color: $white;
-        }
-    }
+.blogContentsContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0;
+    margin: 0 auto;
+    width: 80vw;
+    padding-top: calc(#{$bannerHeight} + #{$marginTopBottom});
 
     p {
-        position: relative;
+        font-size: $fs-small;
     }
 
-    .blogContentsContainer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 4rem 0;
-        margin: 0 auto;
-        width: 80vw;
+    h3 {
+        font-size: $fs-large;
+    }
 
-        p {
-            font-size: $fs-small;
-        }
+    h3,
+    p {
+        margin-bottom: 2rem;
+    }
 
-        h3 {
-            font-size: $fs-large;
-        }
-
-        h3,
-        p {
-            margin-bottom: 2rem;
-        }
-
-        @media only screen and (min-width: 996px) {
-            padding: $marginTopBottom;
-            width: 60vw;
-        }
+    @media only screen and (min-width: 996px) {
+        width: 60vw;
     }
 }
