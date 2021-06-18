@@ -1,6 +1,6 @@
 @import "./utils.scss";
 
-.cardsContainer {
+.blogCardsContainer {
     width: 80vw;
     margin: 4rem auto;
     font-family: "Montserrat", sans-serif;
@@ -16,4 +16,11 @@
         color: $golden;
         font-size: $fs-small;
     }
+}
+
+.pEllipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }

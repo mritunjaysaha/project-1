@@ -19,7 +19,9 @@ function CardContents({ img, title, summary, id }) {
                         </h3>
                     </Card.Title>
                     <Card.Text>
-                        <p>{summary ? summary : `summary goes here`}</p>
+                        <p className={styles.pEllipsis}>
+                            {summary ? summary : `summary goes here`}
+                        </p>
                     </Card.Text>
                     <Anchor
                         color={true}
@@ -36,7 +38,7 @@ export function BlogSection() {
     const { data } = blogData;
 
     return (
-        <CardColumns className={styles.cardsContainer}>
+        <CardColumns className={styles.blogCardsContainer}>
             {data.map(({ img, title, summary, id }) => (
                 <CardContents
                     img={img}
