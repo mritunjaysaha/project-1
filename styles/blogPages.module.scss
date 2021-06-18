@@ -2,6 +2,49 @@
 
 $bannerHeight: 60vh;
 
+.layer,
+.parallax,
+.someSpace,
+.particleJS {
+    height: 100vh;
+    position: absolute;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+.particleJS {
+    opacity: 0.6;
+}
+
+.someSpace {
+    h1 {
+        color: black;
+        font-size: 5em;
+        font-weight: 100;
+        letter-spacing: 0.2em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    animation: rotate 18s 0.5s infinite linear reverse;
+}
+
+.some-more-space {
+    animation: rotate 15s 0.1s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateZ(0deg) translate3d(0, 1.5%, 0) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg) translate3d(0, 1.5%, 0) rotateZ(-360deg);
+    }
+}
+
 .blogSection {
     display: flex;
     flex-direction: column;
