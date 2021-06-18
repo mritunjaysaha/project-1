@@ -113,13 +113,12 @@ export default function BlogPage() {
 
     return (
         <section className={styles.blogSection}>
+            <div className={styles.overlay}>
+                <h3>TEMP</h3>
+            </div>
             <header className={styles.parallax} id="scene">
                 <div className={styles.overlay}></div>
-                <div data-depth="0.6" className={styles.layer}>
-                    <div className={styles.someSpace}>
-                        <h1>TEMP </h1>
-                    </div>
-                </div>
+
                 <div data-depth="0.4" className={styles.layer}>
                     <ParticlesJS />
                 </div>
