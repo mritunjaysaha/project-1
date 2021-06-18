@@ -10,11 +10,6 @@ const ParticlesJS = () => (
         id="particle-js"
         className={styles.particleJS}
         options={{
-            background: {
-                color: {
-                    value: "#0d47a1",
-                },
-            },
             fpsLimit: 60,
             particles: {
                 number: {
@@ -87,40 +82,7 @@ const ParticlesJS = () => (
             interactivity: {
                 detect_on: "canvas",
                 events: {
-                    onhover: {
-                        enable: true,
-                        mode: "grab",
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: "push",
-                    },
                     resize: true,
-                },
-                modes: {
-                    grab: {
-                        distance: 140,
-                        line_linked: {
-                            opacity: 1,
-                        },
-                    },
-                    bubble: {
-                        distance: 400,
-                        size: 40,
-                        duration: 2,
-                        opacity: 8,
-                        speed: 3,
-                    },
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4,
-                    },
-                    push: {
-                        particles_nb: 4,
-                    },
-                    remove: {
-                        particles_nb: 2,
-                    },
                 },
             },
         }}
@@ -146,17 +108,18 @@ export default function BlogPage() {
 
     useEffect(() => {
         const scene = document.querySelector("#scene");
-        new Parallax(scene);
+        new Parallax(scene, { invertX: false, invertY: false });
     });
 
     return (
         <section className={styles.blogSection}>
             <header className={styles.parallax} id="scene">
-                {/* <div data-depth="0.6" className={styles.layer}>
+                <div className={styles.overlay}></div>
+                <div data-depth="0.6" className={styles.layer}>
                     <div className={styles.someSpace}>
                         <h1>TEMP </h1>
                     </div>
-                </div> */}
+                </div>
                 <div data-depth="0.4" className={styles.layer}>
                     <ParticlesJS />
                 </div>

@@ -5,16 +5,26 @@ $bannerHeight: 60vh;
 .layer,
 .parallax,
 .someSpace,
-.particleJS {
-    height: 100vh;
+.particleJS,
+.overlay {
     position: absolute;
-    width: 100vw;
+    height: 80vh;
+    width: 100%;
     margin: 0;
     padding: 0;
+    z-index: 10;
+    overflow: hidden;
+}
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+.parallax {
+    background: red;
 }
 
 .particleJS {
-    opacity: 0.6;
+    // opacity: 0.6;
 }
 
 .someSpace {
