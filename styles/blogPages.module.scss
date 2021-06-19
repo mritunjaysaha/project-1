@@ -1,7 +1,7 @@
 @import "./utils.scss";
 
-$bannerHeight: 80vh;
-
+$bannerHeightMobile: 60vh;
+$bannerHeightDesktop: 80vh;
 .layer,
 .parallax,
 .someSpace,
@@ -10,22 +10,39 @@ $bannerHeight: 80vh;
     position: absolute;
     top: 0;
     left: 0;
-    height: $bannerHeight;
+    height: $bannerHeightMobile;
     width: 100%;
     margin: 0;
     padding: 0;
     z-index: 10;
     overflow: hidden;
+
+    @media only screen and (min-width: 996px) {
+        height: $bannerHeightDesktop;
+    }
 }
 .overlay {
     background: rgba(0, 0, 0, 0.2);
     z-index: 100;
     display: flex;
-    justify-content: center;
     align-items: center;
+
     h3 {
-        color: white;
-        font-size: $fs-desktop-large;
+        padding: $padding-sm 0 0 $padding-sm;
+        color: $white;
+        font-size: $fs-medium;
+        width: 80vw;
+        text-align: left;
+        text-transform: capitalize;
+    }
+
+    @media only screen and (min-width: 996px) {
+        width: 60vw;
+        justify-content: center;
+
+        h3 {
+            font-size: $fs-desktop-large;
+        }
     }
 }
 
@@ -38,10 +55,6 @@ $bannerHeight: 80vh;
         #203a43,
         #0f2027
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-
-.particleJS {
-    // opacity: 0.6;
 }
 
 .someSpace {
@@ -88,8 +101,12 @@ $bannerHeight: 80vh;
     padding: 4rem 0;
     margin: 0 auto;
     width: 80vw;
-    padding-top: calc(#{$bannerHeight} + #{$marginTopBottom});
+    padding-top: calc(#{$bannerHeightMobile} + #{$marginTopBottom-sm});
     font-family: "Catamaran", sans-serif;
+
+    @media only screen and (min-width: 996px) {
+        padding-top: calc(#{$bannerHeightDesktop} + #{$marginTopBottom});
+    }
 
     strong,
     p,

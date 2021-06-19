@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem;
+    padding: $padding-sm;
     color: $white;
     z-index: 1000;
 
@@ -19,8 +19,6 @@
     font-weight: $fw-medium !important;
 
     h1 {
-        margin-left: 1rem;
-        padding: 1rem 0;
         font-size: $fs-medium;
     }
 
