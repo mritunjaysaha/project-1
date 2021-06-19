@@ -155,10 +155,24 @@
     }
 }
 
+.activeLinkWhite,
+.activeLinkBlack {
+    color: $white;
+    background-color: $black;
+
+    @include breakpoint(desktop) {
+        background-color: transparent;
+    }
+}
+
 .activeLinkWhite {
-    border: 1px solid $white;
+    @include breakpoint(desktop) {
+        border: 1px solid $white;
+    }
 }
 
 .activeLinkBlack {
-    border: 1px solid $black;
+    @include breakpoint(desktop) {
+        border: 1px solid $black;
+    }
 }

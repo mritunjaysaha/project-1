@@ -49,10 +49,12 @@ export function Navbar() {
                     : `${styles.navbarHeaderAbsolute}`
             }
         >
+            {/* Company name */}
             <h1>
                 <Anchor name={company.name} href={company.link} />
             </h1>
 
+            {/* Mobile menu icon */}
             <MenuTwoToneIcon
                 fontSize="large"
                 onClick={handleHamburgerMenu}
@@ -67,6 +69,7 @@ export function Navbar() {
                         : `${styles.showMenu} ${styles.navbarMenu}`
                 }
             >
+                {/* Mobile close icon */}
                 <CloseIcon
                     color="inherit"
                     className={styles.close}
@@ -74,6 +77,7 @@ export function Navbar() {
                     onClick={handleCloseButton}
                 />
 
+                {/* Home */}
                 <li
                     key={home.name}
                     className={
@@ -87,6 +91,8 @@ export function Navbar() {
                 >
                     <Anchor name={home.name} href={home.link} />
                 </li>
+
+                {/* Careers */}
                 <li
                     key={careers.name}
                     className={
@@ -100,6 +106,8 @@ export function Navbar() {
                 >
                     <Anchor name={careers.name} href={careers.link} />
                 </li>
+
+                {/* Our Offerings */}
                 <OnHoverMenu
                     data={services}
                     isMenuClicked={isMenuClicked}
@@ -107,6 +115,7 @@ export function Navbar() {
                     handle={handleCloseButton}
                 />
 
+                {/* News letter */}
                 <li
                     key={newsLetter.name}
                     className={
@@ -120,6 +129,8 @@ export function Navbar() {
                 >
                     <Anchor name={newsLetter.name} href={newsLetter.link} />
                 </li>
+
+                {/* contacts */}
                 <li
                     key={contact.name}
                     className={
