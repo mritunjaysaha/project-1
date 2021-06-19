@@ -5,9 +5,33 @@ import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
 import Fade from "@material-ui/core/Fade";
 
-export function OnHoverMenu({ data, setMenuClicked }) {
-    let menuRef = null;
-    const menuID = "#onHoverMenu";
+const SubMenuContents = ({ data }) => (
+    <>
+        {data.map(({ name, link, comingSoon }) =>
+            !comingSoon ? (
+                <li>
+                    <MenuItem className={styles.menuItem}>
+                        <Anchor name={name} href={link} />
+                    </MenuItem>
+                </li>
+            ) : (
+                <li>
+                    <MenuItem className={styles.menuItem}>
+                        <p>
+                            <Anchor name={name} href={link} />
+
+                            <span className={styles.comingSoon}>
+                                coming soon
+                            </span>
+                        </p>
+                    </MenuItem>
+                </li>
+            )
+        )}
+    </>
+);
+
+const DesktopSubMenu = ({ data }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
@@ -36,24 +60,23 @@ export function OnHoverMenu({ data, setMenuClicked }) {
                 onClose={handleClose}
                 TransitionComponent={Fade}
             >
-                {data.map(({ name, link, comingSoon }) =>
-                    !comingSoon ? (
-                        <MenuItem className={styles.menuItemDesktop}>
-                            <Anchor name={name} href={link} />
-                        </MenuItem>
-                    ) : (
-                        <MenuItem className={styles.menuItemDesktop}>
-                            <p>
-                                <Anchor name={name} href={link} />
-
-                                <span className={styles.comingSoon}>
-                                    coming soon
-                                </span>
-                            </p>
-                        </MenuItem>
-                    )
-                )}
+                <ul className={styles.desktopSubMenu}>
+                    <SubMenuContents data={data} />
+                </ul>
             </Menu>
         </div>
+    );
+};
+
+export function OnHoverMenu({ data }) {
+    return (
+        <>
+            <DesktopSubMenu data={data} />
+
+            {/* mobile sub menu */}
+            <ul className={styles.mobileSubMenu}>
+                <SubMenuContents data={data} className={styles.mobileSubMenu} />
+            </ul>
+        </>
     );
 }

@@ -161,6 +161,7 @@
     background-color: $black;
 
     @include breakpoint(desktop) {
+        color: inherit;
         background-color: transparent;
     }
 }
