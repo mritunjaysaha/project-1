@@ -28,7 +28,6 @@
             cursor: pointer;
             z-index: 100;
             transition: 0.3s all;
-            color: inherit;
             &:first-of-type {
                 margin-left: 0;
             }
@@ -152,28 +151,5 @@
 
     &:hover {
         box-shadow: $box-shadow-hover;
-    }
-}
-
-.activeLinkWhite,
-.activeLinkBlack {
-    color: $white;
-    background-color: $black;
-
-    @include breakpoint(desktop) {
-        color: inherit;
-        background-color: transparent;
-    }
-}
-
-.activeLinkWhite {
-    @include breakpoint(desktop) {
-        border: 1px solid $white;
-    }
-}
-
-.activeLinkBlack {
-    @include breakpoint(desktop) {
-        border: 1px solid $black;
     }
 }

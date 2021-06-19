@@ -111,3 +111,33 @@ $border-radius: 0.5rem;
     background: $white;
     color: $white;
 }
+
+.activeLinkWhite,
+.activeLinkBlack {
+    color: $white;
+    background-color: $black;
+
+    @include breakpoint(desktop) {
+        color: inherit;
+        background-color: transparent;
+    }
+}
+
+.activeLinkWhite {
+    @include breakpoint(desktop) {
+        border: 1px solid $white;
+    }
+}
+
+.activeLinkBlack {
+    @include breakpoint(desktop) {
+        border: 1px solid $black;
+    }
+}
+
+.hoverUnderline {
+    &:hover {
+        color: inherit;
+        text-decoration: underline;
+    }
+}

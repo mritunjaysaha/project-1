@@ -8,7 +8,7 @@ import MenuList from "@material-ui/core/MenuList";
 import { Anchor } from "../src/atoms/anchor";
 import styles from "../styles/subMenu.module.scss";
 
-export function SubMenu({ name, subMenuData }) {
+export function SubMenu({ name, subMenuData, className }) {
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
 
@@ -41,6 +41,8 @@ export function SubMenu({ name, subMenuData }) {
         prevOpen.current = open;
     }, [open]);
 
+    console.log({ className });
+
     return (
         <div>
             <li
@@ -48,8 +50,14 @@ export function SubMenu({ name, subMenuData }) {
                 onClick={handleToggle}
                 aria-controls={open ? "menu-list-grow" : undefined}
                 aria-haspopup="true"
+                className={`${styles.hoverUnderline} ${
+                    className === "activeLinkBlack"
+                        ? styles.activeLinkBlack
+                        : styles.activeLinkWhite
+                }}`}
+                key={name}
             >
-                <Anchor name={name} />
+                {name}
             </li>
             <Popper
                 open={open}

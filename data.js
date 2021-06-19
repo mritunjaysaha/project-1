@@ -38,6 +38,12 @@ export const navbarData = {
                 link: "/",
             },
         ],
+        servicesLinks: [
+            "/equityCapitalMarkets",
+            "/directInvestments",
+            "/maAdvisory",
+            "/debtCapitalMarkets",
+        ],
     },
 };
 
