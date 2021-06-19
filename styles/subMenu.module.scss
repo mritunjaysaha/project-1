@@ -1,0 +1,11 @@
+@import "./utils.scss";
+
+.comingSoon {
+    display: block;
+    font-weight: $fw-regular;
+    font-size: $fs-x-small;
+}
+
+.menuList {
+    text-transform: capitalize;
+}

@@ -1,5 +1,4 @@
 import React from "react";
-import Button from "@material-ui/core/Button";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Grow from "@material-ui/core/Grow";
 import Paper from "@material-ui/core/Paper";
@@ -7,7 +6,7 @@ import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import { Anchor } from "../src/atoms/anchor";
-import styles from "../styles/onHoverMenu.module.scss";
+import styles from "../styles/subMenu.module.scss";
 
 export function SubMenu({ name, subMenuData }) {
     const [open, setOpen] = React.useState(false);
@@ -50,7 +49,7 @@ export function SubMenu({ name, subMenuData }) {
                 aria-controls={open ? "menu-list-grow" : undefined}
                 aria-haspopup="true"
             >
-                <Anchor name="our offerings" />
+                <Anchor name={name} />
             </li>
             <Popper
                 open={open}
@@ -75,26 +74,24 @@ export function SubMenu({ name, subMenuData }) {
                                     autoFocusItem={open}
                                     id="menu-list-grow"
                                     onKeyDown={handleListKeyDown}
+                                    className={styles.menuList}
                                 >
                                     {subMenuData.map(
                                         ({ name, link, comingSoon }) =>
                                             !comingSoon ? (
-                                                <MenuItem>
+                                                <MenuItem onClick={handleClose}>
                                                     <Anchor
                                                         name={name}
                                                         href={link}
                                                     />
                                                 </MenuItem>
                                             ) : (
-                                                <MenuItem
-                                                    className={styles.menuItem}
-                                                >
+                                                <MenuItem onClick={handleClose}>
                                                     <p>
                                                         <Anchor
                                                             name={name}
                                                             href={link}
                                                         />
-
                                                         <span
                                                             className={
                                                                 styles.comingSoon

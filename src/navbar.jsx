@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "../styles/navbar.module.scss";
 import CloseIcon from "@material-ui/icons/Close";
-import { OnHoverMenu } from "../src/menu";
 import { Anchor } from "../src/atoms/anchor";
 import { navbarData } from "../data";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
