@@ -9,23 +9,17 @@ const SubMenuContents = ({ data }) => (
     <>
         {data.map(({ name, link, comingSoon }) =>
             !comingSoon ? (
-                <li>
-                    <MenuItem className={styles.menuItem}>
-                        <Anchor name={name} href={link} />
-                    </MenuItem>
-                </li>
+                <MenuItem className={styles.menuItem}>
+                    <Anchor name={name} href={link} />
+                </MenuItem>
             ) : (
-                <li>
-                    <MenuItem className={styles.menuItem}>
-                        <p>
-                            <Anchor name={name} href={link} />
+                <MenuItem className={styles.menuItem}>
+                    <p>
+                        <Anchor name={name} href={link} />
 
-                            <span className={styles.comingSoon}>
-                                coming soon
-                            </span>
-                        </p>
-                    </MenuItem>
-                </li>
+                        <span className={styles.comingSoon}>coming soon</span>
+                    </p>
+                </MenuItem>
             )
         )}
     </>
@@ -72,11 +66,6 @@ export function OnHoverMenu({ data }) {
     return (
         <>
             <DesktopSubMenu data={data} />
-
-            {/* mobile sub menu */}
-            <ul className={styles.mobileSubMenu}>
-                <SubMenuContents data={data} className={styles.mobileSubMenu} />
-            </ul>
         </>
     );
 }

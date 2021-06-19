@@ -87,10 +87,10 @@
     flex-direction: column;
     justify-content: center;
 
-    background-color: white;
+    background-color: $white;
     width: 100vw;
     height: 100vh;
-    color: black;
+    color: $black;
 
     font-size: $fs-medium; // effects the font-size of close button
 
@@ -144,8 +144,8 @@
 }
 
 .changeBackgroundColor {
-    background: white;
-    color: black;
+    background: $white;
+    color: $black;
 
     box-shadow: $box-shadow;
     transition: $transition;
