@@ -1,5 +1,5 @@
 import styles from "../styles/servicePages.module.scss";
-import { navbarData, teamData } from "../data";
+import { navbarData } from "../data";
 import { Anchor } from "../src/atoms/anchor";
 import { useRouter } from "next/router";
 
@@ -23,15 +23,15 @@ export function ServicePage({ name, data, imgSrc }) {
             </section>
             <section className={styles.serviceSection2}>
                 <ul className={styles.menuContainer}>
-                    {services.map((data) => (
+                    {services.subMenuData.map(({ name, link }) => (
                         <li
                             className={
-                                router.pathname === data.link
+                                router.pathname === link
                                     ? styles.activeLink
                                     : ""
                             }
                         >
-                            <Anchor name={data.name} href={data.link} />
+                            <Anchor name={name} href={link} />
                         </li>
                     ))}
                 </ul>

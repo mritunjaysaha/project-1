@@ -6,6 +6,7 @@ import { Anchor } from "../src/atoms/anchor";
 import { navbarData } from "../data";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 import { useRouter } from "next/router";
+import { SubMenu } from "../src/subMenu";
 
 export function Navbar() {
     const [isScrolled, setScrolled] = useState(false);
@@ -108,13 +109,16 @@ export function Navbar() {
                 </li>
 
                 {/* Our Offerings */}
-                <OnHoverMenu
+                {/* <OnHoverMenu
                     data={services}
                     isMenuClicked={isMenuClicked}
                     setMenuClicked={setMenuClicked}
                     handle={handleCloseButton}
+                /> */}
+                <SubMenu
+                    name={services.name}
+                    subMenuData={services.subMenuData}
                 />
-
                 {/* News letter */}
                 <li
                     key={newsLetter.name}

@@ -28,7 +28,7 @@
             cursor: pointer;
             z-index: 100;
             transition: 0.3s all;
-
+            color: inherit;
             &:first-of-type {
                 margin-left: 0;
             }

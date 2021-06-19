@@ -13,29 +13,32 @@ export const navbarData = {
     careers: { name: "careers", link: "/careers" },
     contact: { name: "contact us", link: "/contactUs" },
     newsLetter: { name: "newsletter", link: "/newsletter" },
-    services: [
-        {
-            name: "equity capital markets",
-            link: "/equityCapitalMarkets",
-        },
-        {
-            name: "debt capital markets",
-            link: "/debtCapitalMarkets",
-        },
-        {
-            name: "m&a advisory",
-            link: "/maAdvisory",
-        },
-        {
-            name: "direct investments",
-            link: "/directInvestments",
-        },
-        {
-            comingSoon: true,
-            name: "initial coin offerings",
-            link: "/",
-        },
-    ],
+    services: {
+        name: "our offerings",
+        subMenuData: [
+            {
+                name: "equity capital markets",
+                link: "/equityCapitalMarkets",
+            },
+            {
+                name: "debt capital markets",
+                link: "/debtCapitalMarkets",
+            },
+            {
+                name: "m&a advisory",
+                link: "/maAdvisory",
+            },
+            {
+                name: "direct investments",
+                link: "/directInvestments",
+            },
+            {
+                comingSoon: true,
+                name: "initial coin offerings",
+                link: "/",
+            },
+        ],
+    },
 };
 
 export const companyName = { name: "Maneuver Ventures" };
