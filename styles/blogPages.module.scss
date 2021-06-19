@@ -104,10 +104,6 @@ $bannerHeightDesktop: 80vh;
     padding-top: calc(#{$bannerHeightMobile} + #{$marginTopBottom-sm});
     font-family: "Catamaran", sans-serif;
 
-    @media only screen and (min-width: 996px) {
-        padding-top: calc(#{$bannerHeightDesktop} + #{$marginTopBottom});
-    }
-
     strong,
     p,
     li {
@@ -118,7 +114,10 @@ $bannerHeightDesktop: 80vh;
 
     li {
         list-style: inside;
-        padding-left: 4rem;
+        padding-left: $padding-sm;
+        &:first-letter {
+            text-transform: uppercase;
+        }
     }
 
     ul > p {
@@ -126,6 +125,11 @@ $bannerHeightDesktop: 80vh;
     }
 
     @media only screen and (min-width: 996px) {
+        padding-top: calc(#{$bannerHeightDesktop} + #{$marginTopBottom});
         width: 60vw;
+
+        li {
+            padding-left: 4rem;
+        }
     }
 }
