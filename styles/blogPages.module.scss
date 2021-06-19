@@ -37,10 +37,10 @@ $bannerHeightDesktop: 80vh;
     }
 
     @media only screen and (min-width: 996px) {
-        width: 60vw;
         justify-content: center;
-
+        width: 100%;
         h3 {
+            text-align: center;
             font-size: $fs-desktop-large;
         }
     }

@@ -60,15 +60,15 @@ const ParticlesJS = () => (
                 line_linked: {
                     enable: true,
                     distance: 150,
-                    color: "#ffffff",
+                    color: "#fafafa",
                     opacity: 0.4,
                     width: 1,
                 },
                 move: {
                     enable: true,
-                    speed: 1,
+                    speed: 0.4,
                     direction: "none",
-                    random: false,
+                    random: true,
                     straight: false,
                     out_mode: "out",
                     bounce: false,
