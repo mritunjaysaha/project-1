@@ -16,3 +16,23 @@
         }
     }
 }
+
+.mobileSubMenu {
+    display: none;
+
+    li,
+    a,
+    span {
+        font-size: $fs-x-small;
+    }
+    span {
+        text-transform: capitalize;
+    }
+    li {
+        margin: 0;
+        padding: 0;
+        a {
+            font-weight: $fw-regular;
+        }
+    }
+}

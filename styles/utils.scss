@@ -141,3 +141,19 @@ $border-radius: 0.5rem;
         text-decoration: underline;
     }
 }
+
+.hideOnDesktop {
+    display: unset;
+
+    @include breakpoint(desktop) {
+        display: none;
+    }
+}
+
+.hideOnMobile {
+    display: none;
+
+    @include breakpoint(desktop) {
+        display: inline-block;
+    }
+}

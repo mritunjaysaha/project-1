@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Grow from "@material-ui/core/Grow";
 import Paper from "@material-ui/core/Paper";
@@ -8,7 +8,46 @@ import MenuList from "@material-ui/core/MenuList";
 import { Anchor } from "../src/atoms/anchor";
 import styles from "../styles/subMenu.module.scss";
 
-export function SubMenu({ name, subMenuData, className }) {
+function AnchorComingSoon({ name, link }) {
+    return (
+        <p>
+            <Anchor name={name} href={link} />
+            <span className={styles.comingSoon}>coming soon</span>
+        </p>
+    );
+}
+
+function MobileSubMenu({ name, subMenuData }) {
+    const [open, setOpen] = useState(false);
+
+    function handleOnClick() {
+        console.log("button clicked");
+        const subMenuEL = document.querySelector("#mobile-sub-menu");
+        console.log({ subMenuEL });
+        subMenuEL.style.display = "flex";
+    }
+
+    return (
+        <div className={`${styles.hideOnDesktop}`}>
+            <li onClick={handleOnClick}>{name}</li>
+            <ul id="mobile-sub-menu" className={`${styles.mobileSubMenu}`}>
+                {subMenuData.map(({ name, link, comingSoon }) =>
+                    !comingSoon ? (
+                        <li>
+                            <Anchor name={name} link={link} />
+                        </li>
+                    ) : (
+                        <li>
+                            <AnchorComingSoon name={name} link={link} />
+                        </li>
+                    )
+                )}
+            </ul>
+        </div>
+    );
+}
+
+function DesktopSubMenu({ name, subMenuData }) {
     const [open, setOpen] = React.useState(false);
     const anchorRef = React.useRef(null);
 
@@ -41,21 +80,15 @@ export function SubMenu({ name, subMenuData, className }) {
         prevOpen.current = open;
     }, [open]);
 
-    console.log({ className });
-
     return (
-        <div>
+        <div className={styles.hideOnMobile}>
             <li
                 ref={anchorRef}
                 onClick={handleToggle}
                 aria-controls={open ? "menu-list-grow" : undefined}
                 aria-haspopup="true"
-                className={`${styles.hoverUnderline} ${
-                    className === "activeLinkBlack"
-                        ? styles.activeLinkBlack
-                        : styles.activeLinkWhite
-                }}`}
                 key={name}
+                className={styles.hoverUnderline}
             >
                 {name}
             </li>
@@ -90,24 +123,15 @@ export function SubMenu({ name, subMenuData, className }) {
                                                 <MenuItem onClick={handleClose}>
                                                     <Anchor
                                                         name={name}
-                                                        href={link}
+                                                        link={link}
                                                     />
                                                 </MenuItem>
                                             ) : (
                                                 <MenuItem onClick={handleClose}>
-                                                    <p>
-                                                        <Anchor
-                                                            name={name}
-                                                            href={link}
-                                                        />
-                                                        <span
-                                                            className={
-                                                                styles.comingSoon
-                                                            }
-                                                        >
-                                                            coming soon
-                                                        </span>
-                                                    </p>
+                                                    <AnchorComingSoon
+                                                        name={name}
+                                                        link={link}
+                                                    />
                                                 </MenuItem>
                                             )
                                     )}
@@ -118,5 +142,14 @@ export function SubMenu({ name, subMenuData, className }) {
                 )}
             </Popper>
         </div>
+    );
+}
+
+export function SubMenu({ name, subMenuData }) {
+    return (
+        <>
+            <DesktopSubMenu name={name} subMenuData={subMenuData} />
+            <MobileSubMenu name={name} subMenuData={subMenuData} />
+        </>
     );
 }
