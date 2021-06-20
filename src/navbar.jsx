@@ -1,11 +1,182 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import styles from "../styles/navbar.module.scss";
 import CloseIcon from "@material-ui/icons/Close";
 import { Anchor } from "../src/atoms/anchor";
 import { navbarData } from "../data";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 import { useRouter } from "next/router";
-import { SubMenu } from "../src/subMenu";
+import ClickAwayListener from "@material-ui/core/ClickAwayListener";
+import Grow from "@material-ui/core/Grow";
+import Paper from "@material-ui/core/Paper";
+import Popper from "@material-ui/core/Popper";
+import MenuItem from "@material-ui/core/MenuItem";
+import MenuList from "@material-ui/core/MenuList";
+
+function AnchorComingSoon({ name, href }) {
+    return (
+        <p>
+            <Anchor name={name} href={href} />
+            <span className={styles.comingSoon}>coming soon</span>
+        </p>
+    );
+}
+
+function MobileSubMenu({
+    name,
+    subMenuData,
+    handleClose,
+    isMenuClicked,
+    viewportWidth,
+}) {
+    const [open, setOpen] = useState(false);
+
+    function handleOnClick() {
+        const subMenuEL = document.querySelector("#mobile-sub-menu");
+        subMenuEL.style.display = open ? "none" : "flex";
+        setOpen(open ? false : true);
+    }
+
+    return (
+        <div className={`${styles.hideOnDesktop}`}>
+            <li onClick={handleOnClick}>{name}</li>
+            <ul
+                id="mobile-sub-menu"
+                className={`${styles.mobileSubMenu} ${styles.slideBottom}`}
+            >
+                {subMenuData.map(({ name, link, comingSoon }) => {
+                    return !comingSoon ? (
+                        <li onClick={handleClose}>
+                            <Anchor name={name} href={link} />
+                        </li>
+                    ) : (
+                        <li onClick={handleClose}>
+                            <AnchorComingSoon name={name} link={link} />
+                        </li>
+                    );
+                })}
+            </ul>
+        </div>
+    );
+}
+
+function DesktopSubMenu({ name, subMenuData }) {
+    const [open, setOpen] = useState(false);
+    const anchorRef = useRef(null);
+
+    const handleToggle = () => {
+        setOpen((prevOpen) => !prevOpen);
+    };
+
+    const handleClose = (event) => {
+        if (anchorRef.current && anchorRef.current.contains(event.target)) {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+    function handleListKeyDown(event) {
+        if (event.key === "Tab") {
+            event.preventDefault();
+            setOpen(false);
+        }
+    }
+
+    // return focus to the button when we transitioned from !open -> open
+    const prevOpen = useRef(open);
+    useEffect(() => {
+        if (prevOpen.current === true && open === false) {
+            anchorRef.current.focus();
+        }
+
+        prevOpen.current = open;
+    }, [open]);
+
+    return (
+        <div className={styles.hideOnMobile}>
+            <li
+                ref={anchorRef}
+                onClick={handleToggle}
+                aria-controls={open ? "menu-list-grow" : undefined}
+                aria-haspopup="true"
+                key={name}
+                className={styles.hoverUnderline}
+            >
+                {name}
+            </li>
+            <Popper
+                open={open}
+                anchorEl={anchorRef.current}
+                role={undefined}
+                transition
+                disablePortal
+            >
+                {({ TransitionProps, placement }) => (
+                    <Grow
+                        {...TransitionProps}
+                        style={{
+                            transformOrigin:
+                                placement === "bottom"
+                                    ? "center top"
+                                    : "center bottom",
+                        }}
+                    >
+                        <Paper>
+                            <ClickAwayListener onClickAway={handleClose}>
+                                <MenuList
+                                    autoFocusItem={open}
+                                    id="menu-list-grow"
+                                    onKeyDown={handleListKeyDown}
+                                    className={styles.menuList}
+                                >
+                                    {subMenuData.map(
+                                        ({ name, link, comingSoon }) =>
+                                            !comingSoon ? (
+                                                <MenuItem onClick={handleClose}>
+                                                    <Anchor
+                                                        name={name}
+                                                        href={link}
+                                                    />
+                                                </MenuItem>
+                                            ) : (
+                                                <MenuItem onClick={handleClose}>
+                                                    <AnchorComingSoon
+                                                        name={name}
+                                                        href={link}
+                                                    />
+                                                </MenuItem>
+                                            )
+                                    )}
+                                </MenuList>
+                            </ClickAwayListener>
+                        </Paper>
+                    </Grow>
+                )}
+            </Popper>
+        </div>
+    );
+}
+
+export function SubMenu({
+    name,
+    subMenuData,
+    handleClose,
+    isMenuClicked,
+    viewportWidth,
+}) {
+    return (
+        <>
+            <DesktopSubMenu name={name} subMenuData={subMenuData} />
+            <MobileSubMenu
+                name={name}
+                subMenuData={subMenuData}
+                handleClose={handleClose}
+                viewportWidth={viewportWidth}
+                isMenuClicked={isMenuClicked}
+            />
+        </>
+    );
+}
 
 export function Navbar() {
     const [isScrolled, setScrolled] = useState(false);
@@ -34,7 +205,8 @@ export function Navbar() {
     const handleHamburgerMenu = () => {
         setMenuClicked(true);
     };
-    const handleCloseButton = () => {
+    const handleClose = () => {
+        console.log("clicked close buttons");
         setMenuClicked(false);
     };
 
@@ -74,7 +246,7 @@ export function Navbar() {
                     color="inherit"
                     className={styles.close}
                     fontSize="inherit"
-                    onClick={handleCloseButton}
+                    onClick={handleClose}
                 />
 
                 {/* Home */}
@@ -87,7 +259,7 @@ export function Navbar() {
                                 : styles.activeLinkWhite
                             : ""
                     }
-                    onClick={handleCloseButton}
+                    onClick={handleClose}
                 >
                     <Anchor name={home.name} href={home.link} />
                 </li>
@@ -102,7 +274,7 @@ export function Navbar() {
                                 : styles.activeLinkWhite
                             : ""
                     }
-                    onClick={handleCloseButton}
+                    onClick={handleClose}
                 >
                     <Anchor name={careers.name} href={careers.link} />
                 </li>
@@ -112,6 +284,9 @@ export function Navbar() {
                     name={services.name}
                     subMenuData={services.subMenuData}
                     serviceLinks={services.servicesLinks}
+                    handleClose={handleClose}
+                    isMenuClicked={isMenuClicked}
+                    viewportWidth={viewportWidth}
                 />
 
                 {/* News letter */}
@@ -124,7 +299,7 @@ export function Navbar() {
                                 : styles.activeLinkWhite
                             : ""
                     }
-                    onClick={handleCloseButton}
+                    onClick={handleClose}
                 >
                     <Anchor name={newsLetter.name} href={newsLetter.link} />
                 </li>
@@ -139,7 +314,7 @@ export function Navbar() {
                                 : styles.activeLinkWhite
                             : ""
                     }
-                    onClick={handleCloseButton}
+                    onClick={handleClose}
                 >
                     <Anchor name={contact.name} href={contact.link} />
                 </li>
