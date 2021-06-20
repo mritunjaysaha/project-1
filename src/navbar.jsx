@@ -6,7 +6,6 @@ import { navbarData } from "../data";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
 import { useRouter } from "next/router";
 import { SubMenu } from "../src/subMenu";
-import { route } from "next/dist/next-server/server/router";
 
 export function Navbar() {
     const [isScrolled, setScrolled] = useState(false);
@@ -109,18 +108,10 @@ export function Navbar() {
                 </li>
 
                 {/* Our Offerings */}
-                {console.log(router.pathname)}
                 <SubMenu
                     name={services.name}
                     subMenuData={services.subMenuData}
                     serviceLinks={services.servicesLinks}
-                    className={
-                        services.servicesLinks.includes(router.pathname)
-                            ? isScrolled
-                                ? "activeLinkBlack"
-                                : "activeLinkWhite"
-                            : ""
-                    }
                 />
 
                 {/* News letter */}
