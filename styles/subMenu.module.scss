@@ -7,8 +7,12 @@
 }
 
 .menuList {
-    text-transform: capitalize;
-    p {
-        margin: 0;
+    display: none;
+    @include breakpoint(desktop) {
+        display: block;
+        text-transform: capitalize;
+        p {
+            margin: 0;
+        }
     }
 }
