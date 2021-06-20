@@ -9,8 +9,8 @@
     text-transform: uppercase;
 
     display: flex;
-    // justify-content: space-between;
-    // align-items: center;
+    justify-content: space-between;
+    align-items: center;
     padding: $padding-sm;
     color: $white;
     z-index: 1000;
@@ -106,7 +106,7 @@
         justify-content: space-between;
 
         color: inherit;
-
+        padding-top: 0;
         height: unset;
         width: 40rem;
     }

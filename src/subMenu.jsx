@@ -24,13 +24,17 @@ function MobileSubMenu({ name, subMenuData }) {
         console.log("button clicked");
         const subMenuEL = document.querySelector("#mobile-sub-menu");
         console.log({ subMenuEL });
-        subMenuEL.style.display = "flex";
+        subMenuEL.style.display = open ? "none" : "flex";
+        setOpen(open ? false : true);
     }
 
     return (
         <div className={`${styles.hideOnDesktop}`}>
             <li onClick={handleOnClick}>{name}</li>
-            <ul id="mobile-sub-menu" className={`${styles.mobileSubMenu}`}>
+            <ul
+                id="mobile-sub-menu"
+                className={`${styles.mobileSubMenu} ${styles.slideBottom}`}
+            >
                 {subMenuData.map(({ name, link, comingSoon }) =>
                     !comingSoon ? (
                         <li>

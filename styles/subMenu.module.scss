@@ -19,7 +19,8 @@
 
 .mobileSubMenu {
     display: none;
-
+    flex-direction: column;
+    transition: all 0.3s ease-out;
     li,
     a,
     span {
@@ -30,7 +31,7 @@
     }
     li {
         margin: 0;
-        padding: 0;
+        padding-left: 4rem;
         a {
             font-weight: $fw-regular;
         }
