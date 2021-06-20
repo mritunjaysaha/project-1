@@ -3,6 +3,7 @@
 .offeringCards {
     height: 16rem;
     aspect-ratio: 1/1;
+    margin: 0 2rem;
 
     @media only screen and (max-width: 320px) {
         font-size: $fs-small;

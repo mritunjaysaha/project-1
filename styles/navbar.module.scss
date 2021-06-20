@@ -58,19 +58,6 @@
         }
     }
 }
-
-.showNavbar {
-    display: flex;
-}
-
-.hideNavbar {
-    display: none;
-}
-
-.companyName {
-    font-size: $fs-medium;
-}
-
 .navbarMenu {
     position: absolute;
     top: 0;
@@ -83,7 +70,7 @@
     width: 100vw;
     height: 100vh;
     color: $black;
-    padding-top: 20vh;
+    padding-top: 15vh;
 
     font-size: $fs-medium; // effects the font-size of close button
 
@@ -110,6 +97,18 @@
         height: unset;
         width: 40rem;
     }
+}
+
+.showNavbar {
+    display: flex;
+}
+
+.hideNavbar {
+    display: none;
+}
+
+.companyName {
+    font-size: $fs-medium;
 }
 
 .close {
