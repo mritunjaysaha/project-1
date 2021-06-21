@@ -4,20 +4,26 @@
     position: fixed;
     top: 0;
     left: 0;
-    margin: 0;
-    width: 100%;
-    text-transform: uppercase;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: $padding-sm;
-    color: $white;
-    z-index: 1000;
+
+    background-color: rgba(0, 0, 0, 0.6);
 
     font-family: "Montserrat", sans-serif;
     font-weight: $fw-medium !important;
-    background-color: rgba(0, 0, 0, 0.6);
+
+    text-transform: uppercase;
+
+    width: 100%;
+
+    padding: $padding-sm;
+    margin: 0;
+
+    color: $white;
+    z-index: 1000;
+
     h1 {
         font-size: $fs-medium;
     }
@@ -42,9 +48,6 @@
     }
 
     $activeBorder: $white;
-
-    @include breakpoint(tablet) {
-    }
 
     @include breakpoint(desktop) {
         width: 100%;
@@ -88,7 +91,7 @@
         }
     }
 
-    @media only screen and (min-width: 996px) {
+    @include breakpoint(desktop) {
         position: relative;
         background: none;
 
@@ -99,6 +102,10 @@
         padding-top: 0;
         height: unset;
         width: 40rem;
+
+        li {
+            font-size: $fs-x-small !important;
+        }
     }
 }
 
