@@ -8,12 +8,9 @@ import styles from "./styles/blogsData.module.scss";
  *      img: "source of image file",
  *      title: "title-of-the-blog"["name of the blog and should be written as in-this-way with hyphens(-)"],
  *      summary: "summary/starting of the the blog which will be shown in the cards",
- *      fullDescription: [
- *          head: "question or header"
- *          desc: [data as a collection of arrays which will be placed inside
- *                  <p></p>
- *          ]
- *      ]
+ *      fullDescription: function(){
+ *          return <>{Enter HTML}</>
+ *      }
  * }
  * ]
  */
@@ -164,7 +161,7 @@ export const blogData = {
         },
 
         {
-            img: "",
+            img: "/assets/clubhouse0.jpg",
             id: "Clubhouse: The rise and fall",
             title: "Clubhouse: The rise and fall?",
             summary: `
@@ -624,6 +621,168 @@ export const blogData = {
                                 </li>
                             </ul>
                         </p>
+                    </>
+                );
+            },
+        },
+        {
+            img: "/assets/copyright.webp",
+            id: "Breaking through the copyright quagmire",
+            title: "Breaking through the copyright quagmire",
+            summary: `
+            Copyright arrangements are kind of a legal monopoly
+             for use of creative content. This is meant to
+              incentivize artists with fair uses cases only allowed
+               for non profit work. There has been an argument for 
+               these particularly with the creators, that its a 
+               protectionist measure to incentivize artists to keep 
+               making great content & that if these measures are 
+               removed would lead to even more exploitation in a 
+               field dominated by corporate distributors. Let's 
+               look at their origins.
+            `,
+            fullDescription: function () {
+                return (
+                    <>
+                        <div>
+                            <p>
+                                Copyright arrangements are kind of a legal
+                                monopoly for use of creative content. This is
+                                meant to incentivize artists with fair uses
+                                cases only allowed for non profit work. There
+                                has been an argument for these particularly with
+                                the creators, that its a protectionist measure
+                                to incentivize artists to keep making great
+                                content &amp; that if these measures are removed
+                                would lead to even more exploitation in a field
+                                dominated by corporate distributors. Let's look
+                                at their origins.
+                            </p>
+                            <h1>Overview of copyright laws</h1>
+                            <p>
+                                <a
+                                    href="https://www.newmediarights.org/business_models/artist/what_are_major_criticisms_copyright_laws_us"
+                                    target="_blank"
+                                    rel="nofollow noopener"
+                                    title="This link will take you away from the app"
+                                >
+                                    Source
+                                </a>
+                            </p>
+                            <p>
+                                _One thing to be noted is that these laws came
+                                through lobbying of entertainment conglomerates
+                                notably Disney in the US to have copyrights last
+                                forever for it's characters like Mickey Mouse.
+                                Some of which are estimated to be worth hundreds
+                                of millions today. This shows how the laws are
+                                designed not with creators but rather the
+                                distributors in mind
+                            </p>
+                            <p>
+                                _The laws are so overly broad that they actually
+                                stifle an individual’s creativity. Let's see how
+                                it's so. With the emergence of YouTube new forms
+                                of content like video essays, analysis and
+                                commentary based on remixes or based on other
+                                original works. And the terms of fair use are
+                                not very clear about the same thereby keeping
+                                this sector in limbo
+                            </p>
+                            <p>
+                                _These laws are hard to enforce in the digital
+                                world. This is seen in the rampant nature of
+                                piracy. Even outright bans/ website takedowns
+                                mean little as emerging clones/ VPN amongst
+                                other methods render the regulations ineffective
+                            </p>
+                            <p>
+                                _And lastly these laws are so complicated and
+                                unclear that they can be easily abused by
+                                companies with access to lawyers. It’s too
+                                complicated and expensive for individual
+                                artists/ creators to actually enforce the rights
+                                that the law gives them.
+                            </p>
+                            <p>
+                                The above scenario heavily favours the massive
+                                entertainment conglomerate and with the backing
+                                of massive money leaving the creators/
+                                production studios which are relatively small
+                                with few choices if any.Let's see how this
+                                affects us as customers with a particular focus
+                                on video streaming services
+                            </p>
+                            <p>
+                                Using this massive advantage they vouch for
+                                exclusivity arrangements on their streaming
+                                services. The end result is a fragmented market
+                                with consumers having to end up paying for
+                                multiple streaming services. And with every new
+                                service coming up with splitting libraries every
+                                other day piracy has become the norm rather than
+                                the exception.
+                            </p>
+                            <h1>Disruption through tokenization</h1>
+                            <p>
+                                Source:{" "}
+                                <img src="https://images.hive.blog/p/6VvuHGsoU2QD2Vc5vHaDrfhKyhRktkosJRKbPCXe6L1KayGPFarpTP3FdhvJoKr7asP9GbDDCje4QSxrooK4xvbHAjRyDYCSMKHWDbrqouKJjePSMBkJj7FMkE9FGS?format=match&amp;mode=fit&amp;width=640" />
+                            </p>
+                            <p>
+                                So let's explore how decentralization can help
+                                us break through yet another monopoly practice.
+                                The best way to go about this would be
+                                tokenization of the creative work using a
+                                decentralized blockchain similar to how NFTs
+                                were made for artwork/ collectibles to establish
+                                ownership of the same.
+                            </p>
+                            <p>
+                                Many parallels can be drawn with NFTs as in with
+                                passing of ownership would ensure that the
+                                artist/creators gets a cut of the deal
+                                everything that happens. This has the potential
+                                for creators making flexible arrangements/ smart
+                                contracts with distributors. This has the
+                                potential for equalising terms for both parties.
+                                This has potential for democratization of this
+                                sector and allowing for smaller players to
+                                emerge that work together with creators rather
+                                than trying to rip them off. Similar
+                                arrangements can be made for reworked/ remixed
+                                content appropriate rules can be established for
+                                usage and have the rewards shared with the
+                                original source just like with NFT transfers
+                                transactions benefiting the original artist
+                            </p>
+                            <p>
+                                Further copyright is based in legal systems of
+                                the countries and often the large diversity and
+                                complexity of laws means that the efforts for
+                                expanding in newer regions is often not worth
+                                the benefits (Reason why streaming services have
+                                different catalogs across regions, or have
+                                categories blocked across certain regions)
+                                <br />
+                                Tokenization can help us bypass this &amp; make
+                                the creative content available all over the
+                                world and expand the market multi-fold for
+                                creators making their reach and support truly
+                                global. and lastly, implementing anti-piracy
+                                measures would be way easier. The blockchain
+                                system can be both used to check for content
+                                ownership and help in identification of the
+                                creator. Whilst this can't completely eradicate
+                                piracy at least it can serve as a better
+                                alternative to what we have for verification
+                            </p>
+                            <p>
+                                In the next article we would be exploring how
+                                decentralization can help us build &amp; grow a
+                                better alternative for the video distribution
+                                platform
+                            </p>
+                        </div>
                     </>
                 );
             },
