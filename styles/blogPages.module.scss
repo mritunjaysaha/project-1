@@ -104,6 +104,15 @@ $bannerHeightDesktop: 80vh;
     padding-top: calc(#{$bannerHeightMobile} + #{$marginTopBottom-sm});
     font-family: "Catamaran", sans-serif;
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: $fs-x-large;
+    }
+
     strong,
     p,
     li {
@@ -139,7 +148,7 @@ $bannerHeightDesktop: 80vh;
         }
     }
 
-    @media only screen and (min-width: 996px) {
+    @include breakpoint(desktop) {
         padding-top: calc(#{$bannerHeightDesktop} + #{$marginTopBottom});
         width: 60vw;
 

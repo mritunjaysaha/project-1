@@ -1,5 +1,3 @@
-import styles from "./styles/blogsData.module.scss";
-
 /**
  * data: [ list of all the blogs]
  *
@@ -159,7 +157,6 @@ export const blogData = {
                 );
             },
         },
-
         {
             img: "/assets/clubhouse0.jpg",
             id: "Clubhouse: The rise and fall",
@@ -172,70 +169,60 @@ export const blogData = {
                 return (
                     <>
                         <p>
-                            <em>
-                                ( fundamental question: why does social media
-                                suck once its big or why does social meida suck
-                                today in general? and how to subvert the same
-                                aka clubhouse)
-                            </em>
-                        </p>
-                        <p>
                             As we discovered in the previous article, social
                             media succeeded because it brought personalization
                             to an industry. Early adopters found a digital
                             playground with the ability of making new
-                            connections and creators able to create nw forms of
+                            connections and creators able to create new forms of
                             content. Users were mostly left to themselves with
                             platform owners becoming pop culture icons. But as
                             these networks grow more and more big, they're
-                            observed to get worse. Why is that so?
+                            observed to get worse. Why is that so? Thanks to a
+                            combination of market entry barriers and direct
+                            network effects, they become virtual monopolies and
+                            we stop seeing alternatives come up. As the novelty
+                            factors faded and this became the usual, everyone
+                            started to commoditize their accounts. Whilst this
+                            indeed was great at creating new professions and
+                            shouldn't have been a problem by itself, the
+                            platform owners interfered tipped the scales shifted
+                            in favor of money making over everything that made
+                            the platform cool.
                         </p>
+
                         <p>
-                            Thanks to a combination of market entry barriers and
-                            direct network effects, they become virtual
-                            monopolies and we stop seeing alternatives come up.
-                            As the novelty factors faded and this became the
-                            usual, everyone started to commoditize their
-                            accounts.Whilst this indeed was great at creating
-                            new professions and shouldn't have been a problem by
-                            itself, the platform owners interfered tipped the
-                            scales shifted in favour of money making over
-                            everything that made the platform cool.
-                            Source:&nbsp;
-                            <a href="https://www.zoeticamedia.com/the-commoditization-of-social-media-and-what-we-can-learn-from-the-old-days">
-                                zoeticamedia
-                            </a>
-                        </p>
-                        <p>
-                            Thanks to this, what we see today is a rat race of
+                            As a result, what we see today is a rat race of
                             chasing followers/subs,cancel culture mobs, and
                             propaganda amongst other things we saw with
                             mainstream media. All of these culminated in the
                             said platform losing that touch of personalization
                             with creators at the mercy of the platform
-                            algorithms.
+                            algorithms. In this crowded landscape of social
+                            media monopolies, let's explore the rise of
+                            Clubhouse and what can be its future?
                         </p>
+
+                        <h3>Simplifying connections</h3>
+
                         <p>
-                            In this crowded landscape of social media
-                            monopolies, let's explore the rise of Clubhouse and
-                            what can be its future?
-                        </p>
-                        <p>
-                            <span
-                                className={`${styles.underline} ${styles.block}`}
-                            >
-                                Product differentiation/ Simplifying connections
-                            </span>
                             Clubhouse promised to be a breath of fresh air in
-                            this landscape.In the word of their founder Paul
-                            davidson
-                            <img src="/assets/clubhouse.png" alt="clubhouse" />
-                            <span>
-                                Source:&nbsp;
-                                <a href="https://www.financialexpress.com/industry/technology/exclusive-clubhouse-is-not-about-likes-and-follows-but-authentic-connections-co-founder-and-ceo-paul-davison/2264833/">
-                                    Financial Express
-                                </a>
-                            </span>
+                            this landscape bringing in audio rooms to help you
+                            connect to new people. In the words of their founder
+                            Paul Davidson:
+                            <br />
+                            <img
+                                src="https://images.hive.blog/DQmRZQx5CiDBFsBcc1JGLGzqAzKscGcKSrjsbneLNhAXbqp/Screenshot_20210606-213303_2.png"
+                                alt="Screenshot_20210606213303_2.png"
+                            />
+                            <br />
+                            <a
+                                href="https://www.financialexpress.com/industry/technology/exclusive-clubhouse-is-not-about-likes-and-follows-but-authentic-connections-co-founder-and-ceo-paul-davison/2264833/"
+                                target="_blank"
+                                rel="nofollow noopener"
+                                title="This link will take you away from the app"
+                            >
+                                Source
+                            </a>
                         </p>
 
                         <p>
@@ -246,37 +233,40 @@ export const blogData = {
                             the conversation forward, hopefully setting up a
                             call. So let's have a look at statistics for
                             response rates for different channels.
+                            <br />
                             <img
-                                src="/assets/clubhouse1.png"
-                                alt="clubhouse1"
+                                src="https://images.hive.blog/DQmS52bh6YPwVTSs8hmuGAwSWxTmjmCCM7AdwsbyYovLs6T/Screenshot_20210607-022451_2.png"
+                                alt="Screenshot_20210607022451_2.png"
                             />
-                            <span>
-                                Source:&nbsp;
-                                <a href="https://www.approvedindex.co.uk/direct-marketing/direct-mail-response-rates">
-                                    approvedindex
-                                </a>
-                            </span>
-                            <p>
-                                Numbers match up the statistics for voice.
-                                Approx 3 times jump in the response rates when
-                                voice is involved even for cold calls. Sure it's
-                                harder to get personal cell numbers & no one is
-                                going to appreciate spam calls these days. So
-                                through their innovation of audio rooms
-                                clubhouse is able to find a way to leverage the
-                                voice to take connections to a different level.
-                            </p>
+                            <br />
+                            <a
+                                href="https://www.approvedindex.co.uk/direct-marketing/direct-mail-response-rates"
+                                target="_blank"
+                                rel="nofollow noopener"
+                                title="This link will take you away from the app"
+                            >
+                                Source
+                            </a>
                         </p>
+
                         <p>
-                            With Clubhouse we get to skip the above hassles &
-                            have the option of jumping in a room with our target
-                            audience. With the right targeting of rooms one can
-                            actually get in a direct talk with the said person.
-                            Later on the conversation can be followed up on
-                            other social media as a warm outreach. Just like
-                            that you can convert cold leads( strangers) into
-                            warm leads ( somewhat knowing them).
+                            Numbers match up the statistics for voice. Approx 3
+                            times jump in the response rates when voice is
+                            involved even for cold calls. Sure it's harder to
+                            get personal cell numbers &amp; no one is going to
+                            appreciate spam calls these days. So through their
+                            innovation of audio rooms clubhouse is able to find
+                            a way to leverage the voice to take connections to a
+                            different level. With Clubhouse we get to skip the
+                            above hassles &amp; have the option of jumping in a
+                            room with our target audience. With the right
+                            targeting of rooms one can actually get in a direct
+                            talk with the said person. Later on the conversation
+                            can be followed up on other social media as a warm
+                            outreach. Just like that you can convert cold leads(
+                            strangers) into warm leads ( somewhat knowing them).
                         </p>
+
                         <p>
                             We can draw parallels with Google's search engine
                             interface being much cleaner and having faster
@@ -288,26 +278,40 @@ export const blogData = {
                             in retaining the users making them accustomed to the
                             browser.
                         </p>
-                        <p className={`${styles.underline}`}>
-                            _bandwagon network effects ( Credit to nfx network
-                            effects article) and Derek silver video explaining
-                            how it works
-                        </p>
+
+                        <h3>Bandwagon network effects</h3>
                         <p>
-                            The concept of bandwagon network effects happens
-                            when a platform first starts growing. The best
-                            example for this would be the 3 min video from Derek
-                            Silver about how movements start.
+                            <a
+                                href="https://www.nfx.com/post/network-effects-manual/"
+                                target="_blank"
+                                rel="nofollow noopener"
+                                title="This link will take you away from the app"
+                            >
+                                Source
+                            </a>
                         </p>
+
+                        <p>
+                            To understand Bandwagon network effects, the best
+                            example for this would be{" "}
+                            <a
+                                href="https://youtu.be/fW8amMCVAJQ"
+                                target="_blank"
+                                rel="nofollow noopener"
+                                title="This link will take you away from the app"
+                            >
+                                this 3 min video
+                            </a>{" "}
+                            from Derek Silver about how movements start.
+                        </p>
+
                         <p>
                             One notable difference with their platform was that
                             it was invite only, with users having limited
-                            invites(5). This may seem counterintuitive to growth
-                            but now the numbers show the opposite.
-                        </p>
-                        <p>
-                            In a world where getting into social media networks
-                            was a cakewalk, the invite only feature was able to
+                            invites(5). This may seem counter-intuitive to
+                            growth but now the numbers show the opposite. In a
+                            world where getting into social media networks was a
+                            cakewalk, the invite only feature was able to
                             trigger the psychological need to be a part of the
                             cool crowd. Next as the platform was growing at an
                             early stage, the videos of clubhouse conversations
@@ -319,6 +323,7 @@ export const blogData = {
                             rushing in after the first few have joined and
                             danced.
                         </p>
+
                         <p>
                             Another great example is the network of Apple
                             users.The value of the network is drawn not only
@@ -338,288 +343,66 @@ export const blogData = {
                             end up winning on the long run would determine how
                             long would users remain on it.
                         </p>
-                        <p>
-                            <span className={`${styles.underline}`}>
-                                Regulations and Uncertain future
-                            </span>
-                            <p>
-                                However not everything is sunshine and roses
-                                with this platform. With Clubhouse till now the
-                                interference by the platform owners has been
-                                minimal with no data storage & room owners in
-                                charge of the conversation with regulation left
-                                to them. But we need to remember that these are
-                                the early days and the focus is on growth. The
-                                best thing for growth is to have a laissez faire
-                                approach( minimal intervention). But as
-                                complaints of harassment, racism, sexism built
-                                up the pressure on them, they were forced to
-                                bring out some regulations. Their solution for
-                                these complaints has been to add a report
-                                feature that will record the conversation and
-                                create an “internal mechanism” to resolve the
-                                same. This is projected as a necessary measure
-                                but the reality is that it's a slippery slope to
-                                get started on.The app’s already been banned in
-                                China and with many countries passing laws for
-                                regulation of social media, it's a question of
-                                how long would they be able to resist the app
-                                from heavy handed regulation. As time passes
-                                with the flaws of having a central authority, it
-                                seems not a question of if but rather when.
-                            </p>
-                        </p>
 
+                        <h3>Regulations and Uncertain future</h3>
                         <p>
-                            <p className={`${styles.underline}`}>Outro</p>
-
-                            <p>
-                                So besides looking into integrating audio/video
-                                rooms into Hive apps what can be possible
-                                lessons from this? HIVE's utility and platform
-                                control has never been a problem with the user
-                                centric features.and decentralized community
-                                regulation The question then is how we can
-                                perfect on bandwagon network effects. For the
-                                web 3.0, branding HIVE as the new cool crowd can
-                                be a catalyst for bringing in the vast majority
-                                of users similar to above examples . Let's start
-                                a discussion in the comments on how we are doing
-                                this and what strategies can we implement for
-                                achieving that.
-                            </p>
-                        </p>
-
-                        <p>
-                            <p className={`${styles.underline}`}>
-                                General tips for blogging
-                            </p>
-
-                            <ul>
-                                <li>
-                                    use a scanner tool for your written works to
-                                    get it on the screen and then edit to avoid
-                                    typing out the entire stuff
-                                </li>
-                                <li>
-                                    ( Add in the best tools that work with links
-                                    _
-                                </li>
-                            </ul>
-                        </p>
-
-                        <p>
-                            <strong>Brainstorm for hacking Hive</strong>
-                            <ul>
-                                <li>
-                                    diversify by exploring steem blockchain for
-                                    the same posts
-                                </li>
-                                <li>
-                                    get the post timing right around 4 to 6 am
-                                    IST
-                                </li>
-                            </ul>
-                        </p>
-                        <p>
-                            Not safe methods
-                            <ul>
-                                <li>
-                                    cross post across steem and hive trending
-                                    posts through alt accounts ( exit at right
-                                    times)
-                                </li>
-                            </ul>
-                        </p>
-
-                        <p>
-                            <strong>
-                                Hacking Hive through several accounts targeting
-                                several niches
-                            </strong>
-                            <p>
-                                Tags by taskmaster
-                                <img
-                                    src="/assets/clubhouse2.png"
-                                    alt="tags by task master"
-                                />
-                            </p>
-                        </p>
-                        <p>
-                            Niches
-                            <ul>
-                                <li>investigative journalism</li>
-                            </ul>
-                        </p>
-                        <p>
-                            ( Have data on the time taken, efforts, performance,
-                            rewards for the categories below) Curation system
-                            <ul>
-                                <li>
-                                    news articles and trending things commentary
-                                </li>
-                                <li>opinion posts on certain developments</li>
-                                <li>new breakthroughs</li>
-                                <li>
-                                    market analysis and disruptions oncoming
-                                </li>
-                                <li>
-                                    opinions on stocks/ startups business model
-                                    analysis especially crypto startups
-                                </li>
-                                <li>newsletter for happenings</li>
-                            </ul>
-                        </p>
-
-                        <p>
-                            <strong>Future Topics:</strong>
-                            <ul>
-                                <li>
-                                    how to maximise chances of a decentralized
-                                    network growing organically ( first mover's
-                                    advantage, severity of the problem ,
-                                    technological advantage( 10X principle),
-                                    empowerment of the first adopters in the
-                                    community, democratize rewards even amongst
-                                    late comers to keep in the boost)
-                                </li>
-                            </ul>
-                        </p>
-
-                        <p>
-                            <strong>
-                                Study posts by Daniel larimer( they call me Dan)
-                                studied and analysed in regards to hive and his
-                                other ventures
-                            </strong>
-
-                            <ul>
-                                <li>
-                                    one reason why he's so big and a whale is
-                                    that he's the cofounder of this platform and
-                                    other whales trying to influence him to get
-                                    on ahead
-                                </li>
-                                <li>
-                                    spread out your content across all platform
-                                    and apply growth hacking principles relying
-                                    on existing socials/ google SEOs
-                                </li>
-                            </ul>
-                        </p>
-
-                        <p>
-                            <strong>
-                                Try and get him on a possible podcast episode
-                                for changing order of things
-                            </strong>
-                            <span>
-                                The ones who started it where involved with the
-                                community for longp
-                            </span>
-                        </p>
-
-                        <p>
-                            <strong>END</strong>
+                            <img
+                                src="https://images.hive.blog/DQmfFEWPn3dWU4P8bSPr1ivs6JtBckBN4SYuYYsFT9GCQtv/chained-social-media-facebook-twitter-youtube-regulations-internet-900-e1561479652370.jpg"
+                                alt="chainedsocialmediafacebooktwitteryoutuberegulationsinternet900e1561479652370.jpg"
+                            />
                             <br />
-                            <p>
-                                Clubhouse promised to be a breath of fresh air
-                                in this landscape bringing in audio rooms to
-                                help you connect to new people. In the words of
-                                their founder Paul Davidson: [Source](
-                                <span>
-                                    <a href="https://www.financialexpress.com/industry/technology/exclusive-clubhouse-is-not-about-likes-and-follows-but-authentic-connections-co-founder-and-ceo-paul-davison/2264833/">
-                                        Financial Express
-                                    </a>
-                                </span>
-                                ) "We’re trying to create a different type of
-                                network that’s not about likes and follows and
-                                having your social media manager post for you.
-                                You don’t have to pose or try to sound clever.
-                                It’s about authentically connecting with other
-                                humans."
-                            </p>
-                            <ul>
-                                <li>tagshive-167922</li>
-                                <li>technology</li>
-                                <li>hive</li>
-                                <li>analysis</li>
-                                <li>economics</li>
-                                <li>ocd</li>
-                                <li>posh</li>
-                                <li>crypto</li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    <strong>
-                                        celebrity association to propel the
-                                        brand to the next level
-                                    </strong>
-                                    <p> Beats</p>
+                            <a
+                                href="https://lawschoolpolicyreview.files.wordpress.com/2019/06/chained-social-media-facebook-twitter-youtube-regulations-internet-900-e1561479652370.jpg"
+                                target="_blank"
+                                rel="nofollow noopener"
+                                title="This link will take you away from the app"
+                            >
+                                Source
+                            </a>
+                        </p>
 
-                                    <p>Just that is not enough</p>
-                                    <span className={`${styles.block}`}>
-                                        Quibi
-                                    </span>
-                                    <p>
-                                        Just relying on celebrity appeal is not
-                                        enough
-                                        <span className={`${styles.block}`}>
-                                            Or more importantly the focus has
-                                            shifted away
-                                        </span>
-                                    </p>
-                                </li>
+                        <p>
+                            However not everything is sunshine and roses with
+                            this platform. With Clubhouse till now the
+                            interference by the platform owners has been minimal
+                            with no data storage &amp; room owners in charge of
+                            the conversation with regulation left to them. But
+                            we need to remember that these are the early days
+                            and the focus is on growth. The best thing for
+                            growth is to have a laissez faire approach( minimal
+                            intervention). But as complaints of harassment built
+                            up the pressure on them, they were forced to bring
+                            out some regulations. Their solution for these
+                            complaints has been to add a report feature that
+                            will record the conversation and create an “internal
+                            mechanism” to resolve the same. This is projected as
+                            a necessary measure but the reality is that it's a
+                            slippery slope to get started on.The app’s already
+                            been banned in China and with many countries passing
+                            laws for regulation of social media, it's a question
+                            of how long would they be able to resist from heavy
+                            handed regulation. As time passes with the flaws of
+                            having a central authority and the observed pattern
+                            of being regulated or becoming the centralized
+                            regulator itself( aka twitter), it seems like
+                            clubhouse could very well be on its way to becoming
+                            what the social media giants today are.
+                        </p>
 
-                                <li>
-                                    <strong>capitalize on trends</strong>
-                                    <br />
-                                    <p>
-                                        Mention the prevalence of communities
-                                        taken to the cold to find niche
-                                        interests and be able to monetize the
-                                        rewards for the same
-                                    </p>
-                                    <p>
-                                        Think about increasing accessibility of
-                                        the local sports competitions and taking
-                                        a turn away from government regulated
-                                        entities to reduce corruption and biases
-                                        seen in existing systems
-                                    </p>
-
-                                    <strong>Miscellaneous</strong>
-                                    <p>
-                                        <em>
-                                            We're hardwired to value things that
-                                            we can't get easily or that we pay
-                                            for. As social media has been
-                                            traditionally free with limited
-                                            successes with the paid premium
-                                            models( YouTube premium or Quibi) so
-                                            clubhouse had to get creative.
-                                        </em>
-                                    </p>
-                                    <p>
-                                        Reducing the volatility to be comparable
-                                        to Fiat will occur over a period of time
-                                    </p>
-                                    <p>
-                                        Or that might not even be necessary with
-                                        fiat currency reaching new levels of
-                                        volatility
-                                    </p>
-                                    <p>
-                                        Volatility indices of several
-                                        competitors
-                                        <ul>
-                                            <li>
-                                                what will incentivize users to
-                                            </li>
-                                        </ul>
-                                    </p>
-                                </li>
-                            </ul>
+                        <h3>Conclusion</h3>
+                        <p>
+                            So besides looking into integrating audio/video
+                            rooms into Hive apps what can be possible lessons
+                            from this? HIVE's utility and platform control has
+                            never been a problem with the user-centric
+                            features.and decentralized community regulation The
+                            question then is how we can perfect on bandwagon
+                            network effects. For the web 3.0, branding HIVE as
+                            the new cool crowd can be a catalyst for bringing in
+                            the vast majority of users similar to above examples
+                            . Let's start a discussion in the comments on how we
+                            are doing this and what strategies can we implement
+                            for achieving that.
                         </p>
                     </>
                 );
@@ -783,6 +566,184 @@ export const blogData = {
                                 platform
                             </p>
                         </div>
+                    </>
+                );
+            },
+        },
+        {
+            img: "/assets/whats-next-for-cryptocurrencies.jpg",
+            id: "So what's next for Cryptocurrencies",
+            title: "So what's next for Cryptocurrencies?",
+            summary: `
+            So in the wake of the recent price crash, there's been a lot of hype going on about the end of Bitcoin and the emergence of better alternatives to the older cryptocurrencies. High volatility, high mining costs, energy requirements, the list goes on and on. To replace Bitcoin these cryptos would have to contend with the following factors:
+            `,
+            fullDescription: function () {
+                return (
+                    <>
+                        <p>
+                            So in the wake of the recent price crash, there's
+                            been a lot of hype going on about the end of Bitcoin
+                            and the emergence of better alternatives to the
+                            older cryptocurrencies. High volatility, high mining
+                            costs, energy requirements, the list goes on and on.
+                            To replace Bitcoin these cryptos would have to
+                            contend with the following factors:
+                        </p>
+                        <h5>Network effects</h5>;
+                        <p>
+                            <img
+                                src="https://images.hive.blog/DQmT5fbXfhEm6zTnFpsfg33YzQt2VDr4r55T1BokBaL3rCD/iStock-1180543383.jpg"
+                                alt="iStock1180543383.jpg"
+                            />
+                            <br />
+                            <a
+                                href="https://thefintechtimes.com/wp-content/uploads/2020/10/iStock-1180543383.jpg"
+                                target="_blank"
+                                rel="nofollow noopener"
+                                title="This link will take you away from the app"
+                            >
+                                Source
+                            </a>
+                            <br />
+                            It is important to note that Bitcoin is not just a
+                            currency but also a decentralized peer to peer
+                            transaction network with regulations built into the
+                            code. For Bitcoin to be used effectively we need
+                            both the end users to accept it for the transaction.
+                            Therefore the usability increases with more users
+                            getting the same. We can draw parallels with early
+                            telephone systems being more useful with increased
+                            customers. It is referred to as the direct network
+                            effect. The true value of a network increases
+                            exponentially as a factor of( 2^n) where n
+                            represents the number of users. This is known as the
+                            Reed's law for networks.{" "}
+                            <a
+                                href="https://www.nfx.com/post/network-effects-manual/"
+                                target="_blank"
+                                rel="nofollow noopener"
+                                title="This link will take you away from the app"
+                            >
+                                More here.
+                            </a>
+                        </p>
+                        <p>
+                            The network takes preference over the said product.
+                            This allows for the product to stick around even
+                            though they kinda suck. Most public utilities fall
+                            in this category. The entry barrier lies in the
+                            building of this network over everything. That's why
+                            monopolies build around these things for real world
+                            equivalents
+                        </p>
+                        <p>
+                            It's difficult to grow such a network even much so
+                            in a decentralized manner, that's why even today
+                            with so many alternatives the market cap of Bitcoin
+                            is still around 40% of the market.
+                        </p>
+                        <p>
+                            Speaking of networks, El Salvador's legislature has
+                            approved of the bill legalizing Bitcoin as legal
+                            tender. It represents a growing trend of acceptance
+                            that no other cryptocurrency has achieved and the
+                            legal acceptance would incentivize non enthusiasts
+                            &amp; businesses to start transacting in that. This
+                            would end up compounding the network effects
+                            mentioned earlier.
+                        </p>
+                        <h5>Inadequate decentralization</h5>
+                        <p>
+                            Speaking of these alternatives, let's have a look at
+                            alternatives being pitched for being the next big
+                            thing. First are CBDCs pitched by the central banks.
+                            For anyone with a basic understanding of
+                            inflationary policies used one can safely assume
+                            this is no better than fiat. And the switch from
+                            fiat to these(or by extension fiat backed cryptos)
+                            would be symbolic as the said crypto would be
+                            subject to secret devaluations.
+                        </p>
+                        <p>
+                            Speaking of these alternatives, let's have a look at
+                            alternatives being pitched for being the next big
+                            thing. First are CBDCs pitched by the central banks.
+                            For anyone with a basic understanding of
+                            inflationary policies used one can safely assume
+                            this is no better than fiat. And the switch from
+                            fiat to these(or by extension fiat backed cryptos)
+                            would be symbolic as the said crypto would be
+                            subject to secret devaluations.
+                        </p>
+                        <p>
+                            Bitcoin as a currency was meant to solve the problem
+                            of removing the third party entity in transactions.
+                            The rules were built into the code and the code only
+                            alterable through the community. Only some minor
+                            changes have been possible without the majority of
+                            the code being not so different from its inception.
+                            Above all most of these altcoins have third party
+                            centralized entities for many of the purposes(
+                            either for growth/ vaults) thus defeating the very
+                            purpose of decentralization/ removal of third
+                            parties.
+                        </p>
+                        <h4>Other factors</h4>
+                        <p>
+                            Whilst the code is pretty much untouchable in terms
+                            of hard changes/ forks for a good reason there are
+                            significant ways in which the infrastructure is
+                            being improved on. One concern that has always been
+                            with Bitcoin is the volatility. However, volatility
+                            has reduced quite a lot( currently approx 10%)
+                            compared to its early days if we ignore the phases
+                            of bubble formation and crashes of a few months.
+                            It's expected that volatility would be at levels of
+                            stable fiats in a decade. Its here where we
+                        </p>
+                        <p>
+                            Another method we could see the adoption increase is
+                            in times of currency devaluations( hyperinflations)
+                            which would incentivize customers to make the switch
+                            to offset their losses. This is seen in regions of
+                            Africa and Brazil. Also for the rest of the world
+                            economic growth has been on shaky grounds and
+                            unhealthy fiscal policies, so we could be seeing
+                            more of such hyperinflation incidents in this
+                            decade.
+                        </p>
+                        <p>
+                            Plus there's proposals to start mining using
+                            renewables reducing the carbon footprint and making.
+                            These will help in making the mining process more
+                            sustainable and bring in even bigger audiences
+                            <br />
+                            <img
+                                src="https://images.hive.blog/DQmUjx8ieNeBvaqmu6c9pJ24EGKHVzzyG6d9RbGJsB9aYjd/mining.jpg"
+                                alt="mining.jpg"
+                            />
+                            <br />
+                            <a
+                                href="https://images-media.currency.com/37be3df9/0529/5c6d/83c6/9536c5656710/on_page/mining.jpg"
+                                target="_blank"
+                                rel="nofollow noopener"
+                                title="This link will take you away from the app"
+                            >
+                                Source
+                            </a>
+                        </p>
+                        <h4>Conclusion</h4>
+                        <p>
+                            In conclusion, any new alternatives planning to
+                            replace Bitcoin will have an uphill battle against
+                            the above factors amongst many others. Therefore for
+                            the foreseeable future Bitcoin seems to be on the
+                            path of being the primary cryptocurrency though an
+                            argument can be made for the cryptos playing a
+                            smaller, supporting role to it. Or maybe new
+                            technological developments would end up changing the
+                            same. What do you think on this?
+                        </p>
                     </>
                 );
             },
