@@ -221,7 +221,9 @@ export const blogData = {
                             what can be its future?
                         </p>
                         <p>
-                            <span className={`${styles.underline}`}>
+                            <span
+                                className={`${styles.underline} ${styles.block}`}
+                            >
                                 Product differentiation/ Simplifying connections
                             </span>
                             Clubhouse promised to be a breath of fresh air in

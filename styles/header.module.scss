@@ -7,35 +7,36 @@
     height: 100vh;
 
     h3 {
+        position: relative;
+
         top: 50%;
         z-index: 10;
-        position: relative;
-        padding-left: 2rem;
-        width: 100vw;
-        color: $white;
-        font-size: $fs-x-large;
+
+        font-size: $fs-large;
         font-family: "Montserrat", sans-serif;
         font-weight: $fw-bold;
+
+        width: 80vw;
+        color: $white;
+
+        padding-left: 2rem;
+        margin: 0 auto;
     }
 
-    @media only screen and (max-width: 320px) {
-        h3 {
-            font-size: $fs-medium;
-        }
-    }
-
-    @media only screen and (min-width: 640px) {
+    @include breakpoint(tablet) {
         display: flex;
         justify-content: center;
         flex-direction: column;
 
         h3 {
+            padding: 0;
+            top: 0;
             font-size: $fs-desktop-x-large;
             width: 70vw;
         }
     }
 
-    @media only screen and (min-width: 996px) {
+    @include breakpoint(desktop) {
         justify-content: center;
 
         h3 {
