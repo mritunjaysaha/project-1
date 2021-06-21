@@ -1,13 +1,15 @@
 @import "./utils.scss";
 
 .offeringCards {
-    height: 16rem;
+    font-size: $fs-small;
     aspect-ratio: 1/1;
-    margin: 0 2rem;
 
-    @media only screen and (max-width: 320px) {
-        font-size: $fs-small;
-        height: 20rem;
+    margin: 4rem;
+
+    height: 20rem;
+
+    @include breakpoint(tablet) {
+        margin: 0;
     }
 
     @media only screen and (min-width: 996px) {
@@ -16,11 +18,12 @@
 }
 
 .clienteleCards {
-    height: 12rem;
+    width: 60vw;
     aspect-ratio: 4/3;
 
-    @media only screen and (max-width: 320px) {
-        height: 18rem;
+    @include breakpoint(tablet) {
+        height: 16rem;
+        width: unset;
     }
 
     @media only screen and (min-width: 996px) {
@@ -36,7 +39,7 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    margin: 0 auto;
+    margin: 2rem auto;
     box-shadow: $box-shadow;
     border-radius: 0.5rem;
 

@@ -1,22 +1,28 @@
 @import "./utils.scss";
 
 .teamPageCards {
-    height: 40rem;
-    aspect-ratio: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-    border: 1px solid white;
+    aspect-ratio: 1/2;
 
     text-align: center;
 
-    box-shadow: $box-shadow;
+    height: 40rem;
+
+    border: 1px solid white;
     border-radius: 0.5rem;
 
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-
-    justify-content: space-between;
+    box-shadow: $box-shadow;
     transition: $card-transition;
+
+    padding: 2rem;
+    margin: 2rem;
+
+    @include breakpoint(tablet) {
+        // margin: 0;
+    }
 
     .avatarImage {
         img {

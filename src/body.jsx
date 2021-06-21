@@ -117,7 +117,7 @@ export function Body() {
             </section>
 
             {/* blog section */}
-            <section className={styles.blogCardsSection}>
+            <section>
                 <h3 className={styles.multiLineHeader}>
                     more <span className={styles.spanColor}>insights</span>
                 </h3>
