@@ -204,7 +204,10 @@ export const blogData = {
                             itself, the platform owners interfered tipped the
                             scales shifted in favour of money making over
                             everything that made the platform cool.
-                            Source:https://www.zoeticamedia.com/the-commoditization-of-social-media-and-what-we-can-learn-from-the-old-days
+                            Source:&nbsp;
+                            <a href="https://www.zoeticamedia.com/the-commoditization-of-social-media-and-what-we-can-learn-from-the-old-days">
+                                zoeticamedia
+                            </a>
                         </p>
                         <p>
                             Thanks to this, what we see today is a rat race of
@@ -231,8 +234,10 @@ export const blogData = {
                             davidson
                             <img src="/assets/clubhouse.png" alt="clubhouse" />
                             <span>
-                                Source:
-                                https://www.financialexpress.com/industry/technology/exclusive-clubhouse-is-not-about-likes-and-follows-but-authentic-connections-co-founder-and-ceo-paul-davison/2264833/
+                                Source:&nbsp;
+                                <a href="https://www.financialexpress.com/industry/technology/exclusive-clubhouse-is-not-about-likes-and-follows-but-authentic-connections-co-founder-and-ceo-paul-davison/2264833/">
+                                    Financial Express
+                                </a>
                             </span>
                         </p>
 
@@ -249,8 +254,10 @@ export const blogData = {
                                 alt="clubhouse1"
                             />
                             <span>
-                                Source
-                                https://www.approvedindex.co.uk/direct-marketing/direct-mail-response-rates
+                                Source:&nbsp;
+                                <a href="https://www.approvedindex.co.uk/direct-marketing/direct-mail-response-rates">
+                                    approvedindex
+                                </a>
                             </span>
                             <p>
                                 Numbers match up the statistics for voice.
@@ -522,9 +529,13 @@ export const blogData = {
                                 Clubhouse promised to be a breath of fresh air
                                 in this landscape bringing in audio rooms to
                                 help you connect to new people. In the words of
-                                their founder Paul Davidson:
-                                [Source](https://www.financialexpress.com/industry/technology/exclusive-clubhouse-is-not-about-likes-and-follows-but-authentic-connections-co-founder-and-ceo-paul-davison/2264833/)
-                                "We’re trying to create a different type of
+                                their founder Paul Davidson: [Source](
+                                <span>
+                                    <a href="https://www.financialexpress.com/industry/technology/exclusive-clubhouse-is-not-about-likes-and-follows-but-authentic-connections-co-founder-and-ceo-paul-davison/2264833/">
+                                        Financial Express
+                                    </a>
+                                </span>
+                                ) "We’re trying to create a different type of
                                 network that’s not about likes and follows and
                                 having your social media manager post for you.
                                 You don’t have to pose or try to sound clever.
