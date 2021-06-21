@@ -165,7 +165,7 @@ export const blogData = {
 
         {
             img: "",
-            id: "Clubhouse: The rise and fall?",
+            id: "Clubhouse: The rise and fall",
             title: "Clubhouse: The rise and fall?",
             summary: `
             Early adopters found a digital playground with the ability of making new

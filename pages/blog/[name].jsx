@@ -93,19 +93,19 @@ export default function BlogPage() {
     const router = useRouter();
     const { name } = router.query;
 
-    // const [currentData, setCurrentData] = useState("");
+    const [currentData, setCurrentData] = useState("");
 
     const { data } = blogData;
 
-    // useEffect(() => {
-    //     for (let datum of data) {
-    //         if (name === datum.id) {
-    //             setCurrentData(datum);
-    //             break;
-    //         }
-    //     }
-    // });
-    const currentData = data[0];
+    useEffect(() => {
+        for (let datum of data) {
+            if (name === datum.id) {
+                setCurrentData(datum);
+                break;
+            }
+        }
+    });
+    // const currentData = data[0];
 
     useEffect(() => {
         const scene = document.querySelector("#scene");

@@ -124,6 +124,21 @@ $bannerHeightDesktop: 80vh;
         margin-bottom: 0rem;
     }
 
+    p {
+        word-break: break-all;
+        img {
+            margin: 4rem auto;
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 72vw;
+
+            @include breakpoint(desktop) {
+                max-width: 40vw;
+            }
+        }
+    }
+
     @media only screen and (min-width: 996px) {
         padding-top: calc(#{$bannerHeightDesktop} + #{$marginTopBottom});
         width: 60vw;
