@@ -113,6 +113,11 @@ $bannerHeightDesktop: 80vh;
         font-size: $fs-x-large;
     }
 
+    a {
+        color: $orange;
+        cursor: pointer;
+    }
+
     strong,
     p,
     li {
