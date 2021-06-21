@@ -44,9 +44,13 @@
             position: static;
             margin: 0 0 0 $marginLeftRight;
             width: 100rem;
-            line-height: 10rem;
-            font-size: $fs-desktop-xxx-large;
             font-weight: $fw-x-bold;
+        }
+    }
+
+    @include breakpoint(desktopLarge) {
+        h3 {
+            font-size: $fs-desktop-xxx-large;
         }
     }
 }
