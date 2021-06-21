@@ -73,7 +73,6 @@ $border-radius: 0.5rem;
 
     padding: 6rem 0;
     margin: 0 auto;
-    margin-bottom: 12rem;
 
     text-align: center;
     font-size: $fs-x-large;
@@ -83,7 +82,7 @@ $border-radius: 0.5rem;
 
     @media only screen and (min-width: 996px) {
         line-height: $line-height-header;
-
+        margin-bottom: $marginTopBottom;
         font-size: $fs-desktop-large;
     }
 }

@@ -29,8 +29,7 @@
     align-items: center;
     align-self: center;
     justify-content: center;
-
-    margin-top: 12rem;
+    margin-top: 4rem;
 
     @media only screen and (max-width: 320px) {
         display: flex;
@@ -44,6 +43,7 @@
         grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
         gap: 4rem;
         align-items: center;
+        margin-top: 12rem;
     }
 }
 
@@ -52,6 +52,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 4rem;
 
     @media only screen and (min-width: 768px) {
         width: 80vw;
@@ -72,7 +73,6 @@
     font-size: $fs-medium;
     text-align: center;
     text-transform: uppercase;
-    padding: 8rem 0;
 
     .secretDiv {
         margin-bottom: 4rem;
@@ -90,8 +90,8 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 4rem 0;
 
-        padding: 8rem 0;
         h3 {
             width: 60%;
             font-size: $fs-desktop-large;
@@ -111,30 +111,21 @@
         p {
             font-weight: $fw-bold;
             color: $white;
+            width: 80vw;
+            margin: 0 auto;
         }
 
-        @media only screen and (max-width: 320px) {
-            h3 {
-                font-size: $fs-medium;
-            }
-            p {
-                font-size: $fs-small;
-                width: 90vw;
-            }
+        @include breakpoint(desktop) {
+            padding: 8rem 0;
         }
     }
 
     .trustDiv {
         p {
+            margin: 0 auto;
+            width: 80vw;
             font-size: $fs-large;
             font-weight: $fw-bold;
-        }
-
-        @media only screen and (max-width: 320px) {
-            p {
-                font-size: $fs-small;
-                width: 90vw;
-            }
         }
     }
 }
