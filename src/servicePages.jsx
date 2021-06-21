@@ -12,7 +12,9 @@ export function ServicePage({ name, data, imgSrc }) {
             <section className={styles.serviceArticleContainer}>
                 <article className={styles.contentArticle}>
                     <h3>{name}</h3>
-                    <div className={styles.horizontalBorder}></div>
+                    <div
+                        className={`${styles.horizontalBorder} ${styles.backgroundBlack}`}
+                    ></div>
                     <article>
                         {data.map((data) => {
                             return <p>{data}</p>;

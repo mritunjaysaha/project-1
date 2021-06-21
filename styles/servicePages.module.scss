@@ -11,7 +11,7 @@
     flex-direction: column;
     width: 100vw;
 
-    padding: 12rem 0 4rem 4rem;
+    padding: $marginTopBottom 4rem;
 
     img {
         width: 80vw;
@@ -44,7 +44,16 @@
         }
     }
 
-    @media only screen and (min-width: 996px) {
+    @include breakpoint(tablet) {
+        padding: $marginTopBottom 8rem;
+
+        img {
+            width: 60vw;
+            margin: 0 auto;
+        }
+    }
+
+    @include breakpoint(desktop) {
         padding: $marginTopBottom 4rem 0 4rem;
         height: 100vh;
         flex-direction: row;
@@ -72,7 +81,7 @@
         }
     }
 
-    @media only screen and (min-width: 1200px) {
+    @include breakpoint(desktopLarge) {
         padding: 12rem 16rem 0 16rem;
 
         .contentArticle {

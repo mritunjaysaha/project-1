@@ -67,8 +67,8 @@ export function Body() {
             <section className={styles.cardsSection}>
                 <div className={`${styles.backgroundBlack}`}>
                     <h3 className={`${styles.multiLineHeader}`}>
-                        Our core
-                        <span className={styles.spanColor}>services</span>
+                        Meet our
+                        <span className={styles.spanColor}>Team</span>
                         <div
                             className={`${styles.horizontalBorder} ${styles.backgroundWhite}`}
                         ></div>

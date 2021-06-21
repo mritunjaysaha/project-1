@@ -43,7 +43,10 @@
 
     $activeBorder: $white;
 
-    @media only screen and (min-width: 996px) {
+    @include breakpoint(tablet) {
+    }
+
+    @include breakpoint(desktop) {
         width: 100%;
         justify-content: space-between;
 
