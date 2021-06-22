@@ -3,7 +3,7 @@ import styles from "../../styles/anchor.module.scss";
 
 export function Anchor({ href, name }) {
     return (
-        <Link href={href ? href : ""}>
+        <Link href={href ? href : "#"}>
             <a className={styles.anchor}>{name}</a>
         </Link>
     );

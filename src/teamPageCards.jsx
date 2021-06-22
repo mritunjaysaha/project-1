@@ -5,7 +5,7 @@ import Fade from "react-reveal";
 export function TeamPageCards({ name, designation, img, href }) {
     return (
         <Fade bottom duration={800}>
-            <li className={styles.teamPageCards}>
+            <li className={styles.teamPageCards} key={name}>
                 <div>
                     <div className={styles.avatarImage}>
                         <img src={img} alt={name} />

@@ -45,12 +45,12 @@ function MobileSubMenu({
             >
                 {subMenuData.map(({ name, link, comingSoon }) => {
                     return !comingSoon ? (
-                        <li onClick={handleClose}>
+                        <li onClick={handleClose} key={name}>
                             <Anchor name={name} href={link} />
                         </li>
                     ) : (
-                        <li onClick={handleClose}>
-                            <AnchorComingSoon name={name} link={link} />
+                        <li onClick={handleClose} key={name}>
+                            <AnchorComingSoon name={name} href={link} />
                         </li>
                     );
                 })}
