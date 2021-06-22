@@ -1,6 +1,7 @@
 const path = require("path");
 const withSass = require("@zeit/next-sass");
 const withImages = require("next-images");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
 module.exports = withSass({
     cssModules: true,
@@ -19,15 +20,22 @@ module.exports = {
     module: {
         rules: [
             {
-                test: "/.(png|jpe?g)$/i",
-                use: [
-                    {
-                        loader: "file-loader",
-                    },
-                ],
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                type: "asset",
             },
         ],
     },
+    plugins: [
+        new ImageMinimizerPlugin({
+            minimizerOptions: {
+                plugins: [
+                    ["gifsicle", { interlaced: true }],
+                    ["jpegtran", { progressive: true }],
+                    ["optipng", { optimizationLevel: 5 }],
+                ],
+            },
+        }),
+    ],
     sassOptions: {
         includePaths: [path.join(__dirname, "styles")],
     },
