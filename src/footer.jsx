@@ -20,28 +20,30 @@ export function Footer() {
 
     return (
         <footer className={styles.footer}>
-            <div className={styles.companyLogo}>
-                <h1>
-                    <Anchor name={company.name} href={company.link} />
-                </h1>
-                <p>&copy; Copyrights. All rights reserved {getYear()}</p>
+            <div className={styles.footerContainer}>
+                <div className={styles.companyLogo}>
+                    <h1>
+                        <Anchor name={company.name} href={company.link} />
+                    </h1>
+                    <p>&copy; Copyrights. All rights reserved {getYear()}</p>
+                </div>
+                <ul className={styles.ourOfferings}>
+                    <h1>
+                        {services.name}
+                        <div
+                            className={`${styles.horizontalBorder} ${styles.backgroundWhite}`}
+                        ></div>
+                    </h1>
+                    {services.subMenuData.map(({ name, link }) => {
+                        return <ListAnchor name={name} href={link} />;
+                    })}
+                </ul>
+                <ul className={styles.others}>
+                    <ListAnchor name={careers.name} href={careers.link} />
+                    <ListAnchor name={contact.name} href={contact.link} />
+                    <ListAnchor name={newsLetter.name} href={newsLetter.link} />
+                </ul>
             </div>
-            <ul className={styles.ourOfferings}>
-                <h1>
-                    {services.name}
-                    <div
-                        className={`${styles.horizontalBorder} ${styles.backgroundWhite}`}
-                    ></div>
-                </h1>
-                {services.subMenuData.map(({ name, link }) => {
-                    return <ListAnchor name={name} href={link} />;
-                })}
-            </ul>
-            <ul className={styles.others}>
-                <ListAnchor name={careers.name} href={careers.link} />
-                <ListAnchor name={contact.name} href={contact.link} />
-                <ListAnchor name={newsLetter.name} href={newsLetter.link} />
-            </ul>
         </footer>
     );
 }
