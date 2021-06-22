@@ -1,15 +1,6 @@
-export const navbarList = [
-    { name: "home", links: "#" },
-    { name: "solutions", links: "#" },
-    { name: "blog", links: "#" },
-    { name: "services", links: "#" },
-    { name: "newsletter", links: "#" },
-];
-
 export const navbarData = {
     company: { name: "Maneuver Ventures", link: "/" },
     home: { name: "home", link: "/" },
-    solutions: { name: "solutions", link: "/solutions" },
     careers: { name: "careers", link: "/careers" },
     contact: { name: "contact us", link: "/contactUs" },
     newsLetter: { name: "newsletter", link: "/newsletter" },
