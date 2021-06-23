@@ -138,18 +138,17 @@ $bannerHeightDesktop: 80vh;
         margin-bottom: 0rem;
     }
 
-    p {
-        // word-break: break-all;
-        img {
-            margin: 4rem auto;
-            display: block;
-            width: 100%;
-            height: auto;
-            max-width: 72vw;
+    
+    img {
+        margin: 4rem auto;
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: 72vw;
+max-height: 60vh;
 
-            @include breakpoint(desktop) {
-                max-width: 40vw;
-            }
+        @include breakpoint(desktop) {
+            max-width: 40vw;
         }
     }
 

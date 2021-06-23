@@ -20,12 +20,9 @@
     padding: 2rem;
     margin: 2rem;
 
-    @include breakpoint(tablet) {
-        // margin: 0;
-    }
-
     .avatarImage {
         img {
+            width: 12rem;
             height: 12rem;
             aspect-ratio: 1/1;
             border-radius: 50%;

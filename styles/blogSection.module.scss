@@ -16,6 +16,12 @@
         color: $golden;
         font-size: $fs-small;
     }
+
+    img{
+max-height: 24rem;
+height: max-content;
+
+    }
 }
 
 .pEllipsis {
