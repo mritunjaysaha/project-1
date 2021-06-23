@@ -9,7 +9,7 @@ function CardContents({ img, title, summary, id }) {
     return (
         <Fade bottom duration={800}>
             <Card>
-                <Card.Img variant="top" src={img} />
+                <Card.Img variant="top" src={img} alt={title} />
                 <Card.Body>
                     <Card.Title>
                         <h3>

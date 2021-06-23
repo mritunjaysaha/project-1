@@ -10,6 +10,7 @@ export default function Home() {
             <Head>
                 <title>{companyName ? companyName.name : ""}</title>
                 <link rel="icon" href="/favicon.ico" />
+                <meta name="description" content="Maneuver Ventures" />
             </Head>
 
             <Header />
