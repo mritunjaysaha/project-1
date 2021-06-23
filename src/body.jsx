@@ -1,12 +1,7 @@
 import styles from "../styles/body.module.scss";
 import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
-import {
-    offeringsData,
-    clienteleData,
-    summarySectionData,
-    teamData,
-} from "../data";
+import { offeringsData, clienteleData, teamData } from "../data";
 
 import Zoom from "react-reveal";
 import { BlogSection } from "../src/blogSection";

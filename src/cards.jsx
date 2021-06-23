@@ -6,7 +6,7 @@ export function Cards({ text, className, link }) {
     return (
         <Fade bottom duration={800}>
             <li
-                key={text ? text[0] : Date.now()}
+                key={link}
                 className={`${
                     className.toLowerCase() === "offeringcards"
                         ? styles.offeringCards

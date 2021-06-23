@@ -15,7 +15,7 @@ export function TeamPageCards({ name, designation, img, href }) {
                         <p>{designation ? designation : "designation"}</p>
                     </div>
                 </div>
-                <a target="_blank" href={href ? href : "#"}>
+                <a rel="noopener" target="_blank" href={href ? href : "#"}>
                     <UilLinkedinAlt />
                 </a>
             </li>

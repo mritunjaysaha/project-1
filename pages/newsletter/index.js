@@ -88,7 +88,7 @@ export default function NewsLetterPage() {
             <div className={styles.formContainer}>
                 <SignupForm />
             </div>
-            <a href="https://www.freepik.com/photos/background">
+            <a rel="noopener" href="https://www.freepik.com/photos/background">
                 Background photo created by mrsiraphol - www.freepik.com
             </a>
         </section>

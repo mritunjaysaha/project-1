@@ -148,16 +148,11 @@ export const careersPageData = {
     ],
 };
 
-export const summarySectionData = {
-    whoWeAre: { description: `XXX capital is an independently owned` },
-    whatWeDo: {
-        description: `We've been studying trends about what drives decisions.
-    Cause it's not about the info you present, it's about
-    how you retain their attention. And finally at the end
-    of that they are curious and emotionally invested in the
-    deal. That's how we're able to get the deal on our own
-    terms for our clients. Plus we are able to retain that
-    element of fun and excitement. Plus the bigger the
-    stakes with the deal, the more exciting it is for us`,
-    },
+export const backgroundSlideshowImages = {
+    data: [
+        "/assets/city1.jpg",
+        "/assets/city2.jpg",
+        "/assets/city3.jpg",
+        "/assets/city4.jpg",
+    ],
 };

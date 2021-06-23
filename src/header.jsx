@@ -7,13 +7,8 @@ export function Header() {
     return (
         <header className={styles.initialPage}>
             <BackgroundSlideshow
-                images={[
-                    "/assets/city1.jpg",
-                    "/assets/city2.jpg",
-                    "/assets/city3.jpg",
-                    "/assets/city4.jpg",
-                ]}
-                animationDelay="2000"
+                images={backgroundSlideshowImages.data}
+                animationDelay={2000}
             />
             <Fade bottom duration={1000}>
                 <h3>Advisory Services for Growing Companies</h3>

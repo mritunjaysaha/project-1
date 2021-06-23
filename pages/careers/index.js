@@ -2,7 +2,11 @@ import styles from "../../styles/careers.module.scss";
 import { careersPageData } from "../../data";
 import { MUIButton } from "../../src/atoms/button";
 
-const ATag = ({ link, name }) => <a href={link}>{name}</a>;
+const ATag = ({ link, name }) => (
+    <a rel="noopener" href={link}>
+        {name}
+    </a>
+);
 
 export default function Careers() {
     const { data, buttonName } = careersPageData;

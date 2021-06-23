@@ -11,7 +11,7 @@ function CardContents({ img, title, summary, id }) {
             <Card>
                 <Card.Img variant="top" src={img} alt={title} />
                 <Card.Body>
-                    <Card.Title>
+                    <Card.Title key={title}>
                         <h3>
                             {title
                                 ? title
