@@ -7,7 +7,6 @@ import { ComingSoonPage } from "../../src/comingSoonPage";
 export default function OurOfferings() {
     const router = useRouter();
     const { name } = router.query;
-    console.log({ name });
     const [currentData, setCurrentData] = useState("");
 
     const keys = Object.keys(ourOfferingContentsData);
@@ -20,8 +19,6 @@ export default function OurOfferings() {
             }
         }
     }, [name, currentData]);
-
-    console.log({ currentData });
 
     return (
         <>

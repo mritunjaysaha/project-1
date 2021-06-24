@@ -92,7 +92,6 @@ const ParticlesJS = () => (
 export default function BlogPage() {
     const router = useRouter();
     const { name } = router.query;
-    console.log("blog: ", { name });
     const [currentData, setCurrentData] = useState("");
 
     const { data } = blogData;

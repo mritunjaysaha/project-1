@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "../styles/navbar.module.scss";
 import { Anchor } from "../src/atoms/anchor";
 import { navbarData } from "../data";
-import { useRouter } from "next/router";
+import router, { useRouter } from "next/router";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Grow from "@material-ui/core/Grow";
 import Paper from "@material-ui/core/Paper";
@@ -15,6 +15,7 @@ import {
     UilBars,
     UilAngleUp,
 } from "@iconscout/react-unicons";
+import { route } from "next/dist/next-server/server/router";
 
 function AnchorComingSoon({ name, href }) {
     return (
@@ -53,11 +54,17 @@ function MobileSubMenu({ name, subMenuData, handleClose }) {
                 {subMenuData.map(({ name, link, comingSoon }) => {
                     return !comingSoon ? (
                         <li onClick={handleClose} key={name}>
-                            <Anchor name={name} href={link} />
+                            <Anchor
+                                name={name}
+                                href={`/ourOfferings/${link}`}
+                            />
                         </li>
                     ) : (
                         <li onClick={handleClose} key={name}>
-                            <AnchorComingSoon name={name} href={link} />
+                            <AnchorComingSoon
+                                name={name}
+                                href={`/ourOfferings/${link}`}
+                            />
                         </li>
                     );
                 })}
@@ -66,7 +73,7 @@ function MobileSubMenu({ name, subMenuData, handleClose }) {
     );
 }
 
-function DesktopSubMenu({ name, subMenuData }) {
+function DesktopSubMenu({ name, subMenuData, isScrolled, router }) {
     const [open, setOpen] = useState(false);
     const anchorRef = useRef(null);
 
@@ -107,7 +114,13 @@ function DesktopSubMenu({ name, subMenuData }) {
                 aria-controls={open ? "menu-list-grow" : undefined}
                 aria-haspopup="true"
                 key={name}
-                className={styles.hoverUnderline}
+                className={
+                    router.pathname.split("/").includes("ourOfferings")
+                        ? isScrolled
+                            ? `${styles.activeLinkBlack} ${styles.hoverUnderline}`
+                            : `${styles.activeLinkWhite} ${styles.hoverUnderline}`
+                        : ``
+                }
             >
                 {name}
             </li>
@@ -170,10 +183,17 @@ export function SubMenu({
     handleClose,
     isMenuClicked,
     viewportWidth,
+    isScrolled,
+    router,
 }) {
     return (
         <>
-            <DesktopSubMenu name={name} subMenuData={subMenuData} />
+            <DesktopSubMenu
+                name={name}
+                subMenuData={subMenuData}
+                isScrolled={isScrolled}
+                router={router}
+            />
             <MobileSubMenu
                 name={name}
                 subMenuData={subMenuData}
@@ -190,6 +210,10 @@ export function Navbar() {
     const [isMenuClicked, setMenuClicked] = useState(false);
     const [viewportWidth, setViewportWidth] = useState();
     const router = useRouter();
+    console.log({ router });
+
+    console.log(router.pathname.split("/"));
+    console.log(router.pathname.split("/").includes("ourOfferings"));
 
     useEffect(() => {
         setViewportWidth(document.documentElement.clientWidth);
@@ -213,7 +237,6 @@ export function Navbar() {
         setMenuClicked(true);
     };
     const handleClose = () => {
-        console.log("clicked close buttons");
         setMenuClicked(false);
     };
 
@@ -293,6 +316,8 @@ export function Navbar() {
                     handleClose={handleClose}
                     isMenuClicked={isMenuClicked}
                     viewportWidth={viewportWidth}
+                    isScrolled={isScrolled}
+                    router={router}
                 />
 
                 {/* News letter */}

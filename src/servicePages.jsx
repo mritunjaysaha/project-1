@@ -9,7 +9,6 @@ export function ServicePage({ title, data, imgSrc }) {
     const { name } = router.query;
 
     const pathName = name;
-    console.log({ name });
     return (
         <section className={styles.serviceSection}>
             <section className={styles.serviceArticleContainer}>
@@ -29,7 +28,6 @@ export function ServicePage({ title, data, imgSrc }) {
             <section className={styles.serviceSection2}>
                 <ul className={styles.menuContainer}>
                     {services.subMenuData.map(({ name, link }) => {
-                        console.log({ name }, { link });
                         return (
                             <li
                                 className={
