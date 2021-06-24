@@ -1,7 +1,7 @@
 import styles from "../../styles/careers.module.scss";
 import { careersPageData } from "../../data";
 import { MUIButton } from "../../src/atoms/button";
-
+import { ComingSoon } from "../../src/comingSoonPage";
 const ATag = ({ link, name }) => (
     <a rel="noopener" href={link}>
         {name}
@@ -39,15 +39,7 @@ export default function Careers() {
 
     return (
         <section className={styles.careersSection}>
-            {data.length ? (
-                <CareerJSX />
-            ) : (
-                <header className={styles.careersHeader}>
-                    <h1 className={styles.multiLineHeader}>
-                        coming <span className={styles.spanColor}>soon</span>
-                    </h1>
-                </header>
-            )}
+            {data.length ? <CareerJSX /> : <ComingSoon />}
         </section>
     );
 }

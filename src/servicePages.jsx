@@ -32,6 +32,7 @@ export function ServicePage({ name, data, imgSrc }) {
                                     ? styles.activeLink
                                     : ""
                             }
+                            key={link}
                         >
                             <Anchor name={name} href={link} />
                         </li>
