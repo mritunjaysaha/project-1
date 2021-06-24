@@ -36,7 +36,7 @@ function MobileSubMenu({ name, subMenuData, handleClose }) {
 
     return (
         <div className={`${styles.hideOnDesktop}`}>
-            <li onClick={handleOnClick}>
+            <li onClick={handleOnClick} className={styles.liOurOffering}>
                 {name}
                 <span>
                     {!open ? (
