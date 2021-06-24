@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from "react";
 import styles from "../styles/navbar.module.scss";
-import CloseIcon from "@material-ui/icons/Close";
 import { Anchor } from "../src/atoms/anchor";
 import { navbarData } from "../data";
 import MenuTwoToneIcon from "@material-ui/icons/MenuTwoTone";
@@ -11,6 +10,7 @@ import Paper from "@material-ui/core/Paper";
 import Popper from "@material-ui/core/Popper";
 import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
+import { UilTimes } from "@iconscout/react-unicons";
 
 function AnchorComingSoon({ name, href }) {
     return (
@@ -21,13 +21,7 @@ function AnchorComingSoon({ name, href }) {
     );
 }
 
-function MobileSubMenu({
-    name,
-    subMenuData,
-    handleClose,
-    isMenuClicked,
-    viewportWidth,
-}) {
+function MobileSubMenu({ name, subMenuData, handleClose }) {
     const [open, setOpen] = useState(false);
 
     function handleOnClick() {
@@ -242,10 +236,10 @@ export function Navbar() {
                 }
             >
                 {/* Mobile close icon */}
-                <CloseIcon
-                    color="inherit"
+                <UilTimes
+                    // color="inherit"
                     className={styles.close}
-                    fontSize="inherit"
+                    // fontSize="inherit"
                     onClick={handleClose}
                 />
 
