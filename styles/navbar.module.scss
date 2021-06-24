@@ -52,6 +52,7 @@
     @include breakpoint(desktop) {
         width: 100%;
         justify-content: space-between;
+        padding: $padding-sm 4rem;
 
         ul {
             width: max-content;
