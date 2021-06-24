@@ -28,7 +28,7 @@ export default function OurOfferings() {
             {currentData != false ? (
                 !currentData.comingSoon ? (
                     <ServicePage
-                        name={currentData.name}
+                        title={currentData.name}
                         data={currentData.data}
                         imgSrc={currentData.img}
                     />
