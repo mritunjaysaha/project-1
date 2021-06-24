@@ -37,8 +37,14 @@ function MobileSubMenu({ name, subMenuData, handleClose }) {
     return (
         <div className={`${styles.hideOnDesktop}`}>
             <li onClick={handleOnClick}>
-                {name}{" "}
-                {!open ? <UilAngleDown size="30" /> : <UilAngleUp size="30" />}
+                {name}
+                <span>
+                    {!open ? (
+                        <UilAngleDown size="25" />
+                    ) : (
+                        <UilAngleUp size="25" />
+                    )}
+                </span>
             </li>
             <ul
                 id="mobile-sub-menu"
