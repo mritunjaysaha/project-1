@@ -3,7 +3,7 @@
 .blogCardsContainer {
     width: 90vw;
     margin: 0 auto $marginTopBottom auto;
-    font-family: "Montserrat", sans-serif;
+    font-family: $font-family;
 
     h3 {
         font-size: $fs-medium;
@@ -18,11 +18,8 @@
     }
 
     img {
-        @include breakpoint(desktop) {
-            aspect-ratio: 3/4;
-            max-height: 24rem;
-            height: max-content;
-        }
+        max-width: 100%;
+        max-height: 100%;
     }
 }
 

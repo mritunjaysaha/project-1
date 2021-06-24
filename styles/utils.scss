@@ -59,6 +59,9 @@ $overlay: rgba(0, 0, 0, 0.55);
 // border radius
 $border-radius: 0.5rem;
 
+// Font family
+$font-family: "Catamaran", sans-serif;
+
 .spanColor {
     display: block;
     color: $golden;
@@ -78,7 +81,8 @@ $border-radius: 0.5rem;
     text-align: center;
     font-size: $fs-x-large;
 
-    font-family: "Montserrat", sans-serif;
+    font-family: $font-family;
+
     font-weight: $fw-bold;
 
     @include breakpoint(desktop) {

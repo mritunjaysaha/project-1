@@ -35,7 +35,12 @@ export function Footer() {
                         ></div>
                     </h1>
                     {services.subMenuData.map(({ name, link }) => {
-                        return <ListAnchor name={name} href={link} />;
+                        return (
+                            <ListAnchor
+                                name={name}
+                                href={`/ourOfferings/${link}`}
+                            />
+                        );
                     })}
                 </ul>
                 <ul className={styles.others}>
