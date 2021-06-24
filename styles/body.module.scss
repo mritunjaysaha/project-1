@@ -128,13 +128,13 @@
 }
 
 .blogSection {
-    margin-top: 0;
-    @include breakpoint(tablet) {
-        margin-top: $marginTopBottom;
-    }
+    // margin-top: 0;
+    // @include breakpoint(tablet) {
+    margin-top: $marginTopBottom;
+    // }
 
     .multiLineHeader {
         padding: 0;
-        margin-bottom: 8rem;
+        margin-bottom: $marginTopBottom;
     }
 }
