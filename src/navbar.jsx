@@ -221,10 +221,6 @@ export function Navbar() {
     const [isMenuClicked, setMenuClicked] = useState(false);
     const [viewportWidth, setViewportWidth] = useState();
     const router = useRouter();
-    console.log({ router });
-
-    console.log(router.pathname.split("/"));
-    console.log(router.pathname.split("/").includes("ourOfferings"));
 
     useEffect(() => {
         setViewportWidth(document.documentElement.clientWidth);
