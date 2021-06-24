@@ -241,7 +241,7 @@ export function Navbar() {
             />
             <ul
                 className={
-                    viewportWidth < 996
+                    viewportWidth < 992
                         ? isMenuClicked
                             ? `${styles.navbarMenu}`
                             : `${styles.hideMenu}`

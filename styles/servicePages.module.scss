@@ -70,7 +70,7 @@
 
             h3 {
                 font-size: $fs-desktop-xx-large;
-                width: 60rem;
+                width: 50vw;
             }
 
             article {
@@ -86,6 +86,7 @@
 
         .contentArticle {
             padding-right: 12rem;
+            width: 60rem;
         }
     }
 }

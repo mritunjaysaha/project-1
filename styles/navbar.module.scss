@@ -126,13 +126,13 @@
     top: $padding-sm;
     right: $padding-sm;
 
-    @media only screen and (min-width: 996px) {
+    @include breakpoint(desktop) {
         display: none !important;
     }
 }
 
 .hamburgerMenu {
-    @media only screen and (min-width: 996px) {
+    @include breakpoint(desktop) {
         display: none !important;
     }
 }
