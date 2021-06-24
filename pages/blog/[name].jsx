@@ -92,7 +92,7 @@ const ParticlesJS = () => (
 export default function BlogPage() {
     const router = useRouter();
     const { name } = router.query;
-
+    console.log("blog: ", { name });
     const [currentData, setCurrentData] = useState("");
 
     const { data } = blogData;
@@ -105,7 +105,6 @@ export default function BlogPage() {
             }
         }
     });
-    // const currentData = data[0];
 
     useEffect(() => {
         const scene = document.querySelector("#scene");

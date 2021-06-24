@@ -20,7 +20,10 @@ export function Cards({ text, className, link }) {
                 </div>
                 {link ? (
                     <div className={styles.linkArea}>
-                        <Anchor name="know more" href={link} />
+                        <Anchor
+                            name="know more"
+                            href={link ? `/ourOfferings/${link}` : ""}
+                        />
                     </div>
                 ) : (
                     ""

@@ -142,14 +142,14 @@ function DesktopSubMenu({ name, subMenuData }) {
                                                 <MenuItem onClick={handleClose}>
                                                     <Anchor
                                                         name={name}
-                                                        href={link}
+                                                        href={`/ourOfferings/${link}`}
                                                     />
                                                 </MenuItem>
                                             ) : (
                                                 <MenuItem onClick={handleClose}>
                                                     <AnchorComingSoon
                                                         name={name}
-                                                        href={link}
+                                                        href={`/ourOfferings/${link}`}
                                                     />
                                                 </MenuItem>
                                             )

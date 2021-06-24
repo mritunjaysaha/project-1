@@ -9,31 +9,26 @@ export const navbarData = {
         subMenuData: [
             {
                 name: "equity capital markets",
-                link: "/equityCapitalMarkets",
+                link: "equityCapitalMarkets",
             },
             {
                 name: "debt capital markets",
-                link: "/debtCapitalMarkets",
+                link: "debtCapitalMarkets",
             },
             {
                 name: "m&a advisory",
-                link: "/maAdvisory",
+                link: "maAdvisory",
             },
             {
+                comingSoon: true,
                 name: "direct investments",
-                link: "/directInvestments",
+                link: "directInvestments",
             },
             {
                 comingSoon: true,
                 name: "initial coin offerings",
-                link: "/",
+                link: "initialCoinOfferings",
             },
-        ],
-        servicesLinks: [
-            "/equityCapitalMarkets",
-            "/directInvestments",
-            "/maAdvisory",
-            "/debtCapitalMarkets",
         ],
     },
 };
@@ -41,10 +36,10 @@ export const navbarData = {
 export const companyName = { name: "Maneuver Ventures" };
 
 export const offeringsData = [
-    { name: ["equity capital", "markets"], link: "/equityCapitalMarkets" },
-    { name: ["debt capital", "markets"], link: "/debtCapitalMarkets" },
-    { name: ["m&a", "Advisory"], link: "/maAdvisory" },
-    { name: ["direct", "investments"], link: "/directInvestments" },
+    { name: ["equity capital", "markets"], link: "equityCapitalMarkets" },
+    { name: ["debt capital", "markets"], link: "debtCapitalMarkets" },
+    { name: ["m&a", "Advisory"], link: "maAdvisory" },
+    { name: ["direct", "investments"], link: "directInvestments" },
     { name: ["green", "bonds"], link: null },
     { name: ["impact", "funding"], link: null },
 ];
@@ -205,7 +200,7 @@ export const ourOfferingContentsData = {
     },
     initialCoinOfferings: {
         comingSoon: true,
-        name: "initial coin offerings",
+        name: "initial coin",
         data: [],
         img: "",
     },
