@@ -1,7 +1,7 @@
 @import "./utils.scss";
 
 .blogCardsContainer {
-    width: 80vw;
+    width: 90vw;
     margin: 0 auto 8rem auto;
     font-family: "Montserrat", sans-serif;
 
@@ -17,10 +17,9 @@
         font-size: $fs-small;
     }
 
-    img{
-max-height: 24rem;
-height: max-content;
-
+    img {
+        max-height: 24rem;
+        height: max-content;
     }
 }
 
