@@ -37,7 +37,8 @@ function MobileSubMenu({ name, subMenuData, handleClose }) {
     return (
         <div className={`${styles.hideOnDesktop}`}>
             <li onClick={handleOnClick}>
-                {name} {!open ? <UilAngleDown /> : <UilAngleUp />}
+                {name}{" "}
+                {!open ? <UilAngleDown size="30" /> : <UilAngleUp size="30" />}
             </li>
             <ul
                 id="mobile-sub-menu"
@@ -230,6 +231,7 @@ export function Navbar() {
             <UilBars
                 onClick={handleHamburgerMenu}
                 className={styles.hamburgerMenu}
+                size="30"
             />
             <ul
                 className={
@@ -242,9 +244,8 @@ export function Navbar() {
             >
                 {/* Mobile close icon */}
                 <UilTimes
-                    // color="inherit"
+                    size="30"
                     className={styles.close}
-                    // fontSize="inherit"
                     onClick={handleClose}
                 />
 
