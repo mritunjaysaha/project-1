@@ -26,7 +26,7 @@ function AnchorComingSoon({ name, href }) {
     );
 }
 
-function MobileSubMenu({ name, subMenuData, handleClose }) {
+function MobileSubMenu({ name, subMenuData, handleClose, isScrolled, router }) {
     const [open, setOpen] = useState(false);
 
     function handleOnClick() {
@@ -37,7 +37,16 @@ function MobileSubMenu({ name, subMenuData, handleClose }) {
 
     return (
         <div className={`${styles.hideOnDesktop}`}>
-            <li onClick={handleOnClick} className={styles.liOurOffering}>
+            <li
+                onClick={handleOnClick}
+                className={
+                    router.pathname.split("/").includes("ourOfferings")
+                        ? isScrolled
+                            ? `${styles.activeLinkBlack} ${styles.liOurOffering}`
+                            : `${styles.activeLinkWhite} ${styles.liOurOffering}`
+                        : ``
+                }
+            >
                 {name}
                 <span>
                     {!open ? (
@@ -200,6 +209,8 @@ export function SubMenu({
                 handleClose={handleClose}
                 viewportWidth={viewportWidth}
                 isMenuClicked={isMenuClicked}
+                isScrolled={isScrolled}
+                router={router}
             />
         </>
     );
