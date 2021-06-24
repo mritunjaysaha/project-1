@@ -90,7 +90,7 @@ $bannerHeightDesktop: 80vh;
     display: flex;
     flex-direction: column;
     background-color: $white;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Catamaran", sans-serif;
 }
 
 .blogContentsContainer {
@@ -138,14 +138,13 @@ $bannerHeightDesktop: 80vh;
         margin-bottom: 0rem;
     }
 
-    
     img {
         margin: 4rem auto;
         display: block;
         width: 100%;
         height: auto;
         max-width: 72vw;
-max-height: 60vh;
+        max-height: 60vh;
 
         @include breakpoint(desktop) {
             max-width: 40vw;

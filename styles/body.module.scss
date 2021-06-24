@@ -136,5 +136,9 @@
     .multiLineHeader {
         padding: 0;
         margin-bottom: $marginTopBottom;
+
+        @include breakpoint(desktop) {
+            line-height: 2.4rem;
+        }
     }
 }

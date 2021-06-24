@@ -4,7 +4,6 @@ import styles from "../styles/blogSection.module.scss";
 import { blogData } from "../blogsData";
 import { Anchor } from "./atoms/anchor";
 import Fade from "react-reveal";
-import { UilAngleRight } from "@iconscout/react-unicons";
 
 function ReadMore() {
     return (

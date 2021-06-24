@@ -18,9 +18,11 @@
     }
 
     img {
-        aspect-ratio: 3/4;
-        max-height: 24rem;
-        height: max-content;
+        @include breakpoint(desktop) {
+            aspect-ratio: 3/4;
+            max-height: 24rem;
+            height: max-content;
+        }
     }
 }
 
