@@ -30,3 +30,12 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+.readMore {
+    display: flex;
+    align-items: center;
+
+    span {
+        vertical-align: middle;
+    }
+}

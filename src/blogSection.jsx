@@ -4,6 +4,15 @@ import styles from "../styles/blogSection.module.scss";
 import { blogData } from "../blogsData";
 import { Anchor } from "./atoms/anchor";
 import Fade from "react-reveal";
+import { UilAngleRight } from "@iconscout/react-unicons";
+
+function ReadMore() {
+    return (
+        <p className={styles.readMore}>
+            Read More&nbsp;<span>&gt;&gt;&gt;</span>
+        </p>
+    );
+}
 
 function CardContents({ img, title, summary, id }) {
     return (
@@ -25,7 +34,7 @@ function CardContents({ img, title, summary, id }) {
                     </Card.Text>
                     <Anchor
                         color={true}
-                        name="Read More >>>"
+                        name={<ReadMore />}
                         href={`/blog/${id ? id : ""}`}
                     />
                 </Card.Body>
