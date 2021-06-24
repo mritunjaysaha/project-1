@@ -44,7 +44,7 @@ function MobileSubMenu({ name, subMenuData, handleClose, isScrolled, router }) {
                         ? isScrolled
                             ? `${styles.activeLinkBlack} ${styles.liOurOffering}`
                             : `${styles.activeLinkWhite} ${styles.liOurOffering}`
-                        : ``
+                        : `${styles.liOurOffering}`
                 }
             >
                 {name}
