@@ -23,9 +23,18 @@
     }
 }
 
+.cardsContentsContainer {
+    display: flex;
+
+    img {
+        height: 12rem;
+        width: 16rem;
+    }
+}
+
 .pEllipsis {
     display: -webkit-box;
-    -webkit-line-clamp: 6;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }

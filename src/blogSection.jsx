@@ -1,5 +1,3 @@
-import Card from "react-bootstrap/Card";
-import CardColumns from "react-bootstrap/CardColumns";
 import styles from "../styles/blogSection.module.scss";
 import { blogData } from "../blogsData";
 import { Anchor } from "./atoms/anchor";
@@ -16,28 +14,23 @@ function ReadMore() {
 function CardContents({ img, title, summary, id }) {
     return (
         <Fade bottom duration={800}>
-            <Card>
-                <Card.Img variant="top" src={img} alt={title} />
-                <Card.Body>
-                    <Card.Title key={title}>
+            <div className={styles.cardsContentsContainer}>
+                <img variant="top" src={img} alt={title} />
+                <div>
+                    <li key={title}>
                         <h3>
                             {title
                                 ? title
                                 : `Card title that wraps to a new line`}
                         </h3>
-                    </Card.Title>
-                    <Card.Text>
+                    </li>
+                    <p>
                         <p className={styles.pEllipsis}>
                             {summary ? summary : `summary goes here`}
                         </p>
-                    </Card.Text>
-                    <Anchor
-                        color={true}
-                        name={<ReadMore />}
-                        href={`/blog/${id ? id : ""}`}
-                    />
-                </Card.Body>
-            </Card>
+                    </p>
+                </div>
+            </div>
         </Fade>
     );
 }
@@ -46,7 +39,7 @@ export function BlogSection() {
     const { data } = blogData;
 
     return (
-        <CardColumns className={styles.blogCardsContainer}>
+        <section className={styles.blogCardsContainer}>
             {data.map(({ img, title, summary, id }) => (
                 <CardContents
                     img={img}
@@ -55,6 +48,6 @@ export function BlogSection() {
                     id={id}
                 />
             ))}
-        </CardColumns>
+        </section>
     );
 }
