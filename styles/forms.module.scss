@@ -1,0 +1,44 @@
+@import "./utils.scss";
+
+.formContainer {
+    padding: 8rem 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+
+    font-family: $font-family;
+
+    margin: 0 auto;
+    @media only screen and (min-width: 996px) {
+        width: 40rem;
+    }
+
+    button {
+        width: 75%;
+        padding: 1rem;
+        font-size: $fs-small;
+        background-color: $black !important;
+        color: $white;
+    }
+    input,
+    button {
+        font-family: inherit;
+    }
+}
+
+.errors {
+    color: $errorsColor;
+    font-size: $fs-x-small;
+    margin-top: 1rem;
+}
+
+.errorsInput {
+    &:active,
+    &:focus {
+        border: none;
+        outline: 2px solid $errorsColor !important;
+    }
+}

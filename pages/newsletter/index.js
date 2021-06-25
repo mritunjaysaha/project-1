@@ -1,8 +1,9 @@
 import { useFormik } from "formik";
-import styles from "../../styles/newsletter.module.scss";
 import TextField from "@material-ui/core/TextField";
 import { MUIButton } from "../../src/atoms/button";
 import Fade from "react-reveal/Fade";
+
+import styles from "../../styles/newsletter.module.scss";
 
 const validate = (values) => {
     const errors = {};

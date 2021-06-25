@@ -1,10 +1,35 @@
+import { useFormik } from "formik";
+import { TextField } from "@material-ui/core";
+import { MUIButton } from "../atoms/button";
+import styles from "../../styles/forms.module.scss";
+
+const validate = (values) => {
+    const errors = {};
+
+    if (!values.email) {
+        errors.mail = "Required";
+    } else if (
+        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
+    ) {
+        errors.email = "Invalid email address";
+    }
+};
+
 export function ContactUsForm() {
+    const formik = useFormik({
+        initialValues: {
+            email: "",
+            fname: "",
+            lname: "",
+        },
+        validate,
+    });
     return (
-        <>
+        <div className={styles.formContainer}>
             <form
                 action="https://gmail.us6.list-manage.com/subscribe/post"
                 method="POST"
-                noValidate
+                className={styles.form}
             >
                 <input
                     type="hidden"
@@ -12,42 +37,41 @@ export function ContactUsForm() {
                     value="e654510bb63cf53256868ec7e"
                 />
                 <input type="hidden" name="id" value="096b104afc" />
-                <label htmlFor="MERGE0">
-                    Email
-                    <input
-                        type="email"
+                <label htmlFor="email">
+                    <TextField
+                        label="E-mail"
+                        variant="outlined"
+                        id="email"
                         name="EMAIL"
-                        id="MERGE0"
-                        value="mritunjaysaha17@gmail.com"
-                        // onChange={(e) => {
-                        //     this.setState({ emailValue: e.target.value });
-                        // }}
-                        autoCapitalize="off"
-                        autoCorrect="off"
+                        type="email"
+                        onChange={formik.handleChange}
+                        value={formik.values.email}
+                        className={
+                            formik.errors.email ? `${styles.errorsInput}` : ""
+                        }
+                        error={formik.errors.email ? true : ""}
                     />
                 </label>
-                <label htmlFor="MERGE1">
-                    First name
-                    <input
-                        type="text"
+                <label htmlFor="fname">
+                    <TextField
+                        label="First Name"
+                        variant="outlined"
+                        id="fname"
                         name="FNAME"
-                        id="MERGE1"
-                        value="John"
-                        // onChange={(e) => {
-                        //     this.setState({ fNameValue: e.target.value });
-                        // }}
+                        type="text"
+                        value={formik.values.fname}
+                        onChange={formik.handleChange}
                     />
                 </label>
-                <label htmlFor="MERGE2">
-                    Last name
-                    <input
-                        type="text"
+                <label htmlFor="lname">
+                    <TextField
+                        label="Last Name"
+                        variant="outlined"
+                        id="lname"
                         name="LNAME"
-                        id="MERGE2"
-                        value="Doe"
-                        // onChange={(e) => {
-                        //     this.setState({ lNameValue: e.target.value });
-                        // }}
+                        type="text"
+                        value={formik.values.fname}
+                        onChange={formik.handleChange}
                     />
                 </label>
                 <input
@@ -92,6 +116,6 @@ export function ContactUsForm() {
                     ></textarea>
                 </div>
             </form>
-        </>
+        </div>
     );
 }

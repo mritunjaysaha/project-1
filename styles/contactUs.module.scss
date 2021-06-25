@@ -10,23 +10,6 @@
 
     font-family: $font-family;
 
-    .contentsContainer {
-        background-color: $overlay;
-        height: inherit;
-        width: inherit;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: $fs-desktop-large;
-        color: $white;
-        margin-bottom: 2rem;
-    }
-
     .anchorContainer {
         position: relative !important;
         background-color: $black;
@@ -37,5 +20,36 @@
         font-weight: $fw-medium;
         text-transform: uppercase;
         width: max-content;
+    }
+}
+
+.contentsContainer {
+    background-color: $overlay;
+    height: inherit;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h1 {
+        font-size: $fs-desktop-large;
+        color: $white;
+        margin-bottom: 2rem;
+    }
+}
+
+.contactUsFormContainer {
+    form {
+        div {
+            margin-bottom: 1rem;
+        }
+    }
+    button {
+        width: 100%;
+        padding: 1rem;
+        font-size: $fs-small;
+        background-color: $black !important;
+        color: $white;
     }
 }
