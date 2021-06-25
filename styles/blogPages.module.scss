@@ -2,6 +2,17 @@
 
 $bannerHeightMobile: 60vh;
 $bannerHeightDesktop: 80vh;
+
+.blogPages {
+    padding-top: $marginTopBottom;
+
+    h1 {
+        font-size: $fs-desktop-large;
+        text-align: center;
+        margin: 0 auto 8rem auto;
+        width: max-content;
+    }
+}
 .layer,
 .parallax,
 .someSpace,

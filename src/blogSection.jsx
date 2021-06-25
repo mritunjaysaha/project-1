@@ -1,6 +1,5 @@
 import styles from "../styles/blogSection.module.scss";
 import { blogData } from "../blogsData";
-import { Anchor } from "./atoms/anchor";
 import Fade from "react-reveal";
 
 function ReadMore() {
@@ -14,23 +13,19 @@ function ReadMore() {
 function CardContents({ img, title, summary, id }) {
     return (
         <Fade bottom duration={800}>
-            <div className={styles.cardsContentsContainer}>
-                <img variant="top" src={img} alt={title} />
+            <a className={styles.cardsContentsContainer} href={`/blogs/${id}`}>
+                <figure>
+                    <img variant="top" src={img} alt={title} />
+                </figure>
                 <div>
                     <li key={title}>
-                        <h3>
-                            {title
-                                ? title
-                                : `Card title that wraps to a new line`}
-                        </h3>
+                        <h3>{title}</h3>
                     </li>
                     <p>
-                        <p className={styles.pEllipsis}>
-                            {summary ? summary : `summary goes here`}
-                        </p>
+                        <p className={styles.pEllipsis}>{summary}</p>
                     </p>
                 </div>
-            </div>
+            </a>
         </Fade>
     );
 }
