@@ -247,7 +247,7 @@ export function Navbar() {
         setMenuClicked(false);
     };
 
-    const { company, home, services, careers, newsLetter, contact } =
+    const { company, home, blogs, services, careers, newsLetter, contact } =
         navbarData;
 
     return (
@@ -300,6 +300,20 @@ export function Navbar() {
                     <Anchor name={home.name} href={home.link} />
                 </li>
 
+                {/* Blogs */}
+                <li
+                    key={blogs.name}
+                    className={
+                        router.pathname.split("/").includes("blogs")
+                            ? isScrolled
+                                ? styles.activeLinkBlack
+                                : styles.activeLinkWhite
+                            : ""
+                    }
+                >
+                    <Anchor name={blogs.name} href={blogs.link} />
+                </li>
+
                 {/* Careers */}
                 <li
                     key={careers.name}
@@ -328,7 +342,7 @@ export function Navbar() {
                 />
 
                 {/* News letter */}
-                <li
+                {/* <li
                     key={newsLetter.name}
                     className={
                         router.pathname === newsLetter.link
@@ -340,7 +354,7 @@ export function Navbar() {
                     onClick={handleClose}
                 >
                     <Anchor name={newsLetter.name} href={newsLetter.link} />
-                </li>
+                </li> */}
 
                 {/* contacts */}
                 <li

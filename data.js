@@ -3,6 +3,7 @@ export const navbarData = {
     home: { name: "home", link: "/" },
     careers: { name: "careers", link: "/careers" },
     contact: { name: "contact us", link: "/contactUs" },
+    blogs: { name: "blogs", link: "/blogs" },
     newsLetter: { name: "newsletter", link: "/newsletter" },
     services: {
         name: "our offerings",
