@@ -6,9 +6,9 @@ export default function ContactUsPage() {
         <section className={styles.contactUsSection}>
             <div className={styles.contentsContainer}>
                 <h1>Get in touch with us</h1>
-                <div className={styles.anchorContainer}>
+                {/* <div className={styles.anchorContainer}>
                     <Anchor name="contact us" href="/" />
-                </div>
+                </div> */}
             </div>
         </section>
     );
