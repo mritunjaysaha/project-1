@@ -53,3 +53,14 @@
         color: $white;
     }
 }
+
+.nameContainer {
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        &:first-of-type {
+            margin-right: 2rem;
+        }
+    }
+}
