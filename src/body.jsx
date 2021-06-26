@@ -4,7 +4,7 @@ import { TeamPageCards } from "./teamPageCards";
 import { offeringsData, clienteleData, teamData } from "../data";
 
 import Zoom from "react-reveal";
-import { BlogSection } from "../src/blogSection";
+import { BlogSection } from "../src/blogs/blogSection";
 
 export function Body() {
     return (

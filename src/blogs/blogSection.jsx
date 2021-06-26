@@ -1,5 +1,5 @@
-import styles from "../styles/blogSection.module.scss";
-import { blogData } from "../blogsData";
+import styles from "../../styles/blogSection.module.scss";
+import { blogData } from "../../blogsData";
 import Fade from "react-reveal";
 
 function ReadMore() {

@@ -1,4 +1,4 @@
-import { BlogSection } from "../../src/blogSection";
+import { BlogSection } from "../../src/blogs/blogSection";
 import styles from "../../styles/blogPages.module.scss";
 
 export default function Blog() {
