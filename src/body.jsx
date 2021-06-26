@@ -96,27 +96,19 @@ export function Body() {
                         <p>That's why you probably haven't heard of us</p>
                     </Zoom>
                 </div>
-                <div className={styles.trustDiv}>
-                    <Zoom cascade duration={8000}>
-                        <p>
-                            trust is earned.
-                            <br />
-                            confidentiality is part of our dna.
-                            <br />
-                            we sign with our integrity.
-                            <br />
-                            period.
-                        </p>
-                    </Zoom>
-                </div>
             </section>
 
             {/* blog section */}
             <section className={styles.blogSection}>
-                <h3 className={styles.multiLineHeader}>
-                    our <span className={styles.spanColor}>blogs</span>
-                </h3>
-
+                <div className={`${styles.backgroundBlack}`}>
+                    <h3 className={`${styles.multiLineHeader}`}>
+                        Our
+                        <span className={styles.spanColor}>Blogs</span>
+                        <div
+                            className={`${styles.horizontalBorder} ${styles.backgroundWhite}`}
+                        ></div>
+                    </h3>
+                </div>
                 <BlogSectionForHomePage />
                 <div className={styles.moreButton}>
                     <Anchor name="more" href="/blogs" />
