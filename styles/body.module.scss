@@ -149,3 +149,13 @@
         }
     }
 }
+
+.moreButton {
+    width: max-content;
+    margin: 0 auto 8rem auto;
+
+    font-size: $fs-medium;
+
+    text-transform: capitalize;
+    text-decoration: underline;
+}

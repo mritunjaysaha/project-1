@@ -2,9 +2,9 @@ import styles from "../styles/body.module.scss";
 import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
 import { offeringsData, clienteleData, teamData } from "../data";
-
 import Zoom from "react-reveal";
 import { BlogSection } from "../src/blogs/blogSection";
+import { Anchor } from "../src/atoms/anchor";
 
 export function Body() {
     return (
@@ -118,6 +118,9 @@ export function Body() {
                 </h3>
 
                 <BlogSection />
+                <div className={styles.moreButton}>
+                    <Anchor name="more" href="/blogs" />
+                </div>
             </section>
         </>
     );
