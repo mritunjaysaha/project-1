@@ -1,14 +1,13 @@
 import styles from "../../styles/blogSection.module.scss";
 import { blogData } from "../../blogsData";
 import Fade from "react-reveal";
+import { Anchor } from "../atoms/anchor";
 
-function ReadMore() {
-    return (
-        <p className={styles.readMore}>
-            Read More&nbsp;<span>&gt;&gt;&gt;</span>
-        </p>
-    );
-}
+const { data } = blogData;
+
+data.sort(function (a, b) {
+    return b.sn - a.sn;
+});
 
 function CardContents({ img, title, summary, id }) {
     return (
@@ -31,12 +30,6 @@ function CardContents({ img, title, summary, id }) {
 }
 
 export function BlogSection() {
-    const { data } = blogData;
-
-    data.sort(function (a, b) {
-        return b.sn - a.sn;
-    });
-
     return (
         <section className={styles.blogCardsContainer}>
             {data.map(({ img, title, summary, id }) => (
@@ -48,5 +41,19 @@ export function BlogSection() {
                 />
             ))}
         </section>
+    );
+}
+
+export function BlogList() {
+    return (
+        <ul>
+            {data.map(({ title, id }) => {
+                return (
+                    <li key={title}>
+                        <Anchor name={title} href={`/blogs/${id}`} />
+                    </li>
+                );
+            })}
+        </ul>
     );
 }

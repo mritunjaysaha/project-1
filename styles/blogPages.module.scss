@@ -171,3 +171,20 @@ $bannerHeightDesktop: 80vh;
         }
     }
 }
+
+.restOfTheBlogs {
+    display: flex;
+
+    width: 60vw;
+
+    margin: 4rem auto 8rem auto;
+
+    ul {
+        li {
+            a {
+                font-size: $fs-medium;
+                color: $blue;
+            }
+        }
+    }
+}

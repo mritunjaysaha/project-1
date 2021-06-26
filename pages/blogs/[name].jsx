@@ -4,6 +4,7 @@ import { blogData } from "../../blogsData";
 import Particles from "react-tsparticles";
 import styles from "../../styles/blogPages.module.scss";
 import Parallax from "parallax-js";
+import { BlogList } from "../../src/blogs/blogSection";
 
 const ParticlesJS = () => (
     <Particles
@@ -127,6 +128,9 @@ export default function BlogPage() {
             </section>
             <section className={styles.blogContentsContainer}>
                 {currentData != false ? currentData.fullDescription() : ""}
+            </section>
+            <section className={styles.restOfTheBlogs}>
+                <BlogList />
             </section>
         </>
     );
