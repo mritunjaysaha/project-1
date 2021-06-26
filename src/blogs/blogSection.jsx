@@ -2,6 +2,7 @@ import styles from "../../styles/blogSection.module.scss";
 import { blogData } from "../../blogsData";
 import Fade from "react-reveal";
 import { Anchor } from "../atoms/anchor";
+import Link from "next/link";
 
 const { data } = blogData;
 
@@ -12,19 +13,21 @@ data.sort(function (a, b) {
 function CardContents({ img, title, summary, id }) {
     return (
         <Fade bottom duration={800}>
-            <a className={styles.cardsContentsContainer} href={`/blogs/${id}`}>
-                <figure>
-                    <img variant="top" src={img} alt={title} />
-                </figure>
-                <article>
-                    <li key={title}>
-                        <h3>{title}</h3>
-                    </li>
-                    <div>
-                        <p className={styles.pEllipsis}>{summary}</p>
-                    </div>
-                </article>
-            </a>
+            <Link href={`/blogs/${id}`}>
+                <a className={styles.cardsContentsContainer}>
+                    <figure>
+                        <img variant="top" src={img} alt={title} />
+                    </figure>
+                    <article>
+                        <li key={title}>
+                            <h3>{title}</h3>
+                        </li>
+                        <div>
+                            <p className={styles.pEllipsis}>{summary}</p>
+                        </div>
+                    </article>
+                </a>
+            </Link>
         </Fade>
     );
 }
