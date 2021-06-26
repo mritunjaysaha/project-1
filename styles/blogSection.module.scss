@@ -60,23 +60,53 @@
     }
     @include breakpoint(tablet) {
         flex-direction: row;
+        align-items: flex-start;
 
         figure {
             display: block;
-            margin: 2rem 4rem 2rem 2rem;
+            margin: 2rem 0 2rem 2rem;
         }
 
         img {
             height: auto;
-            width: 20rem;
+            width: 20vw;
         }
 
         div {
             width: 60vw;
-            margin-right: 4rem;
+            padding: 2rem;
 
-            li p {
-                width: 60vw;
+            li {
+                h3 {
+                    line-height: 2.4rem;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        align-items: center;
+        justify-content: space-around;
+
+        figure {
+            display: block;
+            margin-left: 2rem;
+            width: 26rem;
+            img {
+                width: inherit;
+            }
+        }
+
+        div {
+            width: 80%;
+            padding-left: 4rem;
+
+            li {
+                h3 {
+                    line-height: inherit;
+                    padding-bottom: 0;
+                }
             }
         }
     }
@@ -89,6 +119,10 @@
     overflow: hidden;
 
     @include breakpoint(tablet) {
+        -webkit-line-clamp: 2;
+    }
+
+    @include breakpoint(desktop) {
         -webkit-line-clamp: 3;
     }
 }
