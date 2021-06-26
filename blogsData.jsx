@@ -2,6 +2,7 @@
  *
  * data: [
  * {
+ *      sn: integer value
  *      img: "source of image file",
  *      id: "Same as title but should not have symbols like %, /, &, etc"
  *      title: "title-of-the-blog"["name of the blog and should be written as in-this-way with hyphens(-)"],
