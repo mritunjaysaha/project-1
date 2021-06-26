@@ -1,3 +1,4 @@
+import { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import { withStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
@@ -31,6 +32,18 @@ const CssTextField = withStyles({
 })(TextField);
 
 function ContactUsForm() {
+    const [values, setValues] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        contact: "",
+    });
+
+    function handleChange(e) {
+        e.persist();
+        setValues((values) => ({ ...values, [e.target.id]: e.target.value }));
+    }
+
     return (
         <>
             <div className={styles.contactUsFormContainer}>
@@ -53,7 +66,8 @@ function ContactUsForm() {
                             name="FNAME"
                             label="First Name"
                             type="text"
-                            value="john"
+                            value={values.firstName}
+                            onChange={handleChange}
                         />
                         <CssTextField
                             fullWidth
@@ -62,7 +76,8 @@ function ContactUsForm() {
                             name="LNAME"
                             label="Last Name"
                             type="text"
-                            value="doe"
+                            value={values.lastName}
+                            onChange={handleChange}
                         />
                     </div>
 
@@ -73,7 +88,8 @@ function ContactUsForm() {
                         name="EMAIL"
                         label="Email"
                         type="email"
-                        value="mritunjaysaha@gmail.com"
+                        value={values.email}
+                        onChange={handleChange}
                     />
 
                     <CssTextField
@@ -83,7 +99,8 @@ function ContactUsForm() {
                         name="PHONE"
                         label="Contact Number"
                         type="tel"
-                        value="7001100011"
+                        value={values.contact}
+                        onChange={handleChange}
                     />
 
                     <Button variant="contained" fullWidth type="submit">
