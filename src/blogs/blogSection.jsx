@@ -29,6 +29,31 @@ function CardContents({ img, title, summary, id }) {
     );
 }
 
+export function BlogSectionForHomePage() {
+    const cardsToShow = [];
+
+    for (
+        let i = 0;
+        (i < data.length && data.length < 5) || (i < 5 && data.length >= 5);
+        i++
+    ) {
+        cardsToShow.push(data[i]);
+    }
+
+    return (
+        <section className={styles.blogCardsContainer}>
+            {cardsToShow.map(({ img, title, summary, id }) => (
+                <CardContents
+                    img={img}
+                    title={title}
+                    summary={summary}
+                    id={id}
+                />
+            ))}
+        </section>
+    );
+}
+
 export function BlogSection() {
     return (
         <section className={styles.blogCardsContainer}>
