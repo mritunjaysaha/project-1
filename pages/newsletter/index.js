@@ -1,4 +1,4 @@
-import { useFormik } from "formik";
+import { useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import { MUIButton } from "../../src/atoms/button";
 import Fade from "react-reveal/Fade";
@@ -20,29 +20,32 @@ const validate = (values) => {
 };
 
 const SignupForm = () => {
-    const formik = useFormik({
-        initialValues: {
-            email: "",
-            name: "",
-        },
-        validate,
-        onSubmit: (values) => {
-            alert(JSON.stringify(values, null, 2));
-        },
-    });
+    const [values, setValues] = useState({ name: "", email: "" });
+
+    function handleChange(e) {
+        e.persist();
+        setValues((values) => ({ ...values, [e.target.id]: e.target.value }));
+    }
 
     return (
-        <form className={`${styles.form}`} onSubmit={formik.handleSubmit}>
+        <form
+            action="https://gmail.us6.list-manage.com/subscribe/post"
+            method="POST"
+            className={`${styles.form}`}
+        >
+            <input type="hidden" name="u" value="e654510bb63cf53256868ec7e" />
+            <input type="hidden" name="id" value="096b104afc" />
+
             <label htmlFor="name"></label>
             <TextField
                 label="Name"
                 defaultValue="admin"
                 variant="outlined"
                 id="name"
-                name="name"
+                name="NAME"
                 type="name"
-                onChange={formik.handleChange}
-                value={formik.values.name}
+                onChange={handleChange}
+                value={values.name}
             />
             <br />
             <br />
@@ -53,19 +56,14 @@ const SignupForm = () => {
                 defaultValue="admin@gmail.com"
                 variant="outlined"
                 id="email"
-                name="email"
+                name="EMAIL"
                 type="email"
-                onChange={formik.handleChange}
-                value={formik.values.email}
-                className={formik.errors.email ? `${styles.errorsInput}` : ""}
-                error={formik.errors.email ? true : ""}
+                onChange={handleChange}
+                value={values.email}
+                // className={errors.email ? `${styles.errorsInput}` : ""}
+                // error={errors.email ? true : ""}
             />
 
-            {formik.errors.email ? (
-                <Fade bottom collapse duration={800}>
-                    <div className={styles.errors}>{formik.errors.email}</div>
-                </Fade>
-            ) : null}
             <br />
             <br />
 
