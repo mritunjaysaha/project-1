@@ -17,14 +17,14 @@ function CardContents({ img, title, summary, id }) {
                 <figure>
                     <img variant="top" src={img} alt={title} />
                 </figure>
-                <div>
+                <article>
                     <li key={title}>
                         <h3>{title}</h3>
                     </li>
-                    <p>
+                    <div>
                         <p className={styles.pEllipsis}>{summary}</p>
-                    </p>
-                </div>
+                    </div>
+                </article>
             </a>
         </Fade>
     );
@@ -32,6 +32,10 @@ function CardContents({ img, title, summary, id }) {
 
 export function BlogSection() {
     const { data } = blogData;
+
+    data.sort(function (a, b) {
+        return b.sn - a.sn;
+    });
 
     return (
         <section className={styles.blogCardsContainer}>

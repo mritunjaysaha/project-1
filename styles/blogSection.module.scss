@@ -49,12 +49,21 @@
         // width: 20rem;
     }
 
-    div {
+    article {
         padding: 2rem;
         li {
             h3 {
+                font-size: $fs-medium;
+                font-weight: $fw-bold;
                 line-height: 2.4rem;
                 padding-bottom: 1rem;
+            }
+        }
+
+        div {
+            p {
+                margin: 0;
+                line-height: 2rem;
             }
         }
     }
@@ -72,7 +81,7 @@
             width: 20vw;
         }
 
-        div {
+        article {
             width: 60vw;
             padding: 2rem;
 
@@ -98,7 +107,7 @@
             }
         }
 
-        div {
+        article {
             width: 80%;
             padding-left: 4rem;
 
