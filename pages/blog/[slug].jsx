@@ -3,10 +3,6 @@ import { getFiles, getFilesBySlug } from "../../lib/mdx";
 import BlogLayout from "../../layouts/blog";
 
 export default function Blog({ mdxSource, frontMatter }) {
-    console.log("here");
-    console.log({ mdxSource });
-    console.log({ frontMatter });
-
     return (
         <BlogLayout frontMatter={frontMatter}>
             <MDXRemote {...mdxSource} />

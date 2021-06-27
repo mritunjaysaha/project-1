@@ -1,4 +1,4 @@
-import styles from "../styles/blogSection.module.scss";
+import styles from "../styles/blog.module.scss";
 import Link from "next/link";
 
 const BlogPost = ({ sn, id, title, summary, img, slug }) => {
@@ -6,16 +6,16 @@ const BlogPost = ({ sn, id, title, summary, img, slug }) => {
     return (
         <Link href={`blog/${slug}`} passHref>
             <a className={styles.cardsContentsContainer}>
-                {/* <figure>
+                <figure>
                     <img variant="top" src={img} alt={title} />
-                </figure> */}
+                </figure>
                 <article>
                     <li key={title}>
                         <h3>{title}</h3>
                     </li>
-                    {/* <div>
+                    <div>
                         <p className={styles.pEllipsis}>{summary}</p>
-                    </div> */}
+                    </div>
                 </article>
             </a>
         </Link>

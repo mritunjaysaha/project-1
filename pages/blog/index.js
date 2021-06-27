@@ -1,5 +1,5 @@
-import { BlogSection } from "../../src/blogs/blogSection";
-import styles from "../../styles/blogPages.module.scss";
+import styles from "../../styles/blog.module.scss";
+
 import { getAllFilesFrontMatter } from "../../lib/mdx";
 import BlogPost from "../../components/BlogPost";
 
@@ -15,12 +15,12 @@ export default function Blog({ posts }) {
                         className={`${styles.horizontalBorder} ${styles.backgroundBlack}`}
                     ></div>
                 </h1>
-                {/* <BlogSection /> */}
-
-                {posts.map((frontMatter) => {
-                    console.log({ frontMatter });
-                    return <BlogPost {...frontMatter} />;
-                })}
+                <section className={styles.blogCardsContainer}>
+                    {posts.map((frontMatter) => {
+                        console.log({ frontMatter });
+                        return <BlogPost {...frontMatter} />;
+                    })}
+                </section>
             </section>
         </>
     );
