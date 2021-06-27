@@ -19,7 +19,7 @@ export const blogData = {
         {
             sn: 1,
             img: "/assets/where-can-social-media-go-from-here.jpg",
-            id: `where-can-social-media-go-from-here`,
+            link: `where-can-social-media-go-from-here`,
             title: "Where can social media go from here",
             summary: `As mass media began to develop information could be 
             easily spread and by extension ideas. Ideas by their 
@@ -30,7 +30,7 @@ export const blogData = {
         {
             sn: 2,
             img: "/assets/clubhouse0.jpg",
-            id: "clubhouse-the-rise-and-fall",
+            link: "clubhouse-the-rise-and-fall",
             title: "Clubhouse: The rise and fall?",
             summary: `
             Early adopters found a digital playground with the ability of making new
@@ -40,7 +40,7 @@ export const blogData = {
         {
             sn: 3,
             img: "/assets/whats-next-for-cryptocurrencies.jpg",
-            id: "so-whats-next-for-cryptocurrencies",
+            link: "so-whats-next-for-cryptocurrencies",
             title: "So what's next for Cryptocurrencies?",
             summary: `
             So in the wake of the recent price crash, there's been a lot of hype going on about the end of Bitcoin and the emergence of better alternatives to the older cryptocurrencies. High volatility, high mining costs, energy requirements, the list goes on and on. To replace Bitcoin these cryptos would have to contend with the following factors:
@@ -49,7 +49,7 @@ export const blogData = {
         {
             sn: 4,
             img: "/assets/copyright.webp",
-            id: "breaking-through-the-copyright-quagmire",
+            link: "breaking-through-the-copyright-quagmire",
             title: "Breaking through the copyright quagmire",
             summary: `
             Copyright arrangements are kind of a legal monopoly

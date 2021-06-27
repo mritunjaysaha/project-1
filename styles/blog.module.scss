@@ -39,12 +39,12 @@ $bannerHeightDesktop: 80vh;
     align-items: center;
 
     h3 {
-        padding: $padding-sm 0 0 $padding-sm;
         color: $white;
         font-size: $fs-medium;
         width: 80vw;
-        text-align: left;
+        text-align: center;
         text-transform: capitalize;
+        margin: 0 auto;
     }
 
     @media only screen and (min-width: 996px) {

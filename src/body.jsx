@@ -9,7 +9,6 @@ import { BlogPost } from "../src/components/BlogPost";
 
 export function Body() {
     const { data } = blogData;
-    console.log(data);
 
     data.sort((a, z) => {
         return z.sn - a.sn;
@@ -22,10 +21,8 @@ export function Body() {
         (i < data.length && data.length < 5) || (i < 5 && data.length >= 5);
         i++
     ) {
-        console.log(i, data[i]);
         mostRecentData.push(data[i]);
     }
-    console.log({ mostRecentData });
     return (
         <>
             {/* Offerings */}
@@ -78,7 +75,7 @@ export function Body() {
             </section>
 
             {/* Team page */}
-            <section className={`${styles.cardsSection} ${styles.gradient1}`}>
+            <section className={`${styles.cardsSection}`}>
                 <div className={`${styles.backgroundBlack}`}>
                     <h3 className={`${styles.multiLineHeader}`}>
                         Meet our

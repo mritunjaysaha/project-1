@@ -24,7 +24,7 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-    const posts = await getAllFilesFrontMatter("blog");
+    const posts = await getAllFilesFrontMatter("blogs");
 
     return { props: { posts } };
 }
