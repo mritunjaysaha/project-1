@@ -44,6 +44,6 @@ module.exports = composePlugins([
     }),
     nextConfig,
     mdxEnhanced({
-        layoutPath: "./templates",
+        layoutPath: "./pages/blogs",
     }),
 ]);

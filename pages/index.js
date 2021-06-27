@@ -7,7 +7,7 @@ import { promises as fs } from "fs";
 import grayMatter from "gray-matter";
 
 export default function Home({ posts }) {
-    console.log({ posts });
+    // console.log({ posts });
     return (
         <div>
             <Head>
