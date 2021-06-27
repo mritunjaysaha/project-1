@@ -3,14 +3,33 @@ import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
 import { offeringsData, clienteleData, teamData } from "../data";
 import Zoom from "react-reveal";
-import { BlogSectionForHomePage } from "../src/blogs/blogSection";
 import { Anchor } from "../src/atoms/anchor";
+import { blogData } from "../blogData";
+import { BlogPost } from "../src/components/BlogPost";
 
 export function Body() {
+    const { data } = blogData;
+    console.log(data);
+
+    data.sort((a, z) => {
+        return z.sn - a.sn;
+    });
+
+    const mostRecentData = [];
+
+    for (
+        let i = 0;
+        (i < data.length && data.length < 5) || (i < 5 && data.length >= 5);
+        i++
+    ) {
+        console.log(i, data[i]);
+        mostRecentData.push(data[i]);
+    }
+    console.log({ mostRecentData });
     return (
         <>
             {/* Offerings */}
-            <section className={`${styles.cardsSection} ${styles.gradient1}`}>
+            <section className={`${styles.cardsSection}`}>
                 <div className={`${styles.backgroundBlack}`}>
                     <h3 className={`${styles.multiLineHeader}`}>
                         Our core
@@ -34,7 +53,7 @@ export function Body() {
             </section>
 
             {/* Clientele */}
-            <section className={`${styles.cardsSection} ${styles.gradient1}`}>
+            <section className={`${styles.cardsSection}`}>
                 <div className={styles.backgroundBlack}>
                     <h3
                         className={`${styles.multiLineHeader} ${styles.backgroundBlack}`}
@@ -99,7 +118,7 @@ export function Body() {
             </section>
 
             {/* blog section */}
-            <section className={`${styles.blogSection} ${styles.gradient1}`}>
+            <section className={`${styles.blogSection}`}>
                 <div className={`${styles.backgroundBlack}`}>
                     <h3 className={`${styles.multiLineHeader}`}>
                         Our
@@ -109,7 +128,12 @@ export function Body() {
                         ></div>
                     </h3>
                 </div>
-                <BlogSectionForHomePage />
+                {/* <BlogSectionForHomePage /> */}
+                <section className={styles.blogCardsContainer}>
+                    {mostRecentData.map((frontMatter) => {
+                        return <BlogPost {...frontMatter} />;
+                    })}
+                </section>
                 <div className={styles.moreButton}>
                     <Anchor name="more" href="/blogs" />
                 </div>

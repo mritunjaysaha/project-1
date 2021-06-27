@@ -1,7 +1,7 @@
 import styles from "../../styles/blog.module.scss";
 
-import { getAllFilesFrontMatter } from "../../lib/mdx";
-import BlogPost from "../../components/BlogPost";
+import { getAllFilesFrontMatter } from "../../src/lib/mdx";
+import { BlogPost } from "../../src/components/BlogPost";
 
 export default function Blog({ posts }) {
     return (

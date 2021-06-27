@@ -201,10 +201,10 @@ $bannerHeightDesktop: 80vh;
         font-size: $fs-small;
     }
 
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
+    // img {
+    //     max-width: 100%;
+    //     max-height: 100%;
+    // }
 }
 
 .cardsContentsContainer {
@@ -235,7 +235,7 @@ $bannerHeightDesktop: 80vh;
 
     img {
         height: auto;
-        // width: 20rem;
+        width: 80vw;
     }
 
     article {
