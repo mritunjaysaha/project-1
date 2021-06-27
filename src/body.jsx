@@ -8,7 +8,7 @@ import { BlogPostsForHomePage } from "../src/components/blogUtils";
 
 export function Body() {
     return (
-        <>
+        <div className={styles.gradient1}>
             {/* Offerings */}
             <section className={`${styles.cardsSection} ${styles.gradient1}`}>
                 <div className={`${styles.backgroundBlack}`}>
@@ -97,13 +97,17 @@ export function Body() {
                     </Zoom>
                 </div>
                 <div className={`${styles.secretDiv2} ${styles.gradient1}`}>
-                    <p>
-                        Identifying early stage deals for
-                        <span className={styles.spanColor}>
-                            bolstering your portfolio
-                        </span>
-                    </p>
-                    <p>Bring in right strategic partnerships for growth</p>
+                    <Zoom cascade duration={8000}>
+                        <p>
+                            Identifying early stage deals for
+                            <span className={styles.spanColor}>
+                                bolstering your portfolio
+                            </span>
+                        </p>
+                    </Zoom>
+                    <Zoom cascade duration={8000}>
+                        <p>Bring in right strategic partnerships for growth</p>
+                    </Zoom>{" "}
                 </div>
             </section>
 
@@ -123,6 +127,6 @@ export function Body() {
                     <Anchor name="more" href="/blogs" />
                 </div>
             </section>
-        </>
+        </div>
     );
 }
