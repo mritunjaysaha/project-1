@@ -310,6 +310,7 @@ export function Navbar() {
                                 : styles.activeLinkWhite
                             : ""
                     }
+                    onClick={handleClose}
                 >
                     <Anchor name={blogs.name} href={blogs.link} />
                 </li>
