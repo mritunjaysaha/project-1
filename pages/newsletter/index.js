@@ -34,20 +34,46 @@ const NewsletterTextField = withStyles({
 const SignupForm = () => {
     const [values, setValues] = useState({ name: "", email: "" });
 
+    const [errors, setErrors] = useState({});
+
+    function validate(param, fieldValues = values) {
+        let temp = { ...errors };
+
+        if (param === "email" && "email" in fieldValues) {
+            temp.email = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/.test(
+                fieldValues.email
+            )
+                ? ""
+                : "Email is not valid.";
+        }
+
+        if (param === "name" && "name" in fieldValues) {
+            temp.name = fieldValues.name ? "" : "Required";
+        }
+        setErrors({ ...temp });
+
+        if (fieldValues == values) {
+            return Object.values(temp).every((x) => x == "");
+        }
+    }
+
     function handleChange(e) {
-        e.persist();
+        e.preventDefault();
         setValues((values) => ({ ...values, [e.target.id]: e.target.value }));
+    }
+
+    function handleKeyUp(e) {
+        validate(e.target.id);
     }
 
     return (
         <form
             action="https://gmail.us6.list-manage.com/subscribe/post"
-            method="POST"
+            method="post"
             className={`${styles.form}`}
         >
             <input type="hidden" name="u" value="e654510bb63cf53256868ec7e" />
-            <input type="hidden" name="id" value="096b104afc" />
-
+            <input type="hidden" name="id" value="61c025bc0d" />
             <label htmlFor="name"></label>
             <NewsletterTextField
                 label="Name"
@@ -58,6 +84,9 @@ const SignupForm = () => {
                 type="name"
                 onChange={handleChange}
                 value={values.name}
+                error={errors.name}
+                onKeyUp={handleKeyUp}
+                helperText={errors.name}
             />
             <br />
             <br />
@@ -70,10 +99,11 @@ const SignupForm = () => {
                 id="email"
                 name="EMAIL"
                 type="email"
+                onKeyUp={handleKeyUp}
                 onChange={handleChange}
                 value={values.email}
-                // className={errors.email ? `${styles.errorsInput}` : ""}
-                // error={errors.email ? true : ""}
+                error={errors.email}
+                helperText={errors.email}
             />
 
             <br />

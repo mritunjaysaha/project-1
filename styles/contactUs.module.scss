@@ -33,13 +33,18 @@
     align-items: center;
     text-align: center;
     h1 {
-        font-size: $fs-desktop-large;
+        font-size: $fs-xx-large;
         color: $white;
         margin-bottom: 2rem;
+
+        @include breakpoint(tablet) {
+            font-size: $fs-desktop-large;
+        }
     }
 }
 
 .contactUsFormContainer {
+    width: 90vw;
     form {
         div {
             margin-bottom: 1rem;
@@ -51,6 +56,10 @@
         font-size: $fs-small;
         background-color: $black !important;
         color: $white;
+    }
+
+    @include breakpoint(tablet) {
+        width: unset;
     }
 }
 

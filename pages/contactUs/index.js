@@ -87,7 +87,6 @@ const ContactUsForm = () => {
             <form
                 action="https://gmail.us6.list-manage.com/subscribe/post"
                 method="post"
-                noValidate
             >
                 <input
                     type="hidden"
@@ -105,6 +104,7 @@ const ContactUsForm = () => {
                         type="text"
                         value={values.firstName}
                         onChange={handleChange}
+                        onKeyUp={handleKeyUp}
                         error={errors.firstName}
                         helperText={errors.firstName}
                     />
@@ -117,6 +117,7 @@ const ContactUsForm = () => {
                         type="text"
                         value={values.lastName}
                         onChange={handleChange}
+                        onKeyUp={handleKeyUp}
                         error={errors.lastName}
                         helperText={errors.lastName}
                     />
