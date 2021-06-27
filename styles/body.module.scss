@@ -168,17 +168,29 @@
             p {
                 font-size: $fs-x-large;
 
-                line-height: 1.6rem;
+                line-height: 2rem;
             }
 
             .taglinesContainer {
-                width: 60rem;
+                width: 60vw;
             }
 
             .illustration {
                 img {
-                    width: 40rem;
+                    width: 40vw;
                     height: auto;
+                }
+            }
+        }
+
+        @include breakpoint(tablet) {
+            .taglinesContainer {
+                width: 60vw;
+                margin: 4rem 4rem 4rem 0;
+            }
+            .illustration {
+                img {
+                    width: 25vw;
                 }
             }
         }
