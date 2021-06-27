@@ -57,14 +57,14 @@ export const teamData = [
     {
         name: "Shreyas Naik",
         designation: "Director of Capital Markets",
-        img: "https://media-exp1.licdn.com/dms/image/C5103AQEeWhZDAkOfZA/profile-displayphoto-shrink_400_400/0/1556536638233?e=1625702400&v=beta&t=S-vgk-mcZuK4diyVNyf5l1LDOKWM5pWlgJbFBvhVmUw",
+        img: "/assets/team1.jpg",
         linkedin: "https://www.linkedin.com/in/shreyas-naik-639536149/",
     },
     {
         name: "Samrat Dhar",
-        designation: "Marketing Director",
-        img: "",
-        linkedin: "",
+        designation: "Marketing Advisor",
+        img: "/assets/team2.jpg",
+        linkedin: "https://www.linkedin.com/in/samratdhar/",
     },
 ];
 
