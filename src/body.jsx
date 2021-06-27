@@ -34,7 +34,7 @@ export function Body() {
             </section>
 
             {/* Clientele */}
-            <section className={styles.cardsSection}>
+            <section className={`${styles.cardsSection} ${styles.gradient1}`}>
                 <div className={styles.backgroundBlack}>
                     <h3
                         className={`${styles.multiLineHeader} ${styles.backgroundBlack}`}
@@ -51,7 +51,7 @@ export function Body() {
                         ></div>
                     </h3>
                 </div>
-                <ul className={styles.cardsGridUL}>
+                <ul className={`${styles.cardsGridUL}`}>
                     {clienteleData.map((data) => (
                         <Cards className="clienteleCards" text={data} />
                     ))}

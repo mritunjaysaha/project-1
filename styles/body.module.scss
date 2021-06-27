@@ -14,7 +14,8 @@
 
     @media only screen and (min-width: 996px) {
         display: block;
-        margin: 0 auto $marginTopBottom auto;
+        margin: 0 auto;
+        padding-bottom: $marginTopBottom;
     }
 }
 
@@ -141,4 +142,14 @@
 
     text-transform: capitalize;
     text-decoration: underline;
+}
+
+.gradient1 {
+    background-image: linear-gradient(
+        180deg,
+        #a9b2bd,
+        #b8c6cd,
+        #c7dade,
+        #d6efef
+    );
 }
