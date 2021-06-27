@@ -17,9 +17,10 @@ export default function Blog({ posts }) {
                 </h1>
                 {/* <BlogSection /> */}
 
-                {posts.map((frontMatter) => (
-                    <BlogPost {...frontMatter} />
-                ))}
+                {posts.map((frontMatter) => {
+                    console.log({ frontMatter });
+                    return <BlogPost {...frontMatter} />;
+                })}
             </section>
         </>
     );

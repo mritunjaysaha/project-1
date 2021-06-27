@@ -2,18 +2,6 @@ const path = require("path");
 const withSass = require("@zeit/next-sass");
 const withImages = require("next-images");
 const composePlugins = require("next-compose-plugins");
-const mdxEnhanced = require("next-mdx-enhanced");
-
-// module.exports = withSass({
-//     cssModules: true,
-// });
-
-// module.exports = withImages({
-//     fileExtensions: ["jpg", "jpeg", "png", "gif"],
-//     webpack(config, options) {
-//         return config;
-//     },
-// });
 
 const nextConfig = {
     /* Add Your Scss File Folder Path Here */
@@ -43,7 +31,4 @@ module.exports = composePlugins([
         },
     }),
     nextConfig,
-    mdxEnhanced({
-        layoutPath: "./pages/blogs",
-    }),
 ]);
