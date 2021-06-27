@@ -214,6 +214,8 @@ $bannerHeightDesktop: 80vh;
 
     width: 80vw;
 
+    border-radius: $border-radius;
+
     background-color: white;
     box-shadow: $box-shadow;
 
@@ -236,6 +238,7 @@ $bannerHeightDesktop: 80vh;
     img {
         height: auto;
         width: 80vw;
+        border-radius: $border-radius $border-radius 0 0;
     }
 
     article {
@@ -268,6 +271,8 @@ $bannerHeightDesktop: 80vh;
         img {
             height: auto;
             width: 20vw;
+
+            border-radius: $border-radius;
         }
 
         article {
