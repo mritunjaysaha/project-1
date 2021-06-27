@@ -97,17 +97,28 @@ export function Body() {
                     </Zoom>
                 </div>
                 <div className={`${styles.secretDiv2} ${styles.gradient1}`}>
-                    <Zoom cascade duration={8000}>
-                        <p>
-                            Identifying early stage deals for
-                            <span className={styles.spanColor}>
-                                bolstering your portfolio
-                            </span>
-                        </p>
-                    </Zoom>
-                    <Zoom cascade duration={8000}>
-                        <p>Bring in right strategic partnerships for growth</p>
-                    </Zoom>{" "}
+                    <div className={styles.taglinesContainer}>
+                        <Zoom cascade duration={8000}>
+                            <p>
+                                Identifying early stage deals for
+                                <span className={styles.spanColor}>
+                                    bolstering your portfolio
+                                </span>
+                            </p>
+                        </Zoom>
+                        <Zoom cascade duration={8000}>
+                            <p>
+                                Bring in right strategic &nbsp;
+                                <span>partnerships for growth</span>
+                            </p>
+                        </Zoom>
+                    </div>
+                    <div className={styles.illustration}>
+                        <img
+                            src="/assets/stock-prices-illustration.svg"
+                            alt="portfolio"
+                        />
+                    </div>
                 </div>
             </section>
 
