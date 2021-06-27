@@ -342,7 +342,7 @@ export function Navbar() {
                 />
 
                 {/* News letter */}
-                {/* <li
+                <li
                     key={newsLetter.name}
                     className={
                         router.pathname === newsLetter.link
@@ -354,7 +354,7 @@ export function Navbar() {
                     onClick={handleClose}
                 >
                     <Anchor name={newsLetter.name} href={newsLetter.link} />
-                </li> */}
+                </li>
 
                 {/* contacts */}
                 <li

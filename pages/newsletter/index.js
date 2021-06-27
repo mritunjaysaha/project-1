@@ -1,23 +1,35 @@
 import { useState } from "react";
 import TextField from "@material-ui/core/TextField";
+import { withStyles } from "@material-ui/core/styles";
 import { MUIButton } from "../../src/atoms/button";
-import Fade from "react-reveal/Fade";
-
 import styles from "../../styles/newsletter.module.scss";
 
-const validate = (values) => {
-    const errors = {};
+const NewsletterTextField = withStyles({
+    root: {
+        "& .MuiInputBase-input": {
+            color: "#16161d",
+        },
+        "& label": { color: "#16161d" },
+        "& label.Mui-focused": {
+            color: "#16161d",
+        },
+        "& .MuiInput-underline:after": {
+            borderBottomColor: "green",
+        },
 
-    if (!values.email) {
-        errors.email = "Required";
-    } else if (
-        !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)
-    ) {
-        errors.email = "Invalid email address";
-    }
-
-    return errors;
-};
+        "& .MuiOutlinedInput-root": {
+            "& fieldset": {
+                borderColor: "#16161d",
+            },
+            "&:hover fieldset": {
+                // borderColor: "yellow",
+            },
+            "&.Mui-focused fieldset": {
+                borderColor: "#16161d",
+            },
+        },
+    },
+})(TextField);
 
 const SignupForm = () => {
     const [values, setValues] = useState({ name: "", email: "" });
@@ -37,7 +49,7 @@ const SignupForm = () => {
             <input type="hidden" name="id" value="096b104afc" />
 
             <label htmlFor="name"></label>
-            <TextField
+            <NewsletterTextField
                 label="Name"
                 defaultValue="admin"
                 variant="outlined"
@@ -51,7 +63,7 @@ const SignupForm = () => {
             <br />
 
             <label htmlFor="email"></label>
-            <TextField
+            <NewsletterTextField
                 label="Email"
                 defaultValue="admin@gmail.com"
                 variant="outlined"
