@@ -13,8 +13,6 @@ export default function Blog({ mdxSource, frontMatter }) {
 export async function getStaticPaths() {
     const posts = await getFiles("blog");
 
-    console.log({ posts });
-
     return {
         paths: posts.map((p) => ({
             params: {
@@ -27,7 +25,6 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    console.log({ params });
     const post = await getFilesBySlug("blog", params.slug);
 
     return { props: { ...post } };

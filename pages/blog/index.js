@@ -4,8 +4,6 @@ import { getAllFilesFrontMatter } from "../../lib/mdx";
 import BlogPost from "../../components/BlogPost";
 
 export default function Blog({ posts }) {
-    console.log({ posts });
-
     return (
         <>
             <section className={styles.blogPages}>
@@ -17,7 +15,6 @@ export default function Blog({ posts }) {
                 </h1>
                 <section className={styles.blogCardsContainer}>
                     {posts.map((frontMatter) => {
-                        console.log({ frontMatter });
                         return <BlogPost {...frontMatter} />;
                     })}
                 </section>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Particles from "react-tsparticles";
-import styles from "../styles/blogPages.module.scss";
+import styles from "../styles/blog.module.scss";
 import Parallax from "parallax-js";
 
 const ParticlesJS = () => (

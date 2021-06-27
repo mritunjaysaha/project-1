@@ -2,7 +2,6 @@ import styles from "../styles/blog.module.scss";
 import Link from "next/link";
 
 const BlogPost = ({ sn, id, title, summary, img, slug }) => {
-    console.log({ slug });
     return (
         <Link href={`blog/${slug}`} passHref>
             <a className={styles.cardsContentsContainer}>
