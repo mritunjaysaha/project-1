@@ -34,10 +34,10 @@ export function BlogPostsForHomePage() {
 export function BlogList() {
     return (
         <ul>
-            {data.map(({ title, id }) => {
+            {data.map(({ title, link }) => {
                 return (
                     <li key={title}>
-                        <Anchor name={title} href={`/blogs/${id}`} />
+                        <Anchor name={title} href={`/blogs/${link}`} />
                     </li>
                 );
             })}

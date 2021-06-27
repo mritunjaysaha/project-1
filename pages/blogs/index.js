@@ -4,6 +4,10 @@ import { getAllFilesFrontMatter } from "../../src/lib/mdx";
 import { BlogPost } from "../../src/components/BlogPost";
 
 export default function Blog({ posts }) {
+    posts.sort((a, z) => {
+        return z.sn - a.sn;
+    });
+
     return (
         <>
             <section className={styles.blogPages}>
