@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { useFormik } from "formik";
+import * as yup from "yup";
+import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
-import { withStyles } from "@material-ui/core/styles";
-import { Button } from "@material-ui/core";
 import styles from "../../styles/contactUs.module.scss";
+import { withStyles } from "@material-ui/core/styles";
 
 const CssTextField = withStyles({
     root: {
@@ -31,86 +33,134 @@ const CssTextField = withStyles({
     },
 })(TextField);
 
-function ContactUsForm() {
+const validationSchema = yup.object({
+    email: yup
+        .string("Enter your email")
+        .email("Enter a valid email")
+        .required("Email is required"),
+    // fname: yup.string("Enter your name"),
+    // lname: yup.string("Enter your name"),
+    // phone: yup.number("Enter Contact Number").min(1000000000),
+});
+
+const ContactUsForm = () => {
     const [values, setValues] = useState({
         firstName: "",
         lastName: "",
         email: "",
-        contact: "",
+        phone: "",
     });
+    const [errors, setErrors] = useState({});
+
+    function validate(fieldValues = values) {
+        console.log({ fieldValues });
+
+        let temp = { ...errors };
+
+        if ("email" in fieldValues) {
+            temp.email = /$^|.+@.+..+/.test(fieldValues.email)
+                ? ""
+                : "Email is not valid.";
+        }
+
+        if ("firstName" in fieldValues) {
+            temp.firstName = fieldValues.firstName ? "" : "Required";
+        }
+
+        if ("lastName" in fieldValues) {
+            temp.lastName = fieldValues.lastName ? "" : "Required";
+        }
+
+        if ("phone" in fieldValues) {
+            temp.phone =
+                fieldValues.phone.length > 9
+                    ? ""
+                    : "Minimum 10 numbers required.";
+        }
+        setErrors({ ...temp });
+
+        if (fieldValues == values) {
+            return Object.values(temp).every((x) => x == "");
+        }
+    }
 
     function handleChange(e) {
-        e.persist();
+        e.preventDefault();
         setValues((values) => ({ ...values, [e.target.id]: e.target.value }));
     }
 
+    function handleSubmit(e) {
+        // e.preventDefault();
+
+        validate();
+    }
+
     return (
-        <>
-            <div className={styles.contactUsFormContainer}>
-                <form
-                    action="https://gmail.us6.list-manage.com/subscribe/post"
-                    method="POST"
-                >
-                    <input
-                        type="hidden"
-                        name="u"
-                        value="e654510bb63cf53256868ec7e"
-                    />
-                    <input type="hidden" name="id" value="096b104afc" />
+        <div className={styles.contactUsFormContainer}>
+            <form
+                action="https://gmail.us6.list-manage.com/subscribe/post"
+                method="POST"
+                onSubmit={handleSubmit}
+            >
+                <input
+                    type="hidden"
+                    name="u"
+                    value="e654510bb63cf53256868ec7e"
+                />
+                <input type="hidden" name="id" value="096b104afc" />
 
-                    <div className={styles.nameContainer}>
-                        <CssTextField
-                            fullWidth
-                            variant="outlined"
-                            id="firstName"
-                            name="FNAME"
-                            label="First Name"
-                            type="text"
-                            value={values.firstName}
-                            onChange={handleChange}
-                        />
-                        <CssTextField
-                            fullWidth
-                            variant="outlined"
-                            id="lastName"
-                            name="LNAME"
-                            label="Last Name"
-                            type="text"
-                            value={values.lastName}
-                            onChange={handleChange}
-                        />
-                    </div>
-
+                <div className={styles.nameContainer}>
                     <CssTextField
                         fullWidth
                         variant="outlined"
-                        id="email"
-                        name="EMAIL"
-                        label="Email"
-                        type="email"
-                        value={values.email}
+                        id="firstName"
+                        name="FNAME"
+                        label="First Name"
+                        type="text"
+                        value={values.firstName}
                         onChange={handleChange}
                     />
-
                     <CssTextField
                         fullWidth
                         variant="outlined"
-                        id="tel"
-                        name="PHONE"
-                        label="Contact Number"
-                        type="tel"
-                        value={values.contact}
+                        id="lastName"
+                        name="LNAME"
+                        label="Last Name"
+                        type="text"
+                        value={values.lastName}
                         onChange={handleChange}
                     />
+                </div>
 
-                    <Button variant="contained" fullWidth type="submit">
-                        Submit
-                    </Button>
-                </form>
-            </div>
-        </>
+                <CssTextField
+                    fullWidth
+                    variant="outlined"
+                    id="email"
+                    name="EMAIL"
+                    label="Email"
+                    value={values.email}
+                    onChange={handleChange}
+                    error={errors.email}
+                    helperText={errors.email}
+                />
+
+                <CssTextField
+                    fullWidth
+                    variant="outlined"
+                    id="phone"
+                    name="PHONE"
+                    label="Contact Number"
+                    type="tel"
+                    value={values.phone}
+                    onChange={handleChange}
+                />
+                <Button variant="contained" fullWidth type="submit">
+                    Submit
+                </Button>
+            </form>
+        </div>
     );
-}
+};
 
 export default function ContactUsPage() {
     return (
