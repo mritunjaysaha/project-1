@@ -96,6 +96,15 @@ export function Body() {
                         <p>That's why you probably haven't heard of us</p>
                     </Zoom>
                 </div>
+                <div className={`${styles.secretDiv2} ${styles.gradient1}`}>
+                    <p>
+                        Identifying early stage deals for
+                        <span className={styles.spanColor}>
+                            bolstering your portfolio
+                        </span>
+                    </p>
+                    <p>Bring in right strategic partnerships for growth</p>
+                </div>
             </section>
 
             {/* blog section */}

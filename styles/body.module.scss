@@ -122,6 +122,27 @@
             padding: 8rem 0;
         }
     }
+
+    .secretDiv2 {
+        width: 100%;
+        padding: $marginTopBottom;
+
+        p {
+            font-weight: $fw-bold;
+            font-size: $fs-x-large;
+            line-height: 1.6rem;
+            margin-bottom: 4rem;
+
+            .spanColor {
+                text-shadow: 0px 2px 1px rgba(0, 0, 0, 1);
+            }
+
+            &:last-of-type {
+                font-weight: 800;
+                margin-bottom: 0;
+            }
+        }
+    }
 }
 
 .blogSection {
