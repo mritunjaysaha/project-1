@@ -3,8 +3,8 @@ import { Cards } from "./cards";
 import { TeamPageCards } from "./teamPageCards";
 import { offeringsData, clienteleData, teamData } from "../data";
 import Zoom from "react-reveal";
-import { BlogSectionForHomePage } from "../src/blogs/blogSection";
 import { Anchor } from "../src/atoms/anchor";
+import { BlogPostsForHomePage } from "../src/components/blogUtils";
 
 export function Body() {
     return (
@@ -109,7 +109,7 @@ export function Body() {
                         ></div>
                     </h3>
                 </div>
-                <BlogSectionForHomePage />
+                <BlogPostsForHomePage />
                 <div className={styles.moreButton}>
                     <Anchor name="more" href="/blogs" />
                 </div>

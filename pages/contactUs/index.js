@@ -78,7 +78,6 @@ const ContactUsForm = () => {
     }
 
     function handleKeyUp(e) {
-        console.log(e.target.id);
         validate(e.target.id);
     }
 

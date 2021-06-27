@@ -1,10 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { blogData } from "../../blogsData";
 import Particles from "react-tsparticles";
-import styles from "../../styles/blogPages.module.scss";
+import styles from "../styles/blog.module.scss";
 import Parallax from "parallax-js";
-import { BlogList } from "../../src/blogs/blogSection";
+import { BlogList } from "../src/components/blogUtils";
 
 const ParticlesJS = () => (
     <Particles
@@ -90,21 +89,8 @@ const ParticlesJS = () => (
     />
 );
 
-export default function BlogPage() {
-    const router = useRouter();
-    const { name } = router.query;
-    const [currentData, setCurrentData] = useState("");
-
-    const { data } = blogData;
-
-    useEffect(() => {
-        for (let datum of data) {
-            if (name === datum.id) {
-                setCurrentData(datum);
-                break;
-            }
-        }
-    });
+export default function BlogLayout({ children, frontMatter }) {
+    const { title } = frontMatter;
 
     useEffect(() => {
         const scene = document.querySelector("#scene");
@@ -115,7 +101,7 @@ export default function BlogPage() {
         <>
             <section className={styles.blogSection}>
                 <div className={styles.overlay}>
-                    <h3>{currentData.title}</h3>
+                    <h3>{title}</h3>
                 </div>
                 <header className={styles.parallax} id="scene">
                     <div className={styles.overlay}></div>
@@ -127,7 +113,7 @@ export default function BlogPage() {
                 </header>
             </section>
             <section className={styles.blogContentsContainer}>
-                {currentData != false ? currentData.fullDescription() : ""}
+                {children}
             </section>
             <section className={styles.restOfTheBlogs}>
                 <BlogList />

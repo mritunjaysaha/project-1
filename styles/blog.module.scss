@@ -39,12 +39,12 @@ $bannerHeightDesktop: 80vh;
     align-items: center;
 
     h3 {
-        padding: $padding-sm 0 0 $padding-sm;
         color: $white;
         font-size: $fs-medium;
         width: 80vw;
-        text-align: left;
+        text-align: center;
         text-transform: capitalize;
+        margin: 0 auto;
     }
 
     @media only screen and (min-width: 996px) {
@@ -186,5 +186,141 @@ $bannerHeightDesktop: 80vh;
                 color: $blue;
             }
         }
+    }
+}
+
+.blogCardsContainer {
+    width: 90vw;
+    margin: 0 auto $marginTopBottom auto;
+    font-family: $font-family;
+
+    h3 {
+        font-size: $fs-medium;
+    }
+    p {
+        font-size: $fs-small;
+    }
+
+    // img {
+    //     max-width: 100%;
+    //     max-height: 100%;
+    // }
+}
+
+.cardsContentsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 80vw;
+
+    background-color: white;
+    box-shadow: $box-shadow;
+
+    color: $black;
+
+    transition: $transition;
+    margin: 4rem auto;
+
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+        box-shadow: $box-shadow-hover;
+    }
+
+    figure {
+        display: block;
+        // margin: 2rem 4rem 2rem 2rem;
+    }
+
+    img {
+        height: auto;
+        width: 80vw;
+    }
+
+    article {
+        padding: 2rem;
+        li {
+            h3 {
+                font-size: $fs-medium;
+                font-weight: $fw-bold;
+                line-height: 2.4rem;
+                padding-bottom: 1rem;
+            }
+        }
+
+        div {
+            p {
+                margin: 0;
+                line-height: 2rem;
+            }
+        }
+    }
+    @include breakpoint(tablet) {
+        flex-direction: row;
+        align-items: flex-start;
+
+        figure {
+            display: block;
+            margin: 2rem 0 2rem 2rem;
+        }
+
+        img {
+            height: auto;
+            width: 20vw;
+        }
+
+        article {
+            width: 60vw;
+            padding: 2rem;
+
+            li {
+                h3 {
+                    line-height: 2.4rem;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        align-items: center;
+        justify-content: space-around;
+
+        figure {
+            display: block;
+            margin-left: 2rem;
+            width: 26rem;
+            img {
+                width: inherit;
+            }
+        }
+
+        article {
+            width: 80%;
+            padding-left: 4rem;
+
+            li {
+                h3 {
+                    line-height: inherit;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.pEllipsis {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    @include breakpoint(tablet) {
+        -webkit-line-clamp: 2;
+    }
+
+    @include breakpoint(desktop) {
+        -webkit-line-clamp: 3;
     }
 }
