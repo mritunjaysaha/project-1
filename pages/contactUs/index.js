@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useFormik } from "formik";
-import * as yup from "yup";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import styles from "../../styles/contactUs.module.scss";
@@ -33,16 +31,6 @@ const CssTextField = withStyles({
     },
 })(TextField);
 
-const validationSchema = yup.object({
-    email: yup
-        .string("Enter your email")
-        .email("Enter a valid email")
-        .required("Email is required"),
-    // fname: yup.string("Enter your name"),
-    // lname: yup.string("Enter your name"),
-    // phone: yup.number("Enter Contact Number").min(1000000000),
-});
-
 const ContactUsForm = () => {
     const [values, setValues] = useState({
         firstName: "",
@@ -52,26 +40,26 @@ const ContactUsForm = () => {
     });
     const [errors, setErrors] = useState({});
 
-    function validate(fieldValues = values) {
-        console.log({ fieldValues });
-
+    function validate(param, fieldValues = values) {
         let temp = { ...errors };
 
-        if ("email" in fieldValues) {
-            temp.email = /$^|.+@.+..+/.test(fieldValues.email)
+        if (param === "email" && "email" in fieldValues) {
+            temp.email = /^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/.test(
+                fieldValues.email
+            )
                 ? ""
                 : "Email is not valid.";
         }
 
-        if ("firstName" in fieldValues) {
+        if (param === "firstName" && "firstName" in fieldValues) {
             temp.firstName = fieldValues.firstName ? "" : "Required";
         }
 
-        if ("lastName" in fieldValues) {
+        if (param === "lastName" && "lastName" in fieldValues) {
             temp.lastName = fieldValues.lastName ? "" : "Required";
         }
 
-        if ("phone" in fieldValues) {
+        if (param === "phone" && "phone" in fieldValues) {
             temp.phone =
                 fieldValues.phone.length > 9
                     ? ""
@@ -89,26 +77,24 @@ const ContactUsForm = () => {
         setValues((values) => ({ ...values, [e.target.id]: e.target.value }));
     }
 
-    function handleSubmit(e) {
-        // e.preventDefault();
-
-        validate();
+    function handleKeyUp(e) {
+        console.log(e.target.id);
+        validate(e.target.id);
     }
 
     return (
         <div className={styles.contactUsFormContainer}>
             <form
                 action="https://gmail.us6.list-manage.com/subscribe/post"
-                method="POST"
-                onSubmit={handleSubmit}
+                method="post"
+                noValidate
             >
                 <input
                     type="hidden"
                     name="u"
                     value="e654510bb63cf53256868ec7e"
                 />
-                <input type="hidden" name="id" value="096b104afc" />
-
+                <input type="hidden" name="id" value="61c025bc0d" />
                 <div className={styles.nameContainer}>
                     <CssTextField
                         fullWidth
@@ -119,6 +105,8 @@ const ContactUsForm = () => {
                         type="text"
                         value={values.firstName}
                         onChange={handleChange}
+                        error={errors.firstName}
+                        helperText={errors.firstName}
                     />
                     <CssTextField
                         fullWidth
@@ -129,6 +117,8 @@ const ContactUsForm = () => {
                         type="text"
                         value={values.lastName}
                         onChange={handleChange}
+                        error={errors.lastName}
+                        helperText={errors.lastName}
                     />
                 </div>
 
@@ -140,6 +130,7 @@ const ContactUsForm = () => {
                     label="Email"
                     value={values.email}
                     onChange={handleChange}
+                    onKeyUp={handleKeyUp}
                     error={errors.email}
                     helperText={errors.email}
                 />
@@ -153,7 +144,11 @@ const ContactUsForm = () => {
                     type="tel"
                     value={values.phone}
                     onChange={handleChange}
+                    onKeyUp={handleKeyUp}
+                    error={errors.phone}
+                    helperText={errors.phone}
                 />
+
                 <Button variant="contained" fullWidth type="submit">
                     Submit
                 </Button>
