@@ -145,11 +145,19 @@
 }
 
 .gradient1 {
+    // background-image: linear-gradient(
+    //     180deg,
+    //     #a9b2bd,
+    //     #b8c6cd,
+    //     #c7dade,
+    //     #d6efef
+    // );
+
     background-image: linear-gradient(
         180deg,
-        #a9b2bd,
-        #b8c6cd,
-        #c7dade,
-        #d6efef
+        hsl(214.7, 13.3%, 86%),
+        hsl(205.3, 17.4%, 92.6%),
+        hsl(195.8, 25.3%, 95.3%),
+        hsl(183.3, 45%, 98.2%)
     );
 }

@@ -10,7 +10,7 @@ export function Body() {
     return (
         <>
             {/* Offerings */}
-            <section className={styles.cardsSection}>
+            <section className={`${styles.cardsSection} ${styles.gradient1}`}>
                 <div className={`${styles.backgroundBlack}`}>
                     <h3 className={`${styles.multiLineHeader}`}>
                         Our core
@@ -59,7 +59,7 @@ export function Body() {
             </section>
 
             {/* Team page */}
-            <section className={styles.cardsSection}>
+            <section className={`${styles.cardsSection} ${styles.gradient1}`}>
                 <div className={`${styles.backgroundBlack}`}>
                     <h3 className={`${styles.multiLineHeader}`}>
                         Meet our
