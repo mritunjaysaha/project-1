@@ -99,7 +99,7 @@ export function Body() {
             </section>
 
             {/* blog section */}
-            <section className={styles.blogSection}>
+            <section className={`${styles.blogSection} ${styles.gradient1}`}>
                 <div className={`${styles.backgroundBlack}`}>
                     <h3 className={`${styles.multiLineHeader}`}>
                         Our
