@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Particles from "react-tsparticles";
 import styles from "../styles/blog.module.scss";
 import Parallax from "parallax-js";
+import { BlogList } from "../src/components/blogUtils";
 
 const ParticlesJS = () => (
     <Particles
@@ -89,9 +90,6 @@ const ParticlesJS = () => (
 );
 
 export default function BlogLayout({ children, frontMatter }) {
-    const router = useRouter();
-    // const slug = router.asPath.replace("/blog", "");
-
     const { title } = frontMatter;
 
     useEffect(() => {
@@ -117,9 +115,9 @@ export default function BlogLayout({ children, frontMatter }) {
             <section className={styles.blogContentsContainer}>
                 {children}
             </section>
-            {/* <section className={styles.restOfTheBlogs}>
+            <section className={styles.restOfTheBlogs}>
                 <BlogList />
-            </section> */}
+            </section>
         </>
     );
 }

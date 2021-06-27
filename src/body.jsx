@@ -4,25 +4,9 @@ import { TeamPageCards } from "./teamPageCards";
 import { offeringsData, clienteleData, teamData } from "../data";
 import Zoom from "react-reveal";
 import { Anchor } from "../src/atoms/anchor";
-import { blogData } from "../blogData";
-import { BlogPost } from "../src/components/BlogPost";
+import { BlogPostsForHomePage } from "../src/components/blogUtils";
 
 export function Body() {
-    const { data } = blogData;
-
-    data.sort((a, z) => {
-        return z.sn - a.sn;
-    });
-
-    const mostRecentData = [];
-
-    for (
-        let i = 0;
-        (i < data.length && data.length < 5) || (i < 5 && data.length >= 5);
-        i++
-    ) {
-        mostRecentData.push(data[i]);
-    }
     return (
         <>
             {/* Offerings */}
@@ -125,12 +109,7 @@ export function Body() {
                         ></div>
                     </h3>
                 </div>
-                {/* <BlogSectionForHomePage /> */}
-                <section className={styles.blogCardsContainer}>
-                    {mostRecentData.map((frontMatter) => {
-                        return <BlogPost {...frontMatter} />;
-                    })}
-                </section>
+                <BlogPostsForHomePage />
                 <div className={styles.moreButton}>
                     <Anchor name="more" href="/blogs" />
                 </div>
