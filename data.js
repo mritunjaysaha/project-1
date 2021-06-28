@@ -62,7 +62,7 @@ export const teamData = [
     },
     {
         name: "Samrat Dhar",
-        designation: "Marketing Advisor",
+        designation: "Growth Hacking Advisor",
         img: "/assets/team2.jpg",
         linkedin: "https://www.linkedin.com/in/samratdhar/",
     },
