@@ -227,3 +227,23 @@
         hsl(183.3, 45%, 98.2%)
     );
 }
+
+.gradient2 {
+    background-image: linear-gradient(
+        0deg,
+        hsl(281.7, 17%, 88.5%),
+        hsl(288.8, 6.7%, 90.7%),
+        hsl(315, 5%, 88.6%),
+        hsl(34.3, 17.1%, 92%)
+    );
+}
+
+.gradient3 {
+    background-image: linear-gradient(
+        0deg,
+        hsl(24, 13.7%, 92.9%),
+        hsl(24, 8.2%, 92.8%),
+        hsl(23.1, 6.4%, 92.2%),
+        hsl(30, 4.3%, 96.9%)
+    );
+}

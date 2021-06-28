@@ -34,7 +34,7 @@ export function Body() {
             </section>
 
             {/* Clientele */}
-            <section className={`${styles.cardsSection} ${styles.gradient1}`}>
+            <section className={`${styles.cardsSection} ${styles.gradient2}`}>
                 <div className={styles.backgroundBlack}>
                     <h3
                         className={`${styles.multiLineHeader} ${styles.backgroundBlack}`}
@@ -59,7 +59,7 @@ export function Body() {
             </section>
 
             {/* Team page */}
-            <section className={`${styles.cardsSection} ${styles.gradient1}`}>
+            <section className={`${styles.cardsSection} ${styles.gradient3}`}>
                 <div className={`${styles.backgroundBlack}`}>
                     <h3 className={`${styles.multiLineHeader}`}>
                         Meet our
