@@ -49,6 +49,7 @@ export function Footer() {
                     <ListAnchor name={newsLetter.name} href={newsLetter.link} />
                 </ul>
             </div>
+            the svg has been taken from SVGBackgrounds.com.
         </footer>
     );
 }
